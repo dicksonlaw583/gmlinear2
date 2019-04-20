@@ -1,0 +1,1366 @@
+Converting GML script: ${project_dir}\scripts\gmlin_test_all\gmlin_test_all.gml
+Converted builtin - line 20: background_colour = c_red -> __background_set_colour( c_red )
+Converted builtin - line 29: background_colour = c_green -> __background_set_colour( c_green )
+Converted description /// @description gmlin_test_all()
+
+Converting GML script: GMAssert.gml
+Converted description /// @description __gma_assert_error__(message, expected, got)/// @param message
+/// @param  expected
+/// @param  got
+
+Converting GML script: GMAssert.gml
+Converted description /// @description __gma_assert_error_simple__(message, got)/// @param message
+/// @param  got
+
+Converting GML script: GMAssert.gml
+Converted description /// @description __gma_assert_error_raw__(message, expected, got)/// @param message
+/// @param  expected
+/// @param  got
+
+Converting GML script: GMAssert.gml
+Converted description /// @description __gma_debug_value__(val, [noprefix])/// @param val
+/// @param  [noprefix]
+Converted string - line 41: '"' -> "\""
+Converted string - line 41: '"' -> "\""
+Converted string - line 41: '""' -> "\"\""
+Converted string - line 41: '"' -> "\""
+
+Converting GML script: GMAssert.gml
+Converted description /// @description __gma_debug_list_value__(val)/// @param val
+
+Converting GML script: GMAssert.gml
+Converted description /// @description __gma_equal__(got, expected)/// @param got
+/// @param  expected
+
+Converting GML script: GMAssert.gml
+Converted description /// @description __gma_equalish__(got, expected)/// @param got
+/// @param  expected
+
+Converting GML script: GMAssert.gml
+Converted description /// @description __gma_greater_than__(got, expected)/// @param got
+/// @param  expected
+
+Converting GML script: GMAssert.gml
+Converted description /// @description __gma_less_than__(got, expected)/// @param got
+/// @param  expected
+
+Converting GML script: GMAssert.gml
+Converted description /// @description __gma_greater_than_or_equal__(got, expected)/// @param got
+/// @param  expected
+
+Converting GML script: GMAssert.gml
+Converted description /// @description __gma_less_than_or_equal__(got, expected)/// @param got
+/// @param  expected
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert(got, [msg])/// @param got
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_fail(got, [msg])/// @param got
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_operation(got, expected, op, invert, [msg], [debug_got], [debug_expected])/// @param got
+/// @param  expected
+/// @param  op
+/// @param  invert
+/// @param  [msg]
+/// @param  [debug_got]
+/// @param  [debug_expected]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_equal(got, expected, [msg])/// @param got
+/// @param  expected
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_equalish(got, expected, [msg])/// @param got
+/// @param  expected
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_is(got, expected, [msg])/// @param got
+/// @param  expected
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_not_equal(got, expected, [msg])/// @param got
+/// @param  expected
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_not_equalish(got, expected, [msg])/// @param got
+/// @param  expected
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_isnt(got, expected, [msg])/// @param got
+/// @param  expected
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_greater_than(got, expected, [msg])/// @param got
+/// @param  expected
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_less_than(got, expected, [msg])/// @param got
+/// @param  expected
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_greater_than_or_equal(got, expected, [msg])/// @param got
+/// @param  expected
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_less_than_or_equal(got, expected, [msg])/// @param got
+/// @param  expected
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_is_string(got, [msg])/// @param got
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_is_real(got, [msg])/// @param got
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_is_array(got, [msg])/// @param got
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_is_defined(got, [msg])/// @param got
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_isnt_string(got, [msg])/// @param got
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_isnt_real(got, [msg])/// @param got
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_isnt_array(got, [msg])/// @param got
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_isnt_defined(got, [msg])/// @param got
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_in_range(got, lower, upper, [msg])/// @param got
+/// @param  lower
+/// @param  upper
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_not_in_range(got, lower, upper, [msg])/// @param got
+/// @param  lower
+/// @param  upper
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_contains(got, content, [msg]);/// @param got
+/// @param  content
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_contains_exact(got, content, [msg]);/// @param got
+/// @param  content
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_doesnt_contain(got, content, [msg]);/// @param got
+/// @param  content
+/// @param  [msg]
+
+Converting GML script: GMAssert.gml
+Converted description /// @description assert_doesnt_contain_exact(got, content, [msg]);/// @param got
+/// @param  content
+/// @param  [msg]
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2(x0, x1)/// @param x0
+/// @param  x1
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_zero()
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3(x0, x1, x2)/// @param x0
+/// @param  x1
+/// @param  x2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_zero()
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4(x0, x1, x2, x3)/// @param x0
+/// @param  x1
+/// @param  x2
+/// @param  x3
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_zero()
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn(...)/// @param ...
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_zero(n)/// @param n
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22(x00, x01, x10, x11)/// @param x00
+/// @param  x01
+/// @param  x10
+/// @param  x11
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_identity()
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_zero()
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33(x00, x01, x02, x10, x11, x12, x20, x21, x22)/// @param x00
+/// @param  x01
+/// @param  x02
+/// @param  x10
+/// @param  x11
+/// @param  x12
+/// @param  x20
+/// @param  x21
+/// @param  x22
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_identity()
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_zero()
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44(x00, x01, x02, x03, x10, x11, x12, x13, x20, x21, x22, x23, x30, x31, x32, x33)/// @param x00
+/// @param  x01
+/// @param  x02
+/// @param  x03
+/// @param  x10
+/// @param  x11
+/// @param  x12
+/// @param  x13
+/// @param  x20
+/// @param  x21
+/// @param  x22
+/// @param  x23
+/// @param  x30
+/// @param  x31
+/// @param  x32
+/// @param  x33
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_identity()
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_zero()
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn(m, n, ...)/// @param m
+/// @param  n
+/// @param  ...
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_zero(m, n)/// @param m
+/// @param  n
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn(...)/// @param ...
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_identity(n)/// @param n
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_zero(n)/// @param n
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_clone(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_clone_to(v, vout)/// @param v
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_add(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_add_to(v1, v2, vout)/// @param v1
+/// @param  v2
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_subtract(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_subtract_to(v1, v2, vout)/// @param v1
+/// @param  v2
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_dot(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_scale(v, r)/// @param v
+/// @param  r
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_scale_to(v, r, vout)/// @param v
+/// @param  r
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_unit(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_unit_to(v, vout)/// @param v
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_norm(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_dist(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_1norm(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_1dist(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_maxnorm(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_lerp(v1, v2, amount)/// @param v1
+/// @param  v2
+/// @param  amount
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_lerp_to(v1, v2, amount, vout)/// @param v1
+/// @param  v2
+/// @param  amount
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_proj(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_proj_to(v1, v2, vout)/// @param v1
+/// @param  v2
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_rej(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_rej_to(v1, v2, vout)/// @param v1
+/// @param  v2
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_encode_string(v)/// @param v
+Converted string - line 4: ' ' -> " "
+Converted string - line 4: '' -> ""
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_decode_string(str)/// @param str
+Converted string - line 6: ',' -> ","
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_decode_string_to(str, vout)/// @param str
+/// @param  vout
+Converted string - line 7: ',' -> ","
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_encode_base64(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_decode_base64(enc)/// @param enc
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_decode_base64_to(enc, vout)/// @param enc
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_rec_gmp(v_xy)/// @param v_xy
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_rec_gmp_to(vi_xy, vo_ld)/// @param vi_xy
+/// @param  vo_ld
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_gmp_rec(v_ld)/// @param v_ld
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_gmp_rec_to(vi_ld, vo_xy)/// @param vi_ld
+/// @param  vo_xy
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_rec_pol(v_xy)/// @param v_xy
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_rec_pol_to(vi_xy, vo_rt)/// @param vi_xy
+/// @param  vo_rt
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_pol_rec(v_rt)/// @param v_rt
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_pol_rec_to(vi_rt, vo_xy)/// @param vi_rt
+/// @param  vo_xy
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_gmp_pol(v_ld)/// @param v_ld
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_gmp_pol_to(vi_ld, vo_rt)/// @param vi_ld
+/// @param  vo_rt
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_pol_gmp(v_ld)/// @param v_ld
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r2_pol_gmp_to(vi_rt, vo_ld)/// @param vi_rt
+/// @param  vo_ld
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_clone(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_clone_to(v, vout)/// @param v
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_add(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_add_to(v1, v2, vout)/// @param v1
+/// @param  v2
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_subtract(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_subtract_to(v1, v2, vout)/// @param v1
+/// @param  v2
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_dot(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_cross(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_cross_to(v1, v2, vout)/// @param v1
+/// @param  v2
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_scale(v, r)/// @param v
+/// @param  r
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_scale_to(v, r, vout)/// @param v
+/// @param  r
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_unit(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_unit_to(v, vout)/// @param v
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_norm(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_dist(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_1norm(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_1dist(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_maxnorm(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_lerp(v1, v2, amount)/// @param v1
+/// @param  v2
+/// @param  amount
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_lerp_to(v1, v2, amount, vout)/// @param v1
+/// @param  v2
+/// @param  amount
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_proj(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_proj_to(v1, v2, vout)/// @param v1
+/// @param  v2
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_rej(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_rej_to(v1, v2, vout)/// @param v1
+/// @param  v2
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_encode_string(v)/// @param v
+Converted string - line 4: ' ' -> " "
+Converted string - line 4: '' -> ""
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_decode_string(str)/// @param str
+Converted string - line 6: ',' -> ","
+Converted string - line 9: ',' -> ","
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_decode_string_to(str, vout)/// @param str
+/// @param  vout
+Converted string - line 7: ',' -> ","
+Converted string - line 10: ',' -> ","
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_encode_base64(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_decode_base64(enc)/// @param enc
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_decode_base64_to(enc, vout)/// @param enc
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_rec_cyl(v_xyz)/// @param v_xyz
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_rec_cyl_to(vi_xyz, vo_rpz)/// @param vi_xyz
+/// @param  vo_rpz
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_cyl_rec(v_rpz)/// @param v_rpz
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_cyl_rec_to(vi_rpz, vo_xyz)/// @param vi_rpz
+/// @param  vo_xyz
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_rec_sph(v_xyz)/// @param v_xyz
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_rec_sph_to(vi_xyz, vo_rpt)/// @param vi_xyz
+/// @param  vo_rpt
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_sph_rec(v_rpt)/// @param v_rpt
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_sph_rec_to(vi_rpt, vo_xyz)/// @param vi_rpt
+/// @param  vo_xyz
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_cyl_sph(v_rpz)/// @param v_rpz
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_cyl_sph_to(vi_rpz, vo_rpt)/// @param vi_rpz
+/// @param  vo_rpt
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_sph_cyl(v_rpt)/// @param v_rpt
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r3_sph_cyl_to(vi_rpt, vo_rpz)/// @param vi_rpt
+/// @param  vo_rpz
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_clone(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_clone_to(v, vout)/// @param v
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_add(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_add_to(v1, v2, vout)/// @param v1
+/// @param  v2
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_subtract(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_subtract_to(v1, v2, vout)/// @param v1
+/// @param  v2
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_dot(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_scale(v, r)/// @param v
+/// @param  r
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_scale_to(v, r, vout)/// @param v
+/// @param  r
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_unit(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_unit_to(v, vout)/// @param v
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_norm(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_dist(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_1norm(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_1dist(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_maxnorm(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_lerp(v1, v2, amount)/// @param v1
+/// @param  v2
+/// @param  amount
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_lerp_to(v1, v2, amount, vout)/// @param v1
+/// @param  v2
+/// @param  amount
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_proj(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_proj_to(v1, v2, vout)/// @param v1
+/// @param  v2
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_rej(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_rej_to(v1, v2, vout)/// @param v1
+/// @param  v2
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_encode_string(v)/// @param v
+Converted string - line 4: ' ' -> " "
+Converted string - line 4: '' -> ""
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_decode_string(str)/// @param str
+Converted string - line 6: ',' -> ","
+Converted string - line 9: ',' -> ","
+Converted string - line 12: ',' -> ","
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_decode_string_to(str, vout)/// @param str
+/// @param  vout
+Converted string - line 7: ',' -> ","
+Converted string - line 10: ',' -> ","
+Converted string - line 13: ',' -> ","
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_encode_base64(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_decode_base64(enc)/// @param enc
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r4_decode_base64_to(enc, vout)/// @param enc
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_clone(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_clone_to(v, vout)/// @param v
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_add(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_add_to(v1, v2, vout)/// @param v1
+/// @param  v2
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_subtract(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_subtract_to(v1, v2, vout)/// @param v1
+/// @param  v2
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_dot(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_scale(v, r)/// @param v
+/// @param  r
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_scale_to(v, r, vout)/// @param v
+/// @param  r
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_unit(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_unit_to(v, vout)/// @param v
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_norm(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_dist(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_1norm(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_1dist(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_maxnorm(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_lerp(v1, v2, amount)/// @param v1
+/// @param  v2
+/// @param  amount
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_lerp_to(v1, v2, amount, vout)/// @param v1
+/// @param  v2
+/// @param  amount
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_proj(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_proj_to(v1, v2, vout)/// @param v1
+/// @param  v2
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_rej(v1, v2)/// @param v1
+/// @param  v2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_rej_to(v1, v2, vout)/// @param v1
+/// @param  v2
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_encode_string(v)/// @param v
+Converted string - line 12: ' ' -> " "
+Converted string - line 12: '' -> ""
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_decode_string(enc)/// @param enc
+Converted string - line 5: ',' -> ","
+Converted string - line 8: ',' -> ","
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_decode_string_to(enc, vout)/// @param enc
+/// @param  vout
+Converted string - line 6: ',' -> ","
+Converted string - line 9: ',' -> ","
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_encode_base64(v)/// @param v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_decode_base64(enc, n)/// @param enc
+/// @param  n
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rn_decode_base64_to(enc, n, vout)/// @param enc
+/// @param  n
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_clone(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_clone_to(M, Mout)/// @param M
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_add(M1, M2)/// @param M1
+/// @param  M2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_add_to(M1, M2, Mout)/// @param M1
+/// @param  M2
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_subtract(M1, M2)/// @param M1
+/// @param  M2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_subtract_to(M1, M2, Mout)/// @param M1
+/// @param  M2
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_scale(M, r)/// @param M
+/// @param  r
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_scale_to(M, r, Mout)/// @param M
+/// @param  r
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_transpose(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_transpose_to(M, Mout)/// @param M
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_multiply(M1, M2)/// @param M1
+/// @param  M2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_multiply_to(M1, M2, Mout)/// @param M1
+/// @param  M2
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_transform(M, v)/// @param M
+/// @param  v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_transform_to(M, v, vout)/// @param M
+/// @param  v
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_invert(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_invert_to(M, Mout)/// @param M
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_encode_string(M)/// @param M
+Converted string - line 9: ' ' -> " "
+Converted string - line 9: '' -> ""
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_decode_string(str)/// @param str
+Converted string - line 6: ',' -> ","
+Converted string - line 9: ';' -> ";"
+Converted string - line 12: ',' -> ","
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_decode_string_to(str, Mout)/// @param str
+/// @param  Mout
+Converted string - line 7: ',' -> ","
+Converted string - line 10: ';' -> ";"
+Converted string - line 13: ',' -> ","
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_encode_base64(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_decode_base64(enc)/// @param enc
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r22_decode_base64_to(enc, Mout)/// @param enc
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_clone(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_clone_to(M, Mout)/// @param M
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_add(M1, M2)/// @param M1
+/// @param  M2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_add_to(M1, M2, Mout)/// @param M1
+/// @param  M2
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_subtract(M1, M2)/// @param M1
+/// @param  M2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_subtract_to(M1, M2, Mout)/// @param M1
+/// @param  M2
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_scale(M, r)/// @param M
+/// @param  r
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_scale_to(M, r, Mout)/// @param M
+/// @param  r
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_transpose(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_transpose_to(M, Mout)/// @param M
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_multiply(M1, M2)/// @param M1
+/// @param  M2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_multiply_to(M1, M2, Mout)/// @param M1
+/// @param  M2
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_transform(M, v)/// @param M
+/// @param  v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_transform_to(M, v, vout)/// @param M
+/// @param  v
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_invert(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_invert_to(M, Mout)/// @param M
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_encode_string(M)/// @param M
+Converted string - line 14: ' ' -> " "
+Converted string - line 14: '' -> ""
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_decode_string(str)/// @param str
+Converted string - line 6: ',' -> ","
+Converted string - line 9: ',' -> ","
+Converted string - line 12: ';' -> ";"
+Converted string - line 15: ',' -> ","
+Converted string - line 18: ',' -> ","
+Converted string - line 21: ';' -> ";"
+Converted string - line 24: ',' -> ","
+Converted string - line 27: ',' -> ","
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_decode_string_to(str, Mout)/// @param str
+/// @param  Mout
+Converted string - line 7: ',' -> ","
+Converted string - line 10: ',' -> ","
+Converted string - line 13: ';' -> ";"
+Converted string - line 16: ',' -> ","
+Converted string - line 19: ',' -> ","
+Converted string - line 22: ';' -> ";"
+Converted string - line 25: ',' -> ","
+Converted string - line 28: ',' -> ","
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_encode_base64(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_decode_base64(enc)/// @param enc
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r33_decode_base64_to(enc, Mout)/// @param enc
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_clone(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_clone_to(M, Mout)/// @param M
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_add(M1, M2)/// @param M1
+/// @param  M2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_add_to(M1, M2, Mout)/// @param M1
+/// @param  M2
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_subtract(M1, M2)/// @param M1
+/// @param  M2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_subtract_to(M1, M2, Mout)/// @param M1
+/// @param  M2
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_multiply(M1, M2)/// @param M1
+/// @param  M2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_multiply_to(M1, M2, Mout)/// @param M1
+/// @param  M2
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_transform(M, v)/// @param M
+/// @param  v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_transform_to(M, v, vout)/// @param M
+/// @param  v
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_scale(M, r)/// @param M
+/// @param  r
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_scale_to(M, r, Mout)/// @param M
+/// @param  r
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_transpose(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_transpose_to(M, Mout)/// @param M
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_invert(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_invert_to(M, Mout)/// @param M
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_encode_string(M)/// @param M
+Converted string - line 21: ' ' -> " "
+Converted string - line 21: '' -> ""
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_decode_string(str)/// @param str
+Converted string - line 6: ',' -> ","
+Converted string - line 9: ',' -> ","
+Converted string - line 12: ',' -> ","
+Converted string - line 15: ';' -> ";"
+Converted string - line 18: ',' -> ","
+Converted string - line 21: ',' -> ","
+Converted string - line 24: ',' -> ","
+Converted string - line 27: ';' -> ";"
+Converted string - line 30: ',' -> ","
+Converted string - line 33: ',' -> ","
+Converted string - line 36: ',' -> ","
+Converted string - line 39: ';' -> ";"
+Converted string - line 42: ',' -> ","
+Converted string - line 45: ',' -> ","
+Converted string - line 48: ',' -> ","
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_decode_string_to(str, Mout)/// @param str
+/// @param  Mout
+Converted string - line 7: ',' -> ","
+Converted string - line 10: ',' -> ","
+Converted string - line 13: ',' -> ","
+Converted string - line 16: ';' -> ";"
+Converted string - line 19: ',' -> ","
+Converted string - line 22: ',' -> ","
+Converted string - line 25: ',' -> ","
+Converted string - line 28: ';' -> ";"
+Converted string - line 31: ',' -> ","
+Converted string - line 34: ',' -> ","
+Converted string - line 37: ',' -> ","
+Converted string - line 40: ';' -> ";"
+Converted string - line 43: ',' -> ","
+Converted string - line 46: ',' -> ","
+Converted string - line 49: ',' -> ","
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_encode_base64(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_decode_base64(enc)/// @param enc
+
+Converting GML script: GMLinear.gml
+Converted description /// @description r44_decode_base64_to(enc, Mout)/// @param enc
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_clone(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_clone_to(M, Mout)/// @param M
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_add(M1, M2)/// @param M1
+/// @param  M2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_add_to(M1, M2, Mout)/// @param M1
+/// @param  M2
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_subtract(M1, M2)/// @param M1
+/// @param  M2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_subtract_to(M1, M2, Mout)/// @param M1
+/// @param  M2
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_scale(M, r)/// @param M
+/// @param  r
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_scale_to(M, r, Mout)/// @param M
+/// @param  r
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_transpose(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_transpose_to(M, Mout)/// @param M
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_multiply(M1, M2)/// @param M1
+/// @param  M2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_multiply_to(M1, M2, Mout)/// @param M1
+/// @param  M2
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_transform(M, v)/// @param M
+/// @param  v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_transform_to(M, v, vout)/// @param M
+/// @param  v
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_encode_string(M)/// @param M
+Converted string - line 16: ' ' -> " "
+Converted string - line 16: '' -> ""
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_decode_string(str)/// @param str
+Converted string - line 5: ';' -> ";"
+Converted string - line 8: ';' -> ";"
+Converted string - line 11: ',' -> ","
+Converted string - line 13: ',' -> ","
+Converted string - line 20: ',' -> ","
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_decode_string_to(str, Mout)/// @param str
+/// @param  Mout
+Converted string - line 6: ';' -> ";"
+Converted string - line 9: ';' -> ";"
+Converted string - line 12: ',' -> ","
+Converted string - line 14: ',' -> ","
+Converted string - line 21: ',' -> ","
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_encode_base64(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_decode_base64(enc, m, n)/// @param enc
+/// @param  m
+/// @param  n
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rmn_decode_base64_to(enc, m, n, Mout)/// @param enc
+/// @param  m
+/// @param  n
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_clone(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_clone_to(M, Mout)/// @param M
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_add(M1, M2)/// @param M1
+/// @param  M2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_add_to(M1, M2, Mout)/// @param M1
+/// @param  M2
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_subtract(M1, M2)/// @param M1
+/// @param  M2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_subtract_to(M1, M2, Mout)/// @param M1
+/// @param  M2
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_scale(M, r)/// @param M
+/// @param  r
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_scale_to(M, r, Mout)/// @param M
+/// @param  r
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_transpose(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_transpose_to(M, Mout)/// @param M
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_multiply(M1, M2)/// @param M1
+/// @param  M2
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_multiply_to(M1, M2, Mout)/// @param M1
+/// @param  M2
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_transform(M, v)/// @param M
+/// @param  v
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_transform_to(M, v, vout)/// @param M
+/// @param  v
+/// @param  vout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_invert(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_invert_to(M, Mout)/// @param M
+/// @param  Mout
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_encode_string(M)/// @param M
+Converted string - line 15: ' ' -> " "
+Converted string - line 15: '' -> ""
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_decode_string(str)/// @param str
+Converted string - line 5: ';' -> ";"
+Converted string - line 8: ';' -> ";"
+Converted string - line 12: ',' -> ","
+Converted string - line 19: ',' -> ","
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_decode_string_to(str, Mout)/// @param str
+/// @param  Mout
+Converted string - line 6: ';' -> ";"
+Converted string - line 9: ';' -> ";"
+Converted string - line 13: ',' -> ","
+Converted string - line 20: ',' -> ","
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_encode_base64(M)/// @param M
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_decode_base64(enc, n)/// @param enc
+/// @param  n
+
+Converting GML script: GMLinear.gml
+Converted description /// @description rnn_decode_base64_to(enc, n, Mout)/// @param enc
+/// @param  n
+/// @param  Mout
+
+macOS icon ${options_dir}\mac\icons\icon512.png written out as 32-bit
+Windows NSIS Installer Script has been set to default due to changes in GameMaker Studio 2
+Game speed set to 30
+Added compatibility script 'background/__background_set_colour.gml'
+Added compatibility script 'background/__init_background.gml'
+Added compatibility script '__init_global.gml'
+Added compatibility script 'background/__background_get_colour_element.gml'
+Added compatibility script 'background/__background_set_element.gml'
