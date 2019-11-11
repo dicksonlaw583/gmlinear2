@@ -1,7 +1,7 @@
 {
     "id": "2a83bdf8-2866-41b3-8960-ff4c10efc20d",
     "modelName": "GMExtension",
-    "mvc": "1.0",
+    "mvc": "1.2",
     "name": "GMLinear",
     "IncludedResources": [
         
@@ -20,6 +20,7 @@
     "copyToTargets": 105554163798254,
     "date": "2019-26-20 03:04:23",
     "description": "",
+    "exportToGame": true,
     "extensionName": "",
     "files": [
         {
@@ -4440,9 +4441,12 @@
     "maccompilerflags": "",
     "maclinkerflags": "",
     "macsourcedir": "",
+    "options": null,
+    "optionsFile": "options.json",
     "packageID": "",
     "productID": "",
     "sourcedir": "",
+    "supportedTargets": 105554163798254,
     "tvosProps": false,
     "tvosSystemFrameworkEntries": [
         

@@ -1,7 +1,7 @@
 {
     "id": "9f5bb886-3df3-4d22-bc11-1454ef7d0d97",
     "modelName": "GMExtension",
-    "mvc": "1.0",
+    "mvc": "1.2",
     "name": "GMAssert",
     "IncludedResources": [
         "Scripts\\GMAssert\\__GMA_BREAKPOINT__.gml"
@@ -20,6 +20,7 @@
     "copyToTargets": 105554163798254,
     "date": "2019-26-20 03:04:20",
     "description": "",
+    "exportToGame": true,
     "extensionName": "",
     "files": [
         {
@@ -676,9 +677,12 @@
     "maccompilerflags": "",
     "maclinkerflags": "",
     "macsourcedir": "",
+    "options": null,
+    "optionsFile": "options.json",
     "packageID": "",
     "productID": "",
     "sourcedir": "",
+    "supportedTargets": 105554163798254,
     "tvosProps": false,
     "tvosSystemFrameworkEntries": [
         
