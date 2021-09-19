@@ -1,8 +1,12 @@
 {
-    "id": "3f250087-9575-45e8-befd-340e1c0b94b4",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "gmlin_test_all",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "GMLinear_test",
+    "path": "folders/Scripts/GMLinear_test.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "gmlin_test_all",
+  "tags": [],
+  "resourceType": "GMScript",
 }
