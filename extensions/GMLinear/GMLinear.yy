@@ -1,5 +1,4 @@
 {
-  "copyToTargets": 105554163798254,
   "optionsFile": "options.json",
   "options": [],
   "exportToGame": true,
@@ -1095,9 +1094,10 @@
   "tvosThirdPartyFrameworkEntries": [],
   "IncludedResources": [],
   "androidPermissions": [],
+  "copyToTargets": 105554163798254,
   "parent": {
-    "name": "Extensions",
-    "path": "folders/Extensions.yy",
+    "name": "GMLinear",
+    "path": "folders/Libraries/GMLinear.yy",
   },
   "resourceVersion": "1.3",
   "name": "GMLinear",

@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "GMAssert",
-    "path": "folders/Scripts/GMAssert.yy",
+    "path": "folders/Libraries_config/GMAssert.yy",
   },
   "resourceVersion": "1.0",
   "name": "__GMA_BREAKPOINT__",
