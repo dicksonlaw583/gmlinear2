@@ -17,12 +17,6 @@
   "installdir": "",
   "files": [
     {"filename":"GMLinear.gml","origname":"extensions\\GMLinear.gml","init":"","final":"","kind":2,"uncompress":false,"functions":[
-        {"externalName":"r3","kind":11,"help":"r3(x0, x1, x2)","hidden":false,"returnType":2,"argCount":3,"args":[
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_zero","kind":11,"help":"r3_zero()","hidden":false,"returnType":2,"argCount":0,"args":[],"resourceVersion":"1.0","name":"r3_zero","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"r4","kind":11,"help":"r4(x0, x1, x2, x3)","hidden":false,"returnType":2,"argCount":4,"args":[
             2,
             2,
@@ -87,106 +81,6 @@
         {"externalName":"rnn_zero","kind":11,"help":"rnn_zero(n)","hidden":false,"returnType":2,"argCount":1,"args":[
             2,
           ],"resourceVersion":"1.0","name":"rnn_zero","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_clone","kind":11,"help":"r3_clone(v)","hidden":false,"returnType":2,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r3_clone","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_clone_to","kind":11,"help":"r3_clone_to(v, vout)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_clone_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_add","kind":11,"help":"r3_add(v1, v2)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_add","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_add_to","kind":11,"help":"r3_add_to(v1, v2, vout)","hidden":false,"returnType":2,"argCount":3,"args":[
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_add_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_subtract","kind":11,"help":"r3_subtract(v1, v2)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_subtract","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_subtract_to","kind":11,"help":"r3_subtract_to(v1, v2, vout)","hidden":false,"returnType":2,"argCount":3,"args":[
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_subtract_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_dot","kind":11,"help":"r3_dot(v1, v2)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_dot","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_cross","kind":11,"help":"r3_cross(v1, v2)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_cross","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_cross_to","kind":11,"help":"r3_cross_to(v1, v2, vout)","hidden":false,"returnType":2,"argCount":3,"args":[
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_cross_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_scale","kind":11,"help":"r3_scale(v, r)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_scale","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_scale_to","kind":11,"help":"r3_scale_to(v, r, vout)","hidden":false,"returnType":2,"argCount":3,"args":[
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_scale_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_unit","kind":11,"help":"r3_unit(v)","hidden":false,"returnType":2,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r3_unit","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_unit_to","kind":11,"help":"r3_unit_to(v, vout)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_unit_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_norm","kind":11,"help":"r3_norm(v)","hidden":false,"returnType":2,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r3_norm","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_dist","kind":11,"help":"r3_dist(v1, v2)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_dist","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_1norm","kind":11,"help":"r3_1norm(v)","hidden":false,"returnType":2,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r3_1norm","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_1dist","kind":11,"help":"r3_1dist(v1, v2)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_1dist","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_maxnorm","kind":11,"help":"r3_maxnorm(v)","hidden":false,"returnType":2,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r3_maxnorm","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_lerp","kind":11,"help":"r3_lerp(v1, v2, amount)","hidden":false,"returnType":2,"argCount":3,"args":[
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_lerp","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_lerp_to","kind":11,"help":"r3_lerp_to(v1, v2, amount, vout)","hidden":false,"returnType":2,"argCount":4,"args":[
-            2,
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_lerp_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_proj","kind":11,"help":"r3_proj(v1, v2)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_proj","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_proj_to","kind":11,"help":"r3_proj_to(v1, v2, vout)","hidden":false,"returnType":2,"argCount":3,"args":[
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_proj_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_rej","kind":11,"help":"r3_rej(v1, v2)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_rej","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_rej_to","kind":11,"help":"r3_rej_to(v1, v2, vout)","hidden":false,"returnType":2,"argCount":3,"args":[
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_rej_to","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"r3_encode_string","kind":11,"help":"r3_encode_string(v)","hidden":false,"returnType":1,"argCount":1,"args":[
             2,
           ],"resourceVersion":"1.0","name":"r3_encode_string","tags":[],"resourceType":"GMExtensionFunction",},
@@ -903,8 +797,6 @@
             2,
           ],"resourceVersion":"1.0","name":"rnn_decode_base64_to","tags":[],"resourceType":"GMExtensionFunction",},
       ],"constants":[],"ProxyFiles":[],"copyToTargets":9223372036854775807,"order":[
-        {"name":"r3","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_zero","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r4","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r4_zero","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rn","path":"extensions/GMLinear/GMLinear.yy",},
@@ -923,30 +815,6 @@
         {"name":"rnn","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rnn_identity","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rnn_zero","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_clone","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_clone_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_add","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_add_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_subtract","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_subtract_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_dot","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_cross","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_cross_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_scale","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_scale_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_unit","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_unit_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_norm","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_dist","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_1norm","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_1dist","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_maxnorm","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_lerp","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_lerp_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_proj","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_proj_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_rej","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_rej_to","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r3_encode_string","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r3_decode_string","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r3_decode_string_to","path":"extensions/GMLinear/GMLinear.yy",},

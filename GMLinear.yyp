@@ -10,6 +10,7 @@
     {"id":{"name":"__GMA_BREAKPOINT__","path":"scripts/__GMA_BREAKPOINT__/__GMA_BREAKPOINT__.yy",},"order":0,},
     {"id":{"name":"__GMA_SETTINGS__","path":"scripts/__GMA_SETTINGS__/__GMA_SETTINGS__.yy",},"order":1,},
     {"id":{"name":"__GMLINEAR_SETTINGS__","path":"scripts/__GMLINEAR_SETTINGS__/__GMLINEAR_SETTINGS__.yy",},"order":0,},
+    {"id":{"name":"GMLinear_r3","path":"scripts/GMLinear_r3/GMLinear_r3.yy",},"order":4,},
     {"id":{"name":"GMAssert","path":"extensions/GMAssert/GMAssert.yy",},"order":0,},
     {"id":{"name":"rm_gmlin_test","path":"rooms/rm_gmlin_test/rm_gmlin_test.yy",},"order":4,},
     {"id":{"name":"GMLinear","path":"extensions/GMLinear/GMLinear.yy",},"order":0,},
