@@ -17,13 +17,6 @@
   "installdir": "",
   "files": [
     {"filename":"GMLinear.gml","origname":"extensions\\GMLinear.gml","init":"","final":"","kind":2,"uncompress":false,"functions":[
-        {"externalName":"r4","kind":11,"help":"r4(x0, x1, x2, x3)","hidden":false,"returnType":2,"argCount":4,"args":[
-            2,
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r4","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r4_zero","kind":11,"help":"r4_zero()","hidden":false,"returnType":2,"argCount":0,"args":[],"resourceVersion":"1.0","name":"r4_zero","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"rn","kind":11,"help":"rn(...)","hidden":false,"returnType":2,"argCount":-1,"args":[],"resourceVersion":"1.0","name":"rn","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"rn_zero","kind":11,"help":"rn_zero(n)","hidden":false,"returnType":2,"argCount":1,"args":[
             2,
@@ -666,8 +659,6 @@
             2,
           ],"resourceVersion":"1.0","name":"rnn_decode_base64_to","tags":[],"resourceType":"GMExtensionFunction",},
       ],"constants":[],"ProxyFiles":[],"copyToTargets":9223372036854775807,"order":[
-        {"name":"r4","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r4_zero","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rn","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rn_zero","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r22","path":"extensions/GMLinear/GMLinear.yy",},
