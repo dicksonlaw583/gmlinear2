@@ -214,26 +214,6 @@
             2,
             2,
           ],"resourceVersion":"1.0","name":"r4_rej_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r4_encode_string","kind":11,"help":"r4_encode_string(v)","hidden":false,"returnType":1,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r4_encode_string","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r4_decode_string","kind":11,"help":"r4_decode_string(str)","hidden":false,"returnType":2,"argCount":1,"args":[
-            1,
-          ],"resourceVersion":"1.0","name":"r4_decode_string","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r4_decode_string_to","kind":11,"help":"r4_decode_string_to(str, vout)","hidden":false,"returnType":2,"argCount":2,"args":[
-            1,
-            2,
-          ],"resourceVersion":"1.0","name":"r4_decode_string_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r4_encode_base64","kind":11,"help":"r4_encode_base64(v)","hidden":false,"returnType":1,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r4_encode_base64","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r4_decode_base64","kind":11,"help":"r4_decode_base64(enc)","hidden":false,"returnType":2,"argCount":1,"args":[
-            1,
-          ],"resourceVersion":"1.0","name":"r4_decode_base64","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r4_decode_base64_to","kind":11,"help":"r4_decode_base64_to(enc, vout)","hidden":false,"returnType":2,"argCount":2,"args":[
-            1,
-            2,
-          ],"resourceVersion":"1.0","name":"r4_decode_base64_to","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"rn_clone","kind":11,"help":"rn_clone(v)","hidden":false,"returnType":2,"argCount":1,"args":[
             2,
           ],"resourceVersion":"1.0","name":"rn_clone","tags":[],"resourceType":"GMExtensionFunction",},
@@ -829,12 +809,6 @@
         {"name":"r4_proj_to","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r4_rej","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r4_rej_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r4_encode_string","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r4_decode_string","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r4_decode_string_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r4_encode_base64","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r4_decode_base64","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r4_decode_base64_to","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rn_clone","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rn_clone_to","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rn_add","path":"extensions/GMLinear/GMLinear.yy",},
