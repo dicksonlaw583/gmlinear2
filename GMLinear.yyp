@@ -2,6 +2,7 @@
   "resources": [
     {"id":{"name":"gmlin_test_all","path":"scripts/gmlin_test_all/gmlin_test_all.yy",},"order":0,},
     {"id":{"name":"GMLinear_encode_decode","path":"scripts/GMLinear_encode_decode/GMLinear_encode_decode.yy",},"order":3,},
+    {"id":{"name":"GMLinear_r4","path":"scripts/GMLinear_r4/GMLinear_r4.yy",},"order":5,},
     {"id":{"name":"GMLinear_r2","path":"scripts/GMLinear_r2/GMLinear_r2.yy",},"order":1,},
     {"id":{"name":"__gmlin_test_constructors__","path":"scripts/__gmlin_test_constructors__/__gmlin_test_constructors__.yy",},"order":1,},
     {"id":{"name":"__gmlin_test_vector_operations__","path":"scripts/__gmlin_test_vector_operations__/__gmlin_test_vector_operations__.yy",},"order":2,},
