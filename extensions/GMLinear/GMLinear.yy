@@ -81,26 +81,6 @@
         {"externalName":"rnn_zero","kind":11,"help":"rnn_zero(n)","hidden":false,"returnType":2,"argCount":1,"args":[
             2,
           ],"resourceVersion":"1.0","name":"rnn_zero","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_encode_string","kind":11,"help":"r3_encode_string(v)","hidden":false,"returnType":1,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r3_encode_string","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_decode_string","kind":11,"help":"r3_decode_string(str)","hidden":false,"returnType":2,"argCount":1,"args":[
-            1,
-          ],"resourceVersion":"1.0","name":"r3_decode_string","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_decode_string_to","kind":11,"help":"r3_decode_string_to(str, vout)","hidden":false,"returnType":2,"argCount":2,"args":[
-            1,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_decode_string_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_encode_base64","kind":11,"help":"r3_encode_base64(v)","hidden":false,"returnType":1,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r3_encode_base64","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_decode_base64","kind":11,"help":"r3_decode_base64(enc)","hidden":false,"returnType":2,"argCount":1,"args":[
-            1,
-          ],"resourceVersion":"1.0","name":"r3_decode_base64","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_decode_base64_to","kind":11,"help":"r3_decode_base64_to(enc, vout)","hidden":false,"returnType":2,"argCount":2,"args":[
-            1,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_decode_base64_to","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"r3_rec_cyl","kind":11,"help":"r3_rec_cyl(v_xyz)","hidden":false,"returnType":2,"argCount":1,"args":[
             2,
           ],"resourceVersion":"1.0","name":"r3_rec_cyl","tags":[],"resourceType":"GMExtensionFunction",},
@@ -815,12 +795,6 @@
         {"name":"rnn","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rnn_identity","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rnn_zero","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_encode_string","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_decode_string","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_decode_string_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_encode_base64","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_decode_base64","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_decode_base64_to","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r3_rec_cyl","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r3_rec_cyl_to","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r3_cyl_rec","path":"extensions/GMLinear/GMLinear.yy",},
