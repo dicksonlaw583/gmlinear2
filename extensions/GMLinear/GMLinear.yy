@@ -17,14 +17,6 @@
   "installdir": "",
   "files": [
     {"filename":"GMLinear.gml","origname":"extensions\\GMLinear.gml","init":"","final":"","kind":2,"uncompress":false,"functions":[
-        {"externalName":"r22","kind":11,"help":"r22(x00, x01, x10, x11)","hidden":false,"returnType":2,"argCount":4,"args":[
-            2,
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r22","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r22_identity","kind":11,"help":"r22_identity()","hidden":false,"returnType":2,"argCount":0,"args":[],"resourceVersion":"1.0","name":"r22_identity","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r22_zero","kind":11,"help":"r22_zero()","hidden":false,"returnType":2,"argCount":0,"args":[],"resourceVersion":"1.0","name":"r22_zero","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"r33","kind":11,"help":"r33(x00, x01, x02, x10, x11, x12, x20, x21, x22)","hidden":false,"returnType":2,"argCount":9,"args":[
             2,
             2,
@@ -70,72 +62,6 @@
         {"externalName":"rnn_zero","kind":11,"help":"rnn_zero(n)","hidden":false,"returnType":2,"argCount":1,"args":[
             2,
           ],"resourceVersion":"1.0","name":"rnn_zero","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r22_clone","kind":11,"help":"r22_clone(M)","hidden":false,"returnType":2,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r22_clone","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r22_clone_to","kind":11,"help":"r22_clone_to(M, Mout)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r22_clone_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r22_add","kind":11,"help":"r22_add(M1, M2)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r22_add","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r22_add_to","kind":11,"help":"r22_add_to(M1, M2, Mout)","hidden":false,"returnType":2,"argCount":3,"args":[
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r22_add_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r22_subtract","kind":11,"help":"r22_subtract(M1, M2)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r22_subtract","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r22_subtract_to","kind":11,"help":"r22_subtract_to(M1, M2, Mout)","hidden":false,"returnType":2,"argCount":3,"args":[
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r22_subtract_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r22_scale","kind":11,"help":"r22_scale(M, r)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r22_scale","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r22_scale_to","kind":11,"help":"r22_scale_to(M, r, Mout)","hidden":false,"returnType":2,"argCount":3,"args":[
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r22_scale_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r22_transpose","kind":11,"help":"r22_transpose(M)","hidden":false,"returnType":2,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r22_transpose","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r22_transpose_to","kind":11,"help":"r22_transpose_to(M, Mout)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r22_transpose_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r22_multiply","kind":11,"help":"r22_multiply(M1, M2)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r22_multiply","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r22_multiply_to","kind":11,"help":"r22_multiply_to(M1, M2, Mout)","hidden":false,"returnType":2,"argCount":3,"args":[
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r22_multiply_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r22_transform","kind":11,"help":"r22_transform(M, v)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r22_transform","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r22_transform_to","kind":11,"help":"r22_transform_to(M, v, vout)","hidden":false,"returnType":2,"argCount":3,"args":[
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r22_transform_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r22_invert","kind":11,"help":"r22_invert(M)","hidden":false,"returnType":2,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r22_invert","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r22_invert_to","kind":11,"help":"r22_invert_to(M, Mout)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r22_invert_to","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"r22_encode_string","kind":11,"help":"r22_encode_string(M)","hidden":false,"returnType":1,"argCount":1,"args":[
             2,
           ],"resourceVersion":"1.0","name":"r22_encode_string","tags":[],"resourceType":"GMExtensionFunction",},
@@ -500,9 +426,6 @@
             2,
           ],"resourceVersion":"1.0","name":"rnn_decode_base64_to","tags":[],"resourceType":"GMExtensionFunction",},
       ],"constants":[],"ProxyFiles":[],"copyToTargets":9223372036854775807,"order":[
-        {"name":"r22","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r22_identity","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r22_zero","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r33","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r33_identity","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r33_zero","path":"extensions/GMLinear/GMLinear.yy",},
@@ -514,22 +437,6 @@
         {"name":"rnn","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rnn_identity","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rnn_zero","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r22_clone","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r22_clone_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r22_add","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r22_add_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r22_subtract","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r22_subtract_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r22_scale","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r22_scale_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r22_transpose","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r22_transpose_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r22_multiply","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r22_multiply_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r22_transform","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r22_transform_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r22_invert","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r22_invert_to","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r22_encode_string","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r22_decode_string","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r22_decode_string_to","path":"extensions/GMLinear/GMLinear.yy",},
