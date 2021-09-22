@@ -74,48 +74,6 @@
         {"externalName":"rnn_zero","kind":11,"help":"rnn_zero(n)","hidden":false,"returnType":2,"argCount":1,"args":[
             2,
           ],"resourceVersion":"1.0","name":"rnn_zero","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_rec_cyl","kind":11,"help":"r3_rec_cyl(v_xyz)","hidden":false,"returnType":2,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r3_rec_cyl","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_rec_cyl_to","kind":11,"help":"r3_rec_cyl_to(vi_xyz, vo_rpz)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_rec_cyl_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_cyl_rec","kind":11,"help":"r3_cyl_rec(v_rpz)","hidden":false,"returnType":2,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r3_cyl_rec","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_cyl_rec_to","kind":11,"help":"r3_cyl_rec_to(vi_rpz, vo_xyz)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_cyl_rec_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_rec_sph","kind":11,"help":"r3_rec_sph(v_xyz)","hidden":false,"returnType":2,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r3_rec_sph","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_rec_sph_to","kind":11,"help":"r3_rec_sph_to(vi_xyz, vo_rpt)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_rec_sph_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_sph_rec","kind":11,"help":"r3_sph_rec(v_rpt)","hidden":false,"returnType":2,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r3_sph_rec","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_sph_rec_to","kind":11,"help":"r3_sph_rec_to(vi_rpt, vo_xyz)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_sph_rec_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_cyl_sph","kind":11,"help":"r3_cyl_sph(v_rpz)","hidden":false,"returnType":2,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r3_cyl_sph","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_cyl_sph_to","kind":11,"help":"r3_cyl_sph_to(vi_rpz, vo_rpt)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_cyl_sph_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_sph_cyl","kind":11,"help":"r3_sph_cyl(v_rpt)","hidden":false,"returnType":2,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r3_sph_cyl","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r3_sph_cyl_to","kind":11,"help":"r3_sph_cyl_to(vi_rpt, vo_rpz)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r3_sph_cyl_to","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"rn_clone","kind":11,"help":"rn_clone(v)","hidden":false,"returnType":2,"argCount":1,"args":[
             2,
           ],"resourceVersion":"1.0","name":"rn_clone","tags":[],"resourceType":"GMExtensionFunction",},
@@ -675,18 +633,6 @@
         {"name":"rnn","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rnn_identity","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rnn_zero","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_rec_cyl","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_rec_cyl_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_cyl_rec","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_cyl_rec_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_rec_sph","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_rec_sph_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_sph_rec","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_sph_rec_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_cyl_sph","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_cyl_sph_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_sph_cyl","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r3_sph_cyl_to","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rn_clone","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rn_clone_to","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rn_add","path":"extensions/GMLinear/GMLinear.yy",},
@@ -848,6 +794,12 @@
   "tvosmaccompilerflags": "",
   "maclinkerflags": "",
   "tvosmaclinkerflags": "",
+  "iosplistinject": "",
+  "tvosplistinject": "",
+  "androidinject": "",
+  "androidmanifestinject": "",
+  "androidactivityinject": "",
+  "gradleinject": "",
   "androidcodeinjection": "",
   "ioscodeinjection": "",
   "tvoscodeinjection": "",
@@ -858,6 +810,10 @@
   "IncludedResources": [],
   "androidPermissions": [],
   "copyToTargets": 3035461371874509038,
+  "iosCocoaPods": "",
+  "tvosCocoaPods": "",
+  "iosCocoaPodDependencies": "",
+  "tvosCocoaPodDependencies": "",
   "parent": {
     "name": "GMLinear",
     "path": "folders/Libraries/GMLinear.yy",
