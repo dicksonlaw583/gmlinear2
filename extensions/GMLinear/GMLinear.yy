@@ -70,28 +70,6 @@
         {"externalName":"rnn_zero","kind":11,"help":"rnn_zero(n)","hidden":false,"returnType":2,"argCount":1,"args":[
             2,
           ],"resourceVersion":"1.0","name":"rnn_zero","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"rn_encode_string","kind":11,"help":"rn_encode_string(v)","hidden":false,"returnType":1,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"rn_encode_string","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"rn_decode_string","kind":11,"help":"rn_decode_string(enc)","hidden":false,"returnType":2,"argCount":1,"args":[
-            1,
-          ],"resourceVersion":"1.0","name":"rn_decode_string","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"rn_decode_string_to","kind":11,"help":"rn_decode_string_to(enc, vout)","hidden":false,"returnType":2,"argCount":2,"args":[
-            1,
-            2,
-          ],"resourceVersion":"1.0","name":"rn_decode_string_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"rn_encode_base64","kind":11,"help":"rn_encode_base64(v)","hidden":false,"returnType":1,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"rn_encode_base64","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"rn_decode_base64","kind":11,"help":"rn_decode_base64(enc, n)","hidden":false,"returnType":2,"argCount":2,"args":[
-            1,
-            2,
-          ],"resourceVersion":"1.0","name":"rn_decode_base64","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"rn_decode_base64_to","kind":11,"help":"rn_decode_base64_to(enc, n, vout)","hidden":false,"returnType":2,"argCount":3,"args":[
-            1,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"rn_decode_base64_to","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"r22_clone","kind":11,"help":"r22_clone(M)","hidden":false,"returnType":2,"argCount":1,"args":[
             2,
           ],"resourceVersion":"1.0","name":"r22_clone","tags":[],"resourceType":"GMExtensionFunction",},
@@ -536,12 +514,6 @@
         {"name":"rnn","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rnn_identity","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rnn_zero","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"rn_encode_string","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"rn_decode_string","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"rn_decode_string_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"rn_encode_base64","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"rn_decode_base64","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"rn_decode_base64_to","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r22_clone","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r22_clone_to","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r22_add","path":"extensions/GMLinear/GMLinear.yy",},

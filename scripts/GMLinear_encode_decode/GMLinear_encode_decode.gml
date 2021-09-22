@@ -163,3 +163,71 @@ function r4_decode_base64(enc, vout=[0, 0]) {
 	return vout;
 }
 #macro r4_decode_base64_to r4_decode_base64
+
+///@func rn_encode_string(v)
+///@arg {rn} v The n-dimensional vector to encode.
+///@desc Return the string form of n-dimensional vector v.
+function rn_encode_string(v) {
+	GMLINEAR_INLINE;
+	var v_dim = array_length(v);
+	var result = "";
+	for (var i = 0; i < v_dim; i++) {
+		if (i != 0) {
+			result += ",";
+		}
+		result += string_format(v[i], 15, 14);
+	}
+	return string_replace_all(result, " ", "");
+}
+
+///@func rn_decode_string(str, <vout>)
+///@arg {string} str The string to decode.
+///@arg {rn} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
+///@desc Return the decoded form of str.
+function rn_decode_string(str, vout=[]) {
+	GMLINEAR_INLINE;
+	var v_dim = string_count(",", str);
+	var pos;
+	array_resize(vout, v_dim+1);
+	for (var i = 0; i < v_dim; i++) {
+		pos = string_pos(",", str);
+		vout[@i] = real(string_copy(str, 1, pos-1));
+		str = string_delete(str, 1, pos);
+	}
+	vout[@v_dim] = real(str);
+	return vout;
+}
+#macro rn_decode_string_to rn_decode_string
+
+///@func rn_encode_base64(v)
+///@arg {rn} v The n-dimensional vector to encode.
+///@desc Return the base64 form of n-dimensional vector v.
+function rn_encode_base64(v) {
+	GMLINEAR_INLINE;
+	var v_dim = array_length(v);
+	var buffer = buffer_create(8*v_dim, buffer_fixed, 1);
+	for (var i = 0; i < v_dim; i++) {
+		buffer_write(buffer, buffer_f64, v[i]);
+	}
+	var result = buffer_base64_encode(buffer, 0, 8*v_dim);
+	buffer_delete(buffer);
+	return result;
+}
+
+///@func rn_decode_base64(enc, n, <vout>)
+///@arg {string} enc The string to decode.
+///@arg {int} n The dimension of the vector.
+///@arg {rn} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
+///@desc Return the base64-decoded form of str.
+function rn_decode_base64(enc, n, vout=[]) {
+	GMLINEAR_INLINE;
+	var buffer = buffer_create(8*n, buffer_fixed, 1);
+	buffer_base64_decode_ext(buffer, enc, 0);
+	array_resize(vout, n);
+	for (var i = 0; i < n; i++) {
+		vout[@i] = buffer_read(buffer, buffer_f64);
+	}
+	buffer_delete(buffer);
+	return vout;
+}
+#macro rn_decode_base64_to rn_decode_base64
