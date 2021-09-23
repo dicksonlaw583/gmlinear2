@@ -17,26 +17,6 @@
   "installdir": "",
   "files": [
     {"filename":"GMLinear.gml","origname":"extensions\\GMLinear.gml","init":"","final":"","kind":2,"uncompress":false,"functions":[
-        {"externalName":"r44","kind":11,"help":"r44(x00, x01, x02, x03, x10, x11, x12, x13, x20, x21, x22, x23, x30, x31, x32, x33)","hidden":false,"returnType":2,"argCount":16,"args":[
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r44","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r44_identity","kind":11,"help":"r44_identity()","hidden":false,"returnType":2,"argCount":0,"args":[],"resourceVersion":"1.0","name":"r44_identity","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r44_zero","kind":11,"help":"r44_zero()","hidden":false,"returnType":2,"argCount":0,"args":[],"resourceVersion":"1.0","name":"r44_zero","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"rmn","kind":11,"help":"rmn(m, n, ...)","hidden":false,"returnType":2,"argCount":-1,"args":[],"resourceVersion":"1.0","name":"rmn","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"rmn_zero","kind":11,"help":"rmn_zero(m, n)","hidden":false,"returnType":2,"argCount":2,"args":[
             2,
@@ -281,9 +261,6 @@
             2,
           ],"resourceVersion":"1.0","name":"rnn_decode_base64_to","tags":[],"resourceType":"GMExtensionFunction",},
       ],"constants":[],"ProxyFiles":[],"copyToTargets":9223372036854775807,"order":[
-        {"name":"r44","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r44_identity","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r44_zero","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rmn","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rmn_zero","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"rnn","path":"extensions/GMLinear/GMLinear.yy",},
