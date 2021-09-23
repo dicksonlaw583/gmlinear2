@@ -77,8 +77,11 @@ function rnn_add(M1, M2, Mout=rnn_zero(array_length(M1))) {
 	GMLINEAR_INLINE;
 	var M_dim = array_length(M1);
 	for (var i = M_dim-1; i >= 0; --i) {
+		var M1_i = M1[i];
+		var M2_i = M2[i];
+		var Mout_i = Mout[i];
 		for (var j = M_dim-1; j >= 0; --j) {
-			Mout[i][@j] = M1[i][j]+M2[i][j];
+			Mout_i[@j] = M1_i[j]+M2_i[j];
 		}
 	}
 	return Mout;
@@ -94,8 +97,11 @@ function rnn_subtract(M1, M2, Mout=rnn_zero(array_length(M1))) {
 	GMLINEAR_INLINE;
 	var M_dim = array_length(M1);
 	for (var i = M_dim-1; i >= 0; --i) {
+		var M1_i = M1[i];
+		var M2_i = M2[i];
+		var Mout_i = Mout[i];
 		for (var j = M_dim-1; j >= 0; --j) {
-			Mout[i][@j] = M1[i][j]-M2[i][j];
+			Mout_i[@j] = M1_i[j]-M2_i[j];
 		}
 	}
 	return Mout;
@@ -111,8 +117,10 @@ function rnn_scale(M, r, Mout=rnn_zero(array_length(M))) {
 	GMLINEAR_INLINE;
 	var M_dim = array_length(M);
 	for (var i = M_dim-1; i >= 0; --i) {
+		var M_i = M[i];
+		var Mout_i = Mout[i];
 		for (var j = M_dim-1; j >= 0; --j) {
-			Mout[i][@j] = r*M[i][j];
+			Mout_i[@j] = r*M_i[j];
 		}
 	}
 	return Mout;
@@ -128,9 +136,10 @@ function rnn_transpose(M, Mout=rnn_zero(array_length(M))) {
 	var M_dim = array_length(M);
 	for (var i = 0; i < M_dim; ++i) {
 		var M_i = M[i];
+		var Mout_i = Mout[i];
 		for (var j = 0; j <= i; ++j) {
 			var tmp = M_i[j];
-			Mout[i][@j] = M[j][i];
+			Mout_i[@j] = M[j][i];
 			Mout[j][@i] = tmp;
 		}
 	}
@@ -149,10 +158,11 @@ function rnn_multiply(M1, M2, Mout=rnn_zero(array_length(M1))) {
 	var result = (Mout == M1 || Mout == M2) ? rnn_zero(n) : Mout;
 	for (var i = n-1; i >= 0; --i) {
 		var result_i = result[i];
+		var M1_i = M1[i];
 		for (var j = n-1; j >= 0; --j) {
 			result_i[@j] = 0;
 			for (var k = n-1; k >= 0; --k) {
-				result_i[@j] += M1[i][k]*M2[k][j];
+				result_i[@j] += M1_i[k]*M2[k][j];
 			}
 		}
 	}
@@ -201,7 +211,9 @@ function rnn_invert(M, Mout=rnn_zero(array_length(M))) {
 	for (var i = 0; i < n; ++i) {
 		//Find highest row among i through n-1 by absolute value of its ith entry
 		var highest_row_i = i;
-		var highest_row_abs = abs(original[i][i]);
+		var original_i = original[i];
+		var result_i = result[i];
+		var highest_row_abs = abs(original_i[i]);
 		var current_row_abs;
 		for (var ii = i+1; ii < n; ii++) {
 			current_row_abs = abs(original[ii][i]);
@@ -216,36 +228,40 @@ function rnn_invert(M, Mout=rnn_zero(array_length(M))) {
 		}
 		//Swap the row on both the original and the result
 		if (i != highest_row_i) {
+			var original_highest_row_i = original[highest_row_i];
+			var result_highest_row_i = result[highest_row_i];
 			for (var j = 0; j < n; j++) {
 				var tmp;
-				tmp = original[i][j];
-				original[i][@j] = original[highest_row_i][j];
-				original[highest_row_i][@j] = tmp;
-				tmp = result[i][j];
-				result[i][@j] = result[highest_row_i][j];
-				result[highest_row_i][@j] = tmp;
+				tmp = original_i[j];
+				original_i[@j] = original_highest_row_i[j];
+				original_highest_row_i[@j] = tmp;
+				tmp = result_i[j];
+				result_i[@j] = result_highest_row_i[j];
+				result_highest_row_i[@j] = tmp;
 			}
 		}
 		//Scale down ith row on both the original and the result
 		var scale_factor = original[i, i];
 		for (var j = i+1; j < n; j++) {
-			original[i][@j] /= scale_factor;
+			original_i[@j] /= scale_factor;
 		}
 		for (var j = 0; j < n; j++) {
-			result[i][@j] /= scale_factor;
+			result_i[@j] /= scale_factor;
 		}
-		original[i][@i] = 1;
+		original_i[@i] = 1;
 		//Do row subtraction on every other row, on the original and the result
 		for (var ii = 0; ii < n; ii++) {
 			if (ii != i) {
-				var factor = original[ii][i];
+				var original_ii = original[ii];
+				var result_ii = result[ii];
+				var factor = original_ii[i];
 				for (var j = i+1; j < n; j++) {
-					original[ii][@j] -= factor*original[i][j];
+					original_ii[@j] -= factor*original_i[j];
 				}
 				for (var j = 0; j < n; j++) {
-					result[ii][@j] -= factor*result[i][j];
+					result_ii[@j] -= factor*result_i[j];
 				}
-				original[ii][@i] = 0;
+				original_ii[@i] = 0;
 			}
 		}
 	}
