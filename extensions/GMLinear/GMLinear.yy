@@ -89,72 +89,6 @@
             1,
             2,
           ],"resourceVersion":"1.0","name":"r33_decode_base64_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r44_clone","kind":11,"help":"r44_clone(M)","hidden":false,"returnType":2,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r44_clone","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r44_add","kind":11,"help":"r44_add(M1, M2)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r44_add","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r44_clone_to","kind":11,"help":"r44_clone_to(M, Mout)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r44_clone_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r44_add_to","kind":11,"help":"r44_add_to(M1, M2, Mout)","hidden":false,"returnType":2,"argCount":3,"args":[
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r44_add_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r44_subtract","kind":11,"help":"r44_subtract(M1, M2)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r44_subtract","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r44_subtract_to","kind":11,"help":"r44_subtract_to(M1, M2, Mout)","hidden":false,"returnType":2,"argCount":3,"args":[
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r44_subtract_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r44_multiply","kind":11,"help":"r44_multiply(M1, M2)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r44_multiply","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r44_multiply_to","kind":11,"help":"r44_multiply_to(M1, M2, Mout)","hidden":false,"returnType":2,"argCount":3,"args":[
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r44_multiply_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r44_transform","kind":11,"help":"r44_transform(M, v)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r44_transform","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r44_transform_to","kind":11,"help":"r44_transform_to(M, v, vout)","hidden":false,"returnType":2,"argCount":3,"args":[
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r44_transform_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r44_scale","kind":11,"help":"r44_scale(M, r)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r44_scale","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r44_scale_to","kind":11,"help":"r44_scale_to(M, r, Mout)","hidden":false,"returnType":2,"argCount":3,"args":[
-            2,
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r44_scale_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r44_transpose","kind":11,"help":"r44_transpose(M)","hidden":false,"returnType":2,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r44_transpose","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r44_transpose_to","kind":11,"help":"r44_transpose_to(M, Mout)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r44_transpose_to","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r44_invert","kind":11,"help":"r44_invert(M)","hidden":false,"returnType":2,"argCount":1,"args":[
-            2,
-          ],"resourceVersion":"1.0","name":"r44_invert","tags":[],"resourceType":"GMExtensionFunction",},
-        {"externalName":"r44_invert_to","kind":11,"help":"r44_invert_to(M, Mout)","hidden":false,"returnType":2,"argCount":2,"args":[
-            2,
-            2,
-          ],"resourceVersion":"1.0","name":"r44_invert_to","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"r44_encode_string","kind":11,"help":"r44_encode_string(M)","hidden":false,"returnType":1,"argCount":1,"args":[
             2,
           ],"resourceVersion":"1.0","name":"r44_encode_string","tags":[],"resourceType":"GMExtensionFunction",},
@@ -367,22 +301,6 @@
         {"name":"r33_encode_base64","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r33_decode_base64","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r33_decode_base64_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r44_clone","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r44_add","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r44_clone_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r44_add_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r44_subtract","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r44_subtract_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r44_multiply","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r44_multiply_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r44_transform","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r44_transform_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r44_scale","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r44_scale_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r44_transpose","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r44_transpose_to","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r44_invert","path":"extensions/GMLinear/GMLinear.yy",},
-        {"name":"r44_invert_to","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r44_encode_string","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r44_decode_string","path":"extensions/GMLinear/GMLinear.yy",},
         {"name":"r44_decode_string_to","path":"extensions/GMLinear/GMLinear.yy",},

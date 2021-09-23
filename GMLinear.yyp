@@ -4,6 +4,7 @@
     {"id":{"name":"GMLinear_r3_conversions","path":"scripts/GMLinear_r3_conversions/GMLinear_r3_conversions.yy",},"order":6,},
     {"id":{"name":"GMLinear_r33","path":"scripts/GMLinear_r33/GMLinear_r33.yy",},"order":9,},
     {"id":{"name":"GMLinear_encode_decode","path":"scripts/GMLinear_encode_decode/GMLinear_encode_decode.yy",},"order":3,},
+    {"id":{"name":"GMLinear_r44","path":"scripts/GMLinear_r44/GMLinear_r44.yy",},"order":10,},
     {"id":{"name":"GMLinear_r4","path":"scripts/GMLinear_r4/GMLinear_r4.yy",},"order":5,},
     {"id":{"name":"GMLinear_r2","path":"scripts/GMLinear_r2/GMLinear_r2.yy",},"order":1,},
     {"id":{"name":"__gmlin_test_constructors__","path":"scripts/__gmlin_test_constructors__/__gmlin_test_constructors__.yy",},"order":1,},
