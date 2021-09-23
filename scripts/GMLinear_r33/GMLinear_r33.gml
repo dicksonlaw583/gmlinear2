@@ -1,13 +1,13 @@
 ///@func r33(x00, x01, x02, x10, x11, x12, x20, x21, x22)
-///@arg x00
-///@arg x01
-///@arg x02
-///@arg x10
-///@arg x11
-///@arg x12
-///@arg x20
-///@arg x21
-///@arg x22
+///@arg {real} x00
+///@arg {real} x01
+///@arg {real} x02
+///@arg {real} x10
+///@arg {real} x11
+///@arg {real} x12
+///@arg {real} x20
+///@arg {real} x21
+///@arg {real} x22
 ///@desc Return a new 3x3 matrix.
 function r33(x00, x01, x02, x10, x11, x12, x20, x21, x22) {
 	GMLINEAR_INLINE;
