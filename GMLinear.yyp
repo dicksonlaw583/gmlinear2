@@ -13,6 +13,7 @@
     {"id":{"name":"__gmlin_test_vector_operations__","path":"scripts/__gmlin_test_vector_operations__/__gmlin_test_vector_operations__.yy",},"order":2,},
     {"id":{"name":"GMLinear_r2_conversions","path":"scripts/GMLinear_r2_conversions/GMLinear_r2_conversions.yy",},"order":2,},
     {"id":{"name":"__gmlin_test_matrix_operations__","path":"scripts/__gmlin_test_matrix_operations__/__gmlin_test_matrix_operations__.yy",},"order":3,},
+    {"id":{"name":"GMLinear_constants","path":"scripts/GMLinear_constants/GMLinear_constants.yy",},"order":13,},
     {"id":{"name":"GMLinear_rn","path":"scripts/GMLinear_rn/GMLinear_rn.yy",},"order":7,},
     {"id":{"name":"__GMA_BREAKPOINT__","path":"scripts/__GMA_BREAKPOINT__/__GMA_BREAKPOINT__.yy",},"order":0,},
     {"id":{"name":"__GMA_SETTINGS__","path":"scripts/__GMA_SETTINGS__/__GMA_SETTINGS__.yy",},"order":1,},
@@ -21,7 +22,6 @@
     {"id":{"name":"GMAssert","path":"extensions/GMAssert/GMAssert.yy",},"order":0,},
     {"id":{"name":"GMLinear_r22","path":"scripts/GMLinear_r22/GMLinear_r22.yy",},"order":8,},
     {"id":{"name":"rm_gmlin_test","path":"rooms/rm_gmlin_test/rm_gmlin_test.yy",},"order":4,},
-    {"id":{"name":"GMLinear","path":"extensions/GMLinear/GMLinear.yy",},"order":0,},
   ],
   "Options": [
     {"name":"HTML5","path":"options/html5/options_html5.yy",},
