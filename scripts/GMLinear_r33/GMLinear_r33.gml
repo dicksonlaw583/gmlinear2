@@ -244,3 +244,99 @@ function r33_invert(M, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 	}
 }
 #macro r33_invert_to r33_invert
+
+///@func r33_encode_string(M)
+///@arg {r33} M The 3x3 matrix to encode.
+///@desc Return the string form of 3x3 matrix M.
+function r33_encode_string(M) {
+	GMLINEAR_INLINE;
+	return string_replace_all(
+		string_format(M[0][0], 15, 14)+","+
+		string_format(M[0][1], 15, 14)+","+
+		string_format(M[0][2], 15, 14)+";"+
+		string_format(M[1][0], 15, 14)+","+
+		string_format(M[1][1], 15, 14)+","+
+		string_format(M[1][2], 15, 14)+";"+
+		string_format(M[2][0], 15, 14)+","+
+		string_format(M[2][1], 15, 14)+","+
+		string_format(M[2][2], 15, 14)
+	, " ", "");
+}
+
+///@description r33_decode_string(str, <Mout>)
+///@arg {string} str The string to decode.
+///@arg {r33} <Mout> (Optional) The output 3x3 matrix to overwrite. If unspecified, return a new matrix.
+///@desc Return the decoded form of str.
+function r33_decode_string(_str, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
+	GMLINEAR_INLINE;
+	var pos;
+	var str = _str;
+	pos = string_pos(",", str);
+	Mout[0][@0] = real(string_copy(str, 1, pos-1));
+	str = string_delete(str, 1, pos);
+	pos = string_pos(",", str);
+	Mout[0][@1] = real(string_copy(str, 1, pos-1));
+	str = string_delete(str, 1, pos);
+	pos = string_pos(";", str);
+	Mout[0][@2] = real(string_copy(str, 1, pos-1));
+	str = string_delete(str, 1, pos);
+	pos = string_pos(",", str);
+	Mout[1][@0] = real(string_copy(str, 1, pos-1));
+	str = string_delete(str, 1, pos);
+	pos = string_pos(",", str);
+	Mout[1][@1] = real(string_copy(str, 1, pos-1));
+	str = string_delete(str, 1, pos);
+	pos = string_pos(";", str);
+	Mout[1][@2] = real(string_copy(str, 1, pos-1));
+	str = string_delete(str, 1, pos);
+	pos = string_pos(",", str);
+	Mout[2][@0] = real(string_copy(str, 1, pos-1));
+	str = string_delete(str, 1, pos);
+	pos = string_pos(",", str);
+	Mout[2][@1] = real(string_copy(str, 1, pos-1));
+	Mout[2][@2] = real(string_delete(str, 1, pos));
+	return Mout;
+}
+#macro r33_decode_string_to r33_decode_string
+
+///@func r33_encode_base64(M)
+///@arg {r33} M The 4x4 matrix to encode.
+///@desc Return the base64 form of 3x3 matrix M.
+function r33_encode_base64(M) {
+	GMLINEAR_INLINE;
+	var buffer = buffer_create(72, buffer_fixed, 1);
+	buffer_write(buffer, buffer_f64, M[0][0]);
+	buffer_write(buffer, buffer_f64, M[0][1]);
+	buffer_write(buffer, buffer_f64, M[0][2]);
+	buffer_write(buffer, buffer_f64, M[1][0]);
+	buffer_write(buffer, buffer_f64, M[1][1]);
+	buffer_write(buffer, buffer_f64, M[1][2]);
+	buffer_write(buffer, buffer_f64, M[2][0]);
+	buffer_write(buffer, buffer_f64, M[2][1]);
+	buffer_write(buffer, buffer_f64, M[2][2]);
+	var result = buffer_base64_encode(buffer, 0, 72);
+	buffer_delete(buffer);
+	return result;
+}
+
+///@func r33_decode_base64(enc, <Mout>)
+///@arg {string} enc The string to decode.
+///@arg {r33} <Mout> (Optional) The output 4x4 matrix to overwrite. If unspecified, return a new matrix.
+///@desc Return the base64-decoded form of str.
+function r33_decode_base64(enc, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
+	GMLINEAR_INLINE;
+	var buffer = buffer_create(72, buffer_fixed, 1);
+	buffer_base64_decode_ext(buffer, enc, 0);
+	Mout[0][@0] = buffer_read(buffer, buffer_f64);
+	Mout[0][@1] = buffer_read(buffer, buffer_f64);
+	Mout[0][@2] = buffer_read(buffer, buffer_f64);
+	Mout[1][@0] = buffer_read(buffer, buffer_f64);
+	Mout[1][@1] = buffer_read(buffer, buffer_f64);
+	Mout[1][@2] = buffer_read(buffer, buffer_f64);
+	Mout[2][@0] = buffer_read(buffer, buffer_f64);
+	Mout[2][@1] = buffer_read(buffer, buffer_f64);
+	Mout[2][@2] = buffer_read(buffer, buffer_f64);
+	buffer_delete(buffer);
+	return Mout;
+}
+#macro r33_decode_base64_to r33_decode_base64

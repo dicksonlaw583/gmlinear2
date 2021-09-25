@@ -188,3 +188,97 @@ function rmn_transform(M, v, vout=array_create(array_length(M))) {
 	return vout;
 }
 #macro rmn_transform_to rmn_transform
+
+///@func rmn_encode_string(M)
+///@arg {rmn} M The mxn matrix to encode.
+///@desc Return the string form of M.
+function rmn_encode_string(M) {
+	GMLINEAR_INLINE;
+	var result = "";
+	var m = array_length(M);
+	var n = array_length(M[0]);
+	for (var i = 0; i < m; ++i) {
+		var M_i = M[i];
+		for (var j = 0; j < n; ++j) {
+			if (j > 0) result += ",";
+			result += string_format(M_i[j], 15, 14);
+		}
+		if (i < m-1) {
+			result += ";";
+		}
+	}
+	return string_replace_all(result, " ", "");
+}
+
+///@func rmn_decode_string(str)
+///@arg {string} str The string to decode.
+///@arg {r44} <Mout> (Optional) The output mxn matrix to overwrite. If unspecified, return a new matrix.
+///@desc Return the decoded form of str.
+function rmn_decode_string(_str, Mout=rmn_zero(string_count(";", _str)+1, string_count(",", string_copy(_str, 1, string_pos(";", _str)))+1)) {
+	var str = _str;
+	var i_dim = string_count(";", str);
+	var cpos, spos, rowstr, j_dim, Mout_i;
+	for (var i = 0; i < i_dim; i++) {
+		spos = string_pos(";", str);
+		rowstr = string_copy(str, 1, spos-1);
+		str = string_delete(str, 1, spos);
+		j_dim = string_count(",", rowstr);
+		Mout_i = Mout[i];
+		for (var j = 0; j < j_dim; j++) {
+			cpos = string_pos(",", rowstr);
+			Mout_i[@j] = real(string_copy(rowstr, 1, cpos-1));
+			rowstr = string_delete(rowstr, 1, cpos);
+		}
+		Mout_i[@j_dim] = real(rowstr);
+	}
+	Mout_i = Mout[i_dim];
+	for (var j = 0; j < j_dim; j++) {
+		cpos = string_pos(",", str);
+		Mout_i[@j] = real(string_copy(str, 1, cpos-1));
+		str = string_delete(str, 1, cpos);
+	}
+	Mout_i[@j_dim] = real(str);
+	return Mout;
+}
+#macro rmn_decode_string_to rmn_decode_string
+
+///@func rmn_encode_base64(M)
+///@arg {rmn} M The mxn matrix to encode.
+///@desc Return the base64 form of mxn matrix M.
+function rmn_encode_base64(M) {
+	GMLINEAR_INLINE;
+	var m = array_length(M);
+	var n = array_length(M[0]);
+	var mn8 = m*n*8;
+	var buffer = buffer_create(mn8, buffer_fixed, 1);
+	for (var i = 0; i < m; i++) {
+		var M_i = M[i];
+		for (var j = 0; j < n; j++) {
+			buffer_write(buffer, buffer_f64, M_i[j]);
+		}
+	}
+	var result = buffer_base64_encode(buffer, 0, mn8);
+	buffer_delete(buffer);
+	return result;
+}
+
+///@func rmn_decode_base64(enc, m, n, <Mout>)
+///@arg {string} enc The string to decode.
+///@arg {int} m
+///@arg {int} n
+///@arg {rmn} <Mout> (Optional) The output mxn matrix to overwrite. If unspecified, return a new matrix.
+///@desc Return the base64-decoded form of str.
+function rmn_decode_base64(enc, m, n, Mout=rmn_zero(m, n)) {
+	GMLINEAR_INLINE;
+	var buffer = buffer_create(128, buffer_fixed, 1);
+	buffer_base64_decode_ext(buffer, enc, 0);
+	for (var i = 0; i < m; i++) {
+		var Mout_i = Mout[i];
+		for (var j = 0; j < n; j++) {
+			Mout_i[@j] = buffer_read(buffer, buffer_f64);
+		}
+	}
+	buffer_delete(buffer);
+	return Mout;
+}
+#macro rmn_decode_base64_to rmn_decode_base64

@@ -207,3 +207,64 @@ function r4_rej(v1, v2, vout=[0, 0, 0, 0]) {
 	return vout;
 }
 #macro r4_rej_to r4_rej
+
+///@func r4_encode_string(v)
+///@arg {r4} v The 4D vector to encode.
+///@desc Return the string form of 4D vector v.
+function r4_encode_string(v) {
+	GMLINEAR_INLINE;
+	return string_replace_all(string_format(v[0], 15, 14)+","+string_format(v[1], 15, 14)+","+string_format(v[2], 15, 14)+","+string_format(v[3], 15, 14), " ", "");
+}
+
+///@func r4_decode_string(str, <vout>)
+///@arg {string} str The string to decode.
+///@arg {r4} <vout> (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
+///@desc Return the decoded form of str.
+function r4_decode_string(str, vout=[0, 0]) {
+	GMLINEAR_INLINE;
+	var _str, pos;
+	_str = str;
+	pos = string_pos(",", _str);
+	vout[@ 0] = real(string_copy(_str, 1, pos-1));
+	_str = string_delete(_str, 1, pos);
+	pos = string_pos(",", _str);
+	vout[@ 1] = real(string_copy(_str, 1, pos-1));
+	_str = string_delete(_str, 1, pos);
+	pos = string_pos(",", _str);
+	vout[@ 2] = real(string_copy(_str, 1, pos-1));
+	vout[@ 3] = real(string_delete(_str, 1, pos));
+	return vout;
+}
+#macro r4_decode_string_to r4_decode_string
+
+///@func r4_encode_base64(v)
+///@arg {r4} v The 4D vector to encode.
+///@desc Return the base64 form of 4D vector v.
+function r4_encode_base64(v) {
+	GMLINEAR_INLINE;
+	var buffer = buffer_create(32, buffer_fixed, 1);
+	buffer_write(buffer, buffer_f64, v[0]);
+	buffer_write(buffer, buffer_f64, v[1]);
+	buffer_write(buffer, buffer_f64, v[2]);
+	buffer_write(buffer, buffer_f64, v[3]);
+	var result = buffer_base64_encode(buffer, 0, 32);
+	buffer_delete(buffer);
+	return result;
+}
+
+///@func r4_decode_base64(enc, <vout>)
+///@arg {string} enc The string to decode.
+///@arg {r4} <vout> (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
+///@desc Return the base64-decoded form of str.
+function r4_decode_base64(enc, vout=[0, 0]) {
+	GMLINEAR_INLINE;
+	var buffer = buffer_create(32, buffer_fixed, 1);
+	buffer_base64_decode_ext(buffer, enc, 0);
+	vout[@0] = buffer_read(buffer, buffer_f64);
+	vout[@1] = buffer_read(buffer, buffer_f64);
+	vout[@2] = buffer_read(buffer, buffer_f64);
+	vout[@3] = buffer_read(buffer, buffer_f64);
+	buffer_delete(buffer);
+	return vout;
+}
+#macro r4_decode_base64_to r4_decode_base64
