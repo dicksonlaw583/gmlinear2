@@ -548,7 +548,7 @@ function __gmlin_test_matrix_operations__() {
 	      test_rmn_transpose_to_Mout = rmn_zero(2, 5);
 	  assert_is(rmn_transpose_to(test_rmn_transpose_to_M1, test_rmn_transpose_to_Mout), test_rmn_transpose_to_Mout, "rmn_transpose_to() is returning the wrong matrix!");
 	  assert_equal(test_rmn_transpose_to_Mout, test_rmn_transpose_to_solution, "rmn_transpose_to() failed!");
-	  test_rmn_tranpose_to_M1 = 0;
+	  test_rmn_transpose_to_M1 = 0;
 	  test_rmn_transpose_to_M1 = rmn_clone(test_r33_transpose_to_M1_orig);
 	  test_rmn_transpose_to_Mout = rmn_zero(3, 3);
 	  assert_is(rmn_transpose_to(test_rmn_transpose_to_M1, test_rmn_transpose_to_M1), test_rmn_transpose_to_M1, "rmn_transpose_to() is returning the wrong matrix when Mout is M1!");
