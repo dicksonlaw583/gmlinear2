@@ -22,7 +22,7 @@ function rn_zero(n) {
 ///@arg {rn} v The n-dimensional vector to operate on.
 ///@arg {rn} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return a clone of the given n-dimensional vector.
-function rn_clone(v, vout=[]) {
+function rn_clone(v, vout=array_create(array_length(v), 0)) {
 	GMLINEAR_INLINE;
 	array_copy(vout, 0, v, 0, array_length(v));
 	return vout;
@@ -34,7 +34,7 @@ function rn_clone(v, vout=[]) {
 ///@arg {rn} v2 The second n-dimensional vector.
 ///@arg {rn} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return v1+v2.
-function rn_add(v1, v2, vout=[]) {
+function rn_add(v1, v2, vout=array_create(array_length(v1), 0)) {
 	GMLINEAR_INLINE;
 	for (var i = array_length(v1)-1; i >= 0; --i) {
 		vout[@i] = v1[i]+v2[i];
@@ -48,7 +48,7 @@ function rn_add(v1, v2, vout=[]) {
 ///@arg {rn} v2 The second n-dimensional vector.
 ///@arg {rn} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return v1-v2.
-function rn_subtract(v1, v2, vout=[]) {
+function rn_subtract(v1, v2, vout=array_create(array_length(v1), 0)) {
 	GMLINEAR_INLINE;
 	for (var i = array_length(v1)-1; i >= 0; --i) {
 		vout[@i] = v1[i]-v2[i];
@@ -62,7 +62,7 @@ function rn_subtract(v1, v2, vout=[]) {
 ///@arg {real} r The scaling factor.
 ///@arg {rn} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return rv.
-function rn_scale(v, r, vout=[]) {
+function rn_scale(v, r, vout=array_create(array_length(v), 0)) {
 	GMLINEAR_INLINE;
 	for (var i = array_length(v)-1; i >= 0; --i) {
 		vout[@i] = r*v[i];
@@ -154,7 +154,7 @@ function rn_maxnorm(v) {
 ///@arg {rn} v The n-dimensional vector to operate on.
 ///@arg {rn} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the n-dimensional unit vector in the direction of v.
-function rn_unit(v, vout=[]) {
+function rn_unit(v, vout=array_create(array_length(v), 0)) {
 	GMLINEAR_INLINE;
 	var factor = 0;
 	var v_dim = array_length(v);
@@ -182,7 +182,7 @@ function rn_unit(v, vout=[]) {
 ///@arg {real} amount The interpolation factor. 0=first vector, 1=second vector
 ///@arg {rn} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the linear interpolation between n-dimensional vectors v1 and v2.
-function rn_lerp(v1, v2, amount, vout=[]) {
+function rn_lerp(v1, v2, amount, vout=array_create(array_length(v1), 0)) {
 	GMLINEAR_INLINE;
 	for (var i = array_length(v1)-1; i >= 0; --i) {
 		vout[@i] = lerp(v1[i], v2[i], amount);
@@ -196,7 +196,7 @@ function rn_lerp(v1, v2, amount, vout=[]) {
 ///@arg {rn} v2 The second n-dimensional vector.
 ///@arg {rn} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the projection from v1 onto v2
-function rn_proj(v1, v2, vout=[]) {
+function rn_proj(v1, v2, vout=array_create(array_length(v1), 0)) {
 	GMLINEAR_INLINE;
 	var v_dim = array_length(v1);
 	var aa = 0;
@@ -219,7 +219,7 @@ function rn_proj(v1, v2, vout=[]) {
 ///@arg {rn} v2 The second n-dimensional vector.
 ///@arg {rn} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the rejection from v1 onto v2
-function rn_rej(v1, v2, vout=[]) {
+function rn_rej(v1, v2, vout=array_create(array_length(v1), 0)) {
 	GMLINEAR_INLINE;
 	var v_dim = array_length(v1);
 	var aa = 0;
