@@ -84,4 +84,20 @@ function __gmlin_test_decomposition_operations__() {
 	assert_equalish([L[0][1], L[0][2], L[0][3], L[1][2], L[1][3], L[2][3]], [0, 0, 0, 0, 0, 0], "PA=LU decomposition 1 non-lower-triangular L");
 	assert_equalish([U[1][0], U[2][0], U[2][1], U[3][0], U[3][1], U[3][2]], [0, 0, 0, 0, 0, 0], "PA=LU decomposition 1 non-upper-triangular U");
 	#endregion
+
+	#region rmn_solve_qr(Q, R, b, <vout>)
+	// rmn_solve_qr 1
+	var M = [
+		[4, 9, 2],
+		[3, 5, 7],
+		[8, 1, 6]
+	];
+	var Q = rnn_zero(3);
+	var R = rnn_zero(3);
+	var b = [43, 49, 43];
+	var v = rn_zero(3);
+	rmn_qr(M, Q, R);
+	assert_equal(rmn_solve_qr(Q, R, b, v), [2, 3, 4], "rmn_solve_qr 1a failed!");
+	assert_equal(v, [2, 3, 4], "rmn_solve_qr 1b failed!");
+	#endregion
 }

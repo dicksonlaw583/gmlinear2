@@ -61,6 +61,9 @@ function rmn_qr(M, Q, R) {
 				}
 				// Multiply Householder matrix into R (with special fudge for entries known to be 0)
 				rmn_multiply(Qhh, R, R);
+				for (var i = m-1; i > c; --i) {
+					R[i][@c] = 0;
+				}
 				// Multiply Q by Householder matrix
 				rnn_multiply(Q, Qhh, Q);
 			}
@@ -182,4 +185,43 @@ function rnn_palu(M, P, L, U) {
 			}
 		}
 	}
+}
+
+///@func rmn_solve_qr(Q, R, b, <vout>)
+///@arg {rnn} Q The mxm matrix from QR decomposition
+///@arg {rmn} R The mxn matrix from QR decomposition
+///@arg {rn} b The m-dimensional vector.
+///@arg {rn} <vout> (Optional) The n-dimensional solution vector to output to. If not given, create the new vector.
+///@desc Solve QRx = b for x and return that.
+function rmn_solve_qr(Q, R, b, vout=array_create(array_length(R[0]), 0)) {
+	var m = array_length(R);
+	var n = array_length(R[0]);
+	// Get (Q^T)b
+	var qtb = array_create(m, 0);
+	for (var i = m-1; i >= 0; --i) {
+		var qtb_i = 0;
+		for (var j = m-1; j >= 0; --j) {
+			qtb_i += Q[j][i]*b[j];
+		}
+		qtb[@i] = qtb_i;
+	}
+	// Clear vout to 0
+	for (var i = n-1; i >= 0; --i) {
+		vout[@i] = 0;
+	}
+	// Solve Rx=(Q^T)b
+	// For each row counting backwards
+	for (var i = m-1; i >= 0; --i) {
+		var R_i = R[i];
+		// Seek to pivot
+		for (var p = 0; p < n && R_i[p] == 0; ++p) {}
+		if (p < n) {
+			var vout_p = qtb[i];
+			for (var j = n-1; j > p; --j) {
+				vout_p -= vout[j]*R_i[j];
+			}
+			vout[@p] = vout_p/R_i[p];
+		}
+	}
+	return vout;
 }
