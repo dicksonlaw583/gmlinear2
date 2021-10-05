@@ -267,3 +267,48 @@ function rnn_solve_lu(L, U, b, vout=array_create(array_length(b), 0)) {
 	}
 	return vout;
 }
+
+///@func rnn_solve_palu(P, L, U, b, <vout>)
+///@arg {rnn} P The nxn permutation matrix from PA=LU decomposition
+///@arg {rnn} L The nxn lower-triangular matrix from PA=LU decomposition
+///@arg {rnn} U The nxn upper-triangular matrix from PA=LU decomposition
+///@arg {rn} b The n-dimensional vector.
+///@arg {rn} <vout> (Optional) The n-dimensional solution vector to output to. If not given, create the new vector.
+///@desc Solve LUx = Pb for x and return that.
+function rnn_solve_palu(P, L, U, b, vout=array_create(array_length(b), 0)) {
+	var n = array_length(U);
+	// Calculate Pb
+	var Pb = rnn_transform(P, b);
+	// Solve Ly = Pb
+	var vmid = array_create(n, 0);
+	for (var i = 0; i < n; ++i) {
+		var L_i = L[i];
+		// Seek to pivot
+		for (var p = n-1; p >= 0 && L_i[p] == 0; --p) {}
+		if (p >= 0) {
+			var vmid_p = Pb[i];
+			for (var j = 0; j < p; ++j) {
+				vmid_p -= vmid[j]*L_i[j];
+			}
+			vmid[@p] = vmid_p/L_i[p];
+		}
+	}
+	// Clear vout to 0
+	for (var i = n-1; i >= 0; --i) {
+		vout[@i] = 0;
+	}
+	// Solve Ux = y
+	for (var i = n-1; i >= 0; --i) {
+		var U_i = U[i];
+		// Seek to pivot
+		for (var p = 0; p < n && U_i[p] == 0; ++p) {}
+		if (p < n) {
+			var vout_p = vmid[i];
+			for (var j = n-1; j > p; --j) {
+				vout_p -= vout[j]*U_i[j];
+			}
+			vout[@p] = vout_p/U_i[p];
+		}
+	}
+	return vout;
+}

@@ -116,4 +116,21 @@ function __gmlin_test_decomposition_operations__() {
 	assert_equal(rnn_solve_lu(L, U, b, v), [2, 3, 4], "rnn_solve_lu 1a failed!");
 	assert_equal(v, [2, 3, 4], "rnn_solve_lu 1b failed!");
 	#endregion
+	
+	#region rnn_solve_palu(P, L, U, b, <vout>)
+	// rnn_solve_palu 1
+	var M = [
+		[4, 9, 2],
+		[3, 5, 7],
+		[8, 1, 6]
+	];
+	var P = rnn_identity(3);
+	var L = rnn_zero(3);
+	var U = rnn_zero(3);
+	var b = [43, 49, 43];
+	var v = rn_zero(3);
+	rnn_palu(M, P, L, U);
+	assert_equal(rnn_solve_palu(P, L, U, b, v), [2, 3, 4], "rnn_solve_palu 1a failed!");
+	assert_equal(v, [2, 3, 4], "rnn_solve_palu 1b failed!");
+	#endregion
 }
