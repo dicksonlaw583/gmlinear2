@@ -8,6 +8,7 @@ function gmlin_test_all() {
 	__gmlin_test_constructors__();
 	__gmlin_test_vector_operations__();
 	__gmlin_test_matrix_operations__();
+	__gmlin_test_decomposition_operations__();
 	/** END TESTS HERE **/
 
 	timeB = current_time;
