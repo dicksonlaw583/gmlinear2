@@ -323,6 +323,18 @@ function rnn_det(M) {
 	return det;
 }
 
+///@func rnn_tr(M)
+///@arg {rnn} M The original nxn matrix
+///@func Return the trace of nxn matrix M.
+function rnn_tr(M) {
+	GMLINEAR_INLINE;
+	var tr = 0;
+	for (var i = array_length(M)-1; i >= 0; --i) {
+		tr += M[i][i];
+	}
+	return tr;
+}
+
 ///@func rnn_encode_string(M)
 ///@arg {rnn} M The nxn matrix to encode.
 ///@desc Return the string form of M.

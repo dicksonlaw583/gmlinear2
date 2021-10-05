@@ -182,6 +182,14 @@ function r22_det(M) {
 	return M[0][0]*M[1][1]-M[1][0]*M[0][1];
 }
 
+///@func r22_tr(M)
+///@arg {r22} M The original 2x2 matrix
+///@func Return the trace of 2x2 matrix M.
+function r22_tr(M) {
+	GMLINEAR_INLINE;
+	return M[0][0]+M[1][1];
+}
+
 ///@func r22_encode_string(M)
 ///@arg {r22} M The 2x2 matrix to encode.
 ///@desc Return the string form of 2x2 matrix M.

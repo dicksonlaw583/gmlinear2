@@ -362,6 +362,14 @@ function r44_det(M) {
            -M[0][3]*M[1][0]*M[2][1]*M[3][2]-M[0][3]*M[1][1]*M[2][2]*M[3][0]-M[0][3]*M[1][2]*M[2][0]*M[3][1];
 }
 
+///@func r44_tr(M)
+///@arg {r44} M The original 4x4 matrix
+///@func Return the trace of 4x4 matrix M.
+function r44_tr(M) {
+	GMLINEAR_INLINE;
+	return M[0][0]+M[1][1]+M[2][2]+M[3][3];
+}
+
 ///@func r44_encode_string(M)
 ///@arg {r44} M The 4x4 matrix to encode.
 ///@desc Return the string form of 4x4 matrix M.
