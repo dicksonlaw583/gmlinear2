@@ -4,6 +4,7 @@
 ///@arg {rmn} R The mxn matrix to store the upper-triangular part in
 ///@desc Perform QR decomposition on an mxn matrix M.
 function rmn_qr(M, Q, R) {
+	GMLINEAR_INLINE;
 	var m = array_length(M);
 	var n = array_length(M[0]);
 	// Reset Q to identity
@@ -78,6 +79,7 @@ function rmn_qr(M, Q, R) {
 ///@arg {rnn} U The target nxn matrix for upper-triangular component
 ///@desc Perform LU decomposition on an nxn matrix M and return whether successful.
 function rnn_lu(M, L, U) {
+	GMLINEAR_INLINE;
 	var n = array_length(M);
 	
 	// Make sure there are no 0s on M's diagonal
@@ -127,6 +129,7 @@ function rnn_lu(M, L, U) {
 ///@arg {rnn} U The target nxn matrix for upper-triangular component
 ///@desc Perform PA=LU decomposition on an nxn matrix M.
 function rnn_palu(M, P, L, U) {
+	GMLINEAR_INLINE;
 	var n = array_length(M);
 	var temp = array_create(n);
 	
@@ -194,6 +197,7 @@ function rnn_palu(M, P, L, U) {
 ///@arg {rn} <vout> (Optional) The n-dimensional solution vector to output to. If not given, create the new vector.
 ///@desc Solve QRx = b for x and return that.
 function rmn_solve_qr(Q, R, b, vout=array_create(array_length(R[0]), 0)) {
+	GMLINEAR_INLINE;
 	var m = array_length(R);
 	var n = array_length(R[0]);
 	// Get (Q^T)b
@@ -233,6 +237,7 @@ function rmn_solve_qr(Q, R, b, vout=array_create(array_length(R[0]), 0)) {
 ///@arg {rn} <vout> (Optional) The n-dimensional solution vector to output to. If not given, create the new vector.
 ///@desc Solve LUx = b for x and return that.
 function rnn_solve_lu(L, U, b, vout=array_create(array_length(b), 0)) {
+	GMLINEAR_INLINE;
 	var n = array_length(U);
 	// Solve Ly = b
 	var vmid = array_create(n, 0);
@@ -276,6 +281,7 @@ function rnn_solve_lu(L, U, b, vout=array_create(array_length(b), 0)) {
 ///@arg {rn} <vout> (Optional) The n-dimensional solution vector to output to. If not given, create the new vector.
 ///@desc Solve LUx = Pb for x and return that.
 function rnn_solve_palu(P, L, U, b, vout=array_create(array_length(b), 0)) {
+	GMLINEAR_INLINE;
 	var n = array_length(U);
 	// Calculate Pb
 	var Pb = rnn_transform(P, b);
