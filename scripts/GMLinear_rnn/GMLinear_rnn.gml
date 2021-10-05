@@ -270,6 +270,59 @@ function rnn_invert(M, Mout=rnn_zero(array_length(M))) {
 }
 #macro rnn_invert_to rnn_invert
 
+///@func rnn_det(M)
+///@arg {rnn} M The original nxn matrix
+///@func Return the determinant of nxn matrix M.
+function rnn_det(M) {
+	GMLINEAR_INLINE;
+	// Make a copy of M to play with
+	// Also set up other temporary variables
+	var n = array_length(M);
+	var U = rnn_clone(M);
+	var det = 1;
+	var temp = array_create(n);
+	// Try to reduce U to REF
+	// For each column
+	for (var c = 0; c < n; ++c) {
+		// Pull row with highest column value by absolute value to the top
+		var b = c;
+		var bv = abs(U[c][c]);
+		for (var r = n-1; r > c; --r) {
+			var aUrc = abs(U[r][c]);
+			if (aUrc > bv) {
+				b = r;
+				bv = aUrc;
+			}
+		}
+		if (b != c) {
+			// Swap U rows
+			array_copy(temp, 0, U[c], 0, n);
+			array_copy(U[c], 0, U[b], 0, n);
+			array_copy(U[b], 0, temp, 0, n);
+			// Flip determinant sign
+			det = -det;
+		}
+		// Zero out part under the diagonal using a Gauss-Jordan row step
+		var U_c_c = U[c][c];
+		if (U_c_c == 0) {
+			return 0;
+		} else {
+			for (var r = c+1; r < n; ++r) {
+				var m = U[r][c]/U_c_c;
+				U[r][@c] = 0;
+				for (var i = c+1; i < n; ++i) {
+					U[r][@i] -= m*U[c][i];
+				}
+			}
+		}
+	}
+	// Determinant is REF diagonal product
+	for (var i = n-1; i >= 0; --i) {
+		det *= U[i][i];
+	}
+	return det;
+}
+
 ///@func rnn_encode_string(M)
 ///@arg {rnn} M The nxn matrix to encode.
 ///@desc Return the string form of M.

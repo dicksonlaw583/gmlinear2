@@ -245,6 +245,15 @@ function r33_invert(M, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 }
 #macro r33_invert_to r33_invert
 
+///@func r33_det(M)
+///@arg {r33} M The original 3x3 matrix
+///@func Return the determinant of 3x3 matrix M.
+function r33_det(M) {
+	GMLINEAR_INLINE;
+	return M[0][0]*M[1][1]*M[2][2]+M[1][0]*M[2][1]*M[0][2]+M[2][0]*M[0][1]*M[1][2]
+           -M[0][0]*M[2][1]*M[1][2]-M[2][0]*M[1][1]*M[0][2]-M[1][0]*M[0][1]*M[2][2];
+}
+
 ///@func r33_encode_string(M)
 ///@arg {r33} M The 3x3 matrix to encode.
 ///@desc Return the string form of 3x3 matrix M.
