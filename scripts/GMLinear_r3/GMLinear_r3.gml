@@ -146,7 +146,7 @@ function r3_maxnorm(v) {
 ///@desc Return the 3D unit vector in the direction of v.
 function r3_unit(v, vout=[0, 0, 0]) {
 	GMLINEAR_INLINE;
-	if (v[0] == 0 && v[1] == 0) {
+	if (v[0] == 0 && v[1] == 0 && v[2] == 0) {
 		vout[@0] = 0;
 		vout[@1] = 0;
 		vout[@2] = 0;

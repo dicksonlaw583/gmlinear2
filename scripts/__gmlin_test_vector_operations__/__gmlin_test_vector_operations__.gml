@@ -310,6 +310,7 @@ function __gmlin_test_vector_operations__() {
 	  //r3_unit(v)
 	  assert_equalish(r3_unit(r3(2, -10, 11)), r3(2/15, -2/3, 11/15), "r3_unit() failed!");
 	  assert_equal(r3_unit(r3_zero()), r3_zero(), "r3_unit() failed on zero vector!");
+	  assert_equal(r3_unit(r3(0, 0, 12)), r3(0, 0, 1), "r3_unit() failed regression against GitHub #4");
 	  //r4_unit(v)
 	  assert_equalish(r4_unit(r4(1, -2, 8, -10)), r4(1/13, -2/13, 8/13, -10/13), "r4_unit() failed!");
 	  assert_equal(r4_unit(r4_zero()), r4_zero(), "r4_unit() failed on zero vector!");
