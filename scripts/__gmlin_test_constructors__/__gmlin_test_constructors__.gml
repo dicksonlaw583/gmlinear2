@@ -1,3 +1,4 @@
+//Feather disable all
 function __gmlin_test_constructors__() {
 	{
 	  //r2(x, y)
@@ -263,3 +264,4 @@ function __gmlin_test_constructors__() {
 
 
 }
+// Feather enable all

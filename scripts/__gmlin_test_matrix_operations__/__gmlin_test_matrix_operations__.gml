@@ -1,3 +1,4 @@
+// Feather disable all
 function __gmlin_test_matrix_operations__() {
 	{
 	  //r22_clone
@@ -897,3 +898,4 @@ function __gmlin_test_matrix_operations__() {
 
 
 }
+// feather enable all

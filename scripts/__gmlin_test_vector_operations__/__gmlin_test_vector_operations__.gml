@@ -1,3 +1,4 @@
+// feather disable all
 function __gmlin_test_vector_operations__() {
 	{
 	  //r2_clone(v)
@@ -1024,3 +1025,4 @@ function __gmlin_test_vector_operations__() {
 
 
 }
+// feather enable all

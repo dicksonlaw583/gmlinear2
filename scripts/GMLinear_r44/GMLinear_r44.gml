@@ -17,7 +17,7 @@
 ///@arg {real} x33
 ///@desc Return a new 4x4 matrix.
 function r44(x00, x01, x02, x03, x10, x11, x12, x13, x20, x21, x22, x23, x30, x31, x32, x33) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	return [
 		[x00, x01, x02, x03],
 		[x10, x11, x12, x13],
@@ -29,7 +29,7 @@ function r44(x00, x01, x02, x03, x10, x11, x12, x13, x20, x21, x22, x23, x30, x3
 ///@func r44_identity()
 ///@desc Return the 4x4 identity matrix.
 function r44_identity() {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	return [
 		[1, 0, 0, 0],
 		[0, 1, 0, 0],
@@ -41,7 +41,7 @@ function r44_identity() {
 ///@func r44_zero()
 ///@desc Return the 4x4 zero matrix.
 function r44_zero() {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	return [
 		[0, 0, 0, 0],
 		[0, 0, 0, 0],
@@ -51,11 +51,11 @@ function r44_zero() {
 }
 
 ///@func r44_clone(M, <Mout>)
-///@arg {r44} M The original 4x4 matrix
-///@arg {r44} <Mout> (Optional) The output 4x4 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} M The original 4x4 matrix
+///@arg {Array<Array<Real>>} <Mout> (Optional) The output 4x4 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return a clone of M.
 function r44_clone(M, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	Mout[0][@0] = M[0][0];
 	Mout[0][@1] = M[0][1];
 	Mout[0][@2] = M[0][2];
@@ -77,12 +77,12 @@ function r44_clone(M, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 
 #macro r44_clone_to r44_clone
 
 ///@func r44_add(M1, M2, <Mout>)
-///@arg {r44} M1 The first 4x4 matrix.
-///@arg {r44} M2 The second 4x4 matrix.
-///@arg {r44} <Mout> (Optional) The output 4x4 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} M1 The first 4x4 matrix.
+///@arg {Array<Array<Real>>} M2 The second 4x4 matrix.
+///@arg {Array<Array<Real>>} <Mout> (Optional) The output 4x4 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return M1+M2.
 function r44_add(M1, M2, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	Mout[0][@0] = M1[0][0]+M2[0][0];
 	Mout[0][@1] = M1[0][1]+M2[0][1];
 	Mout[0][@2] = M1[0][2]+M2[0][2];
@@ -104,12 +104,12 @@ function r44_add(M1, M2, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 
 #macro r44_add_to r44_add
 
 ///@func r44_subtract(M1, M2, <Mout>)
-///@arg {r44} M1 The first 4x4 matrix.
-///@arg {r44} M2 The second 4x4 matrix.
-///@arg {r44} <Mout> (Optional) The output 4x4 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} M1 The first 4x4 matrix.
+///@arg {Array<Array<Real>>} M2 The second 4x4 matrix.
+///@arg {Array<Array<Real>>} <Mout> (Optional) The output 4x4 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return M1-M2.
 function r44_subtract(M1, M2, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	Mout[0][@0] = M1[0][0]-M2[0][0];
 	Mout[0][@1] = M1[0][1]-M2[0][1];
 	Mout[0][@2] = M1[0][2]-M2[0][2];
@@ -131,12 +131,12 @@ function r44_subtract(M1, M2, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0
 #macro r44_subtract_to r44_subtract
 
 ///@func r44_scale(M, r, <Mout>)
-///@arg {r44} M The original 4x4 matrix
+///@arg {Array<Array<Real>>} M The original 4x4 matrix
 ///@arg {real} r The scaling factor
-///@arg {r44} <Mout> (Optional) The output 4x4 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} <Mout> (Optional) The output 4x4 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return rM.
 function r44_scale(M, r, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	Mout[0][@0] = r*M[0][0];
 	Mout[0][@1] = r*M[0][1];
 	Mout[0][@2] = r*M[0][2];
@@ -158,11 +158,11 @@ function r44_scale(M, r, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 
 #macro r44_scale_to r44_scale
 
 ///@func r44_transpose(M, <Mout>)
-///@arg {r44} M The original 4x4 matrix
-///@arg {r44} <Mout> (Optional) The output 4x4 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} M The original 4x4 matrix
+///@arg {Array<Array<Real>>} <Mout> (Optional) The output 4x4 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return a transpose of M.
 function r44_transpose(M, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	var a00 = M[0][0];
 	var a01 = M[0][1];
 	var a02 = M[0][2];
@@ -200,12 +200,12 @@ function r44_transpose(M, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0,
 #macro r44_transpose_to r44_transpose
 
 ///@func r44_multiply(M1, M2, <Mout>)
-///@arg {r44} M1 The first 4x4 matrix.
-///@arg {r44} M2 The second 4x4 matrix.
-///@arg {r44} <Mout> (Optional) The output 4x4 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} M1 The first 4x4 matrix.
+///@arg {Array<Array<Real>>} M2 The second 4x4 matrix.
+///@arg {Array<Array<Real>>} <Mout> (Optional) The output 4x4 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return M1*M2.
 function r44_multiply(M1, M2, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	var a00 = M1[0][0];
 	var a01 = M1[0][1];
 	var a02 = M1[0][2];
@@ -259,12 +259,12 @@ function r44_multiply(M1, M2, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0
 #macro r44_multiply_to r44_multiply
 
 ///@func r44_transform(M, v, <vout>)
-///@arg {r44} M The 4x4 matrix.
-///@arg {r4} v The 4D vector to transform.
-///@arg {r4} <vout> (Optional) The output 4D vector to overwrite. If not specified, a new vector will be created.
+///@arg {Array<Array<Real>>} M The 4x4 matrix.
+///@arg {Array<Real>} v The 4D vector to transform.
+///@arg {Array<Real>} <vout> (Optional) The output 4D vector to overwrite. If not specified, a new vector will be created.
 ///@desc Return Mv.
 function r44_transform(M, v, vout=[0, 0, 0, 0]) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	var a00 = M[0][0];
 	var a01 = M[0][1];
 	var a02 = M[0][2];
@@ -294,11 +294,11 @@ function r44_transform(M, v, vout=[0, 0, 0, 0]) {
 #macro r44_transform_to r44_transform
 
 ///@func r44_invert(M, <Mout>)
-///@arg {r44} M The original 4x4 matrix
-///@arg {r44} <Mout> (Optional) The output 4x4 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} M The original 4x4 matrix
+///@arg {Array<Array<Real>>} <Mout> (Optional) The output 4x4 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return a inverse of M. If singular, return undefined.
 function r44_invert(M, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	var a00 = M[0][0];
 	var a01 = M[0][1];
 	var a02 = M[0][2];
@@ -348,10 +348,10 @@ function r44_invert(M, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0,
 #macro r44_invert_to r44_invert
 
 ///@func r44_det(M)
-///@arg {r44} M The original 4x4 matrix
+///@arg {Array<Array<Real>>} M The original 4x4 matrix
 ///@func Return the determinant of 4x4 matrix M.
 function r44_det(M) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	return M[0][0]*M[1][1]*M[2][2]*M[3][3]+M[0][0]*M[1][2]*M[2][3]*M[3][1]+M[0][0]*M[1][3]*M[2][1]*M[3][2]
            +M[0][1]*M[1][0]*M[2][3]*M[3][2]+M[0][1]*M[1][2]*M[2][0]*M[3][3]+M[0][1]*M[1][3]*M[2][2]*M[3][0]
            +M[0][2]*M[1][0]*M[2][1]*M[3][3]+M[0][2]*M[1][1]*M[2][3]*M[3][0]+M[0][2]*M[1][3]*M[2][0]*M[3][1]
@@ -363,18 +363,18 @@ function r44_det(M) {
 }
 
 ///@func r44_tr(M)
-///@arg {r44} M The original 4x4 matrix
+///@arg {Array<Array<Real>>} M The original 4x4 matrix
 ///@func Return the trace of 4x4 matrix M.
 function r44_tr(M) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	return M[0][0]+M[1][1]+M[2][2]+M[3][3];
 }
 
 ///@func r44_encode_string(M)
-///@arg {r44} M The 4x4 matrix to encode.
+///@arg {Array<Array<Real>>} M The 4x4 matrix to encode.
 ///@desc Return the string form of 4x4 matrix M.
 function r44_encode_string(M) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	return string_replace_all(
 		string_format(M[0][0], 15, 14)+","+
 		string_format(M[0][1], 15, 14)+","+
@@ -396,11 +396,11 @@ function r44_encode_string(M) {
 }
 
 ///@description r44_decode_string(str, <Mout>)
-///@arg {string} str The string to decode.
-///@arg {r44} <Mout> (Optional) The output 4x4 matrix to overwrite. If unspecified, return a new matrix.
+///@arg {string} _str The string to decode.
+///@arg {Array<Array<Real>>} <Mout> (Optional) The output 4x4 matrix to overwrite. If unspecified, return a new matrix.
 ///@desc Return the decoded form of str.
 function r44_decode_string(_str, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	var pos;
 	var str = _str;
 	pos = string_pos(",", str);
@@ -453,10 +453,10 @@ function r44_decode_string(_str, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0],
 #macro r44_decode_string_to r44_decode_string
 
 ///@func r44_encode_base64(M)
-///@arg {r44} M The 4x4 matrix to encode.
+///@arg {Array<Array<Real>>} M The 4x4 matrix to encode.
 ///@desc Return the base64 form of 4x4 matrix M.
 function r44_encode_base64(M) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	var buffer = buffer_create(128, buffer_fixed, 1);
 	buffer_write(buffer, buffer_f64, M[0][0]);
 	buffer_write(buffer, buffer_f64, M[0][1]);
@@ -481,10 +481,10 @@ function r44_encode_base64(M) {
 
 ///@func r44_decode_base64(enc, <Mout>)
 ///@arg {string} enc The string to decode.
-///@arg {r44} <Mout> (Optional) The output 4x4 matrix to overwrite. If unspecified, return a new matrix.
+///@arg {Array<Array<Real>>} <Mout> (Optional) The output 4x4 matrix to overwrite. If unspecified, return a new matrix.
 ///@desc Return the base64-decoded form of str.
 function r44_decode_base64(enc, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	var buffer = buffer_create(128, buffer_fixed, 1);
 	buffer_base64_decode_ext(buffer, enc, 0);
 	Mout[0][@0] = buffer_read(buffer, buffer_f64);

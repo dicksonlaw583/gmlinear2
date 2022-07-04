@@ -1,10 +1,10 @@
 ///@func rmn_qr(M, Q, R)
-///@arg {rmn} M The mxn matrix to decompose
-///@arg {rnn} Q The mxm matrix to store the orthogonal part in
-///@arg {rmn} R The mxn matrix to store the upper-triangular part in
+///@arg {Array<Array<Real>>} M The mxn matrix to decompose
+///@arg {Array<Array<Real>>} Q The mxm matrix to store the orthogonal part in
+///@arg {Array<Array<Real>>} R The mxn matrix to store the upper-triangular part in
 ///@desc Perform QR decomposition on an mxn matrix M.
 function rmn_qr(M, Q, R) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	var m = array_length(M);
 	var n = array_length(M[0]);
 	// Reset Q to identity
@@ -74,12 +74,12 @@ function rmn_qr(M, Q, R) {
 #macro rnn_qr rmn_qr
 
 ///@func rnn_lu(M, L, U)
-///@arg {rnn} M The original nxn matrix
-///@arg {rnn} L The target nxn matrix for lower-triangular component
-///@arg {rnn} U The target nxn matrix for upper-triangular component
+///@arg {Array<Array<Real>>} M The original nxn matrix
+///@arg {Array<Array<Real>>} L The target nxn matrix for lower-triangular component
+///@arg {Array<Array<Real>>} U The target nxn matrix for upper-triangular component
 ///@desc Perform LU decomposition on an nxn matrix M and return whether successful.
 function rnn_lu(M, L, U) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	var n = array_length(M);
 	
 	// Make sure there are no 0s on M's diagonal
@@ -123,13 +123,13 @@ function rnn_lu(M, L, U) {
 }
 
 ///@func rnn_palu(M, P, L, U)
-///@arg {rnn} M The original nxn matrix
-///@arg {rnn} P The target nxn matrix for permutation
-///@arg {rnn} L The target nxn matrix for lower-triangular component
-///@arg {rnn} U The target nxn matrix for upper-triangular component
+///@arg {Array<Array<Real>>} M The original nxn matrix
+///@arg {Array<Array<Real>>} P The target nxn matrix for permutation
+///@arg {Array<Array<Real>>} L The target nxn matrix for lower-triangular component
+///@arg {Array<Array<Real>>} U The target nxn matrix for upper-triangular component
 ///@desc Perform PA=LU decomposition on an nxn matrix M.
 function rnn_palu(M, P, L, U) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	var n = array_length(M);
 	var temp = array_create(n);
 	
@@ -191,13 +191,13 @@ function rnn_palu(M, P, L, U) {
 }
 
 ///@func rmn_solve_qr(Q, R, b, <vout>)
-///@arg {rnn} Q The mxm matrix from QR decomposition
-///@arg {rmn} R The mxn matrix from QR decomposition
-///@arg {rn} b The m-dimensional vector.
-///@arg {rn} <vout> (Optional) The n-dimensional solution vector to output to. If not given, create the new vector.
+///@arg {Array<Array<Real>>} Q The mxm matrix from QR decomposition
+///@arg {Array<Array<Real>>} R The mxn matrix from QR decomposition
+///@arg {Array<Real>} b The m-dimensional vector.
+///@arg {Array<Real>} <vout> (Optional) The n-dimensional solution vector to output to. If not given, create the new vector.
 ///@desc Solve QRx = b for x and return that.
 function rmn_solve_qr(Q, R, b, vout=array_create(array_length(R[0]), 0)) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	var m = array_length(R);
 	var n = array_length(R[0]);
 	// Get (Q^T)b
@@ -231,13 +231,13 @@ function rmn_solve_qr(Q, R, b, vout=array_create(array_length(R[0]), 0)) {
 }
 
 ///@func rnn_solve_lu(L, U, b, <vout>)
-///@arg {rnn} L The nxn lower-triangular matrix from LU decomposition
-///@arg {rnn} U The nxn upper-triangular matrix from LU decomposition
-///@arg {rn} b The n-dimensional vector.
-///@arg {rn} <vout> (Optional) The n-dimensional solution vector to output to. If not given, create the new vector.
+///@arg {Array<Array<Real>>} L The nxn lower-triangular matrix from LU decomposition
+///@arg {Array<Array<Real>>} U The nxn upper-triangular matrix from LU decomposition
+///@arg {Array<Real>} b The n-dimensional vector.
+///@arg {Array<Real>} <vout> (Optional) The n-dimensional solution vector to output to. If not given, create the new vector.
 ///@desc Solve LUx = b for x and return that.
 function rnn_solve_lu(L, U, b, vout=array_create(array_length(b), 0)) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	var n = array_length(U);
 	// Solve Ly = b
 	var vmid = array_create(n, 0);
@@ -274,14 +274,14 @@ function rnn_solve_lu(L, U, b, vout=array_create(array_length(b), 0)) {
 }
 
 ///@func rnn_solve_palu(P, L, U, b, <vout>)
-///@arg {rnn} P The nxn permutation matrix from PA=LU decomposition
-///@arg {rnn} L The nxn lower-triangular matrix from PA=LU decomposition
-///@arg {rnn} U The nxn upper-triangular matrix from PA=LU decomposition
-///@arg {rn} b The n-dimensional vector.
-///@arg {rn} <vout> (Optional) The n-dimensional solution vector to output to. If not given, create the new vector.
+///@arg {Array<Array<Real>>} P The nxn permutation matrix from PA=LU decomposition
+///@arg {Array<Array<Real>>} L The nxn lower-triangular matrix from PA=LU decomposition
+///@arg {Array<Array<Real>>} U The nxn upper-triangular matrix from PA=LU decomposition
+///@arg {Array<Real>} b The n-dimensional vector.
+///@arg {Array<Real>} <vout> (Optional) The n-dimensional solution vector to output to. If not given, create the new vector.
 ///@desc Solve LUx = Pb for x and return that.
 function rnn_solve_palu(P, L, U, b, vout=array_create(array_length(b), 0)) {
-	GMLINEAR_INLINE;
+	GMLINEAR_INLINE
 	var n = array_length(U);
 	// Calculate Pb
 	var Pb = rnn_transform(P, b);
