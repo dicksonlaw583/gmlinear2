@@ -292,7 +292,9 @@ function rnn_solve_palu(P, L, U, b, vout=array_create(array_length(b), 0)) {
 		// Seek to pivot
 		for (var p = n-1; p >= 0 && L_i[p] == 0; --p) {}
 		if (p >= 0) {
+			//Feather disable GM1061
 			var vmid_p = Pb[i];
+			//Feather enable GM1061
 			for (var j = 0; j < p; ++j) {
 				vmid_p -= vmid[j]*L_i[j];
 			}

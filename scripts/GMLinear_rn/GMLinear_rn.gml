@@ -11,7 +11,7 @@ function rn() {
 }
 
 ///@func rn_zero(n)
-///@arg {int} n The dimension of the vector
+///@arg {Real} n The dimension of the vector
 ///@desc Return the n-dimensional zero vector.
 function rn_zero(n) {
 	GMLINEAR_INLINE
@@ -289,7 +289,7 @@ function rn_encode_base64(v) {
 
 ///@func rn_decode_base64(enc, n, <vout>)
 ///@arg {string} enc The string to decode.
-///@arg {int} n The dimension of the vector.
+///@arg {Real} n The dimension of the vector.
 ///@arg {Array<Real>} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the base64-decoded form of str.
 function rn_decode_base64(enc, n, vout=[]) {

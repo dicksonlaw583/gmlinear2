@@ -1,10 +1,11 @@
 ///@func rmn(m, n, ...)
-///@arg {int} m Number of rows
-///@arg {int} n Number of columns
+///@arg {Real} m Number of rows
+///@arg {Real} n Number of columns
 ///@arg ...
 ///@desc Return a new mxn matrix.
 function rmn() {
 	GMLINEAR_INLINE
+	//Feather disable GM1028
 	var m = argument[0];
 	var n = argument[1];
 	var mm = 0;
@@ -23,6 +24,7 @@ function rmn() {
 		}
 	}
 	return M;
+	//Feather enable GM1028
 }
 
 ///@func rmn_zero(m, n)
@@ -266,8 +268,8 @@ function rmn_encode_base64(M) {
 
 ///@func rmn_decode_base64(enc, m, n, <Mout>)
 ///@arg {string} enc The string to decode.
-///@arg {int} m
-///@arg {int} n
+///@arg {Real} m
+///@arg {Real} n
 ///@arg {Array<Array<Real>>} <Mout> (Optional) The output mxn matrix to overwrite. If unspecified, return a new matrix.
 ///@desc Return the base64-decoded form of str.
 function rmn_decode_base64(enc, m, n, Mout=rmn_zero(m, n)) {

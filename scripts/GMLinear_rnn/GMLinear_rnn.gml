@@ -29,7 +29,7 @@ function rnn() {
 }
 
 ///@func rnn_identity(n)
-///@arg {int} n
+///@arg {Real} n
 ///@desc Return the nxn identity matrix.
 function rnn_identity(n) {
 	GMLINEAR_INLINE
@@ -416,7 +416,7 @@ function rnn_encode_base64(M) {
 
 ///@func rnn_decode_base64(enc, n, <Mout>)
 ///@arg {string} enc The string to decode.
-///@arg {int} n
+///@arg {Real} n
 ///@arg {Array<Array<Real>>} <Mout> (Optional) The output nxn matrix to overwrite. If unspecified, return a new matrix.
 ///@desc Return the base64-decoded form of str.
 function rnn_decode_base64(enc, n, Mout=rnn_zero(n)) {
