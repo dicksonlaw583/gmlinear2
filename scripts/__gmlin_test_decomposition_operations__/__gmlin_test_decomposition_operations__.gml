@@ -1,5 +1,6 @@
 ///@func __gmlin_test_decomposition_operations__()
 function __gmlin_test_decomposition_operations__() {
+	//Feather disable GM2023
 	#region rmn_qr(M, Q, R)
 	// QR decomposition 1
 	var M = [
@@ -133,4 +134,5 @@ function __gmlin_test_decomposition_operations__() {
 	assert_equal(rnn_solve_palu(P, L, U, b, v), [2, 3, 4], "rnn_solve_palu 1a failed!");
 	assert_equal(v, [2, 3, 4], "rnn_solve_palu 1b failed!");
 	#endregion
+	//Feather enable GM2023
 }
