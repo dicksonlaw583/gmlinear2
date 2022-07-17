@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"GMAssert","path":"extensions/GMAssert/GMAssert.yy",},"order":0,},
     {"id":{"name":"gmlin_test_all","path":"scripts/gmlin_test_all/gmlin_test_all.yy",},"order":0,},
     {"id":{"name":"GMLinear_r3_conversions","path":"scripts/GMLinear_r3_conversions/GMLinear_r3_conversions.yy",},"order":6,},
     {"id":{"name":"GMLinear_r33","path":"scripts/GMLinear_r33/GMLinear_r33.yy",},"order":9,},
@@ -20,7 +21,6 @@
     {"id":{"name":"__GMA_SETTINGS__","path":"scripts/__GMA_SETTINGS__/__GMA_SETTINGS__.yy",},"order":1,},
     {"id":{"name":"__GMLINEAR_SETTINGS__","path":"scripts/__GMLINEAR_SETTINGS__/__GMLINEAR_SETTINGS__.yy",},"order":0,},
     {"id":{"name":"GMLinear_r3","path":"scripts/GMLinear_r3/GMLinear_r3.yy",},"order":4,},
-    {"id":{"name":"GMAssert","path":"extensions/GMAssert/GMAssert.yy",},"order":0,},
     {"id":{"name":"GMLinear_r22","path":"scripts/GMLinear_r22/GMLinear_r22.yy",},"order":8,},
     {"id":{"name":"rm_gmlin_test","path":"rooms/rm_gmlin_test/rm_gmlin_test.yy",},"order":4,},
   ],
@@ -37,9 +37,8 @@
     {"name":"Amazon Fire","path":"options/amazonfire/options_amazonfire.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
   ],
-  "isDnDProject": false,
+  "defaultScriptType": 1,
   "isEcma": false,
-  "tutorialPath": "",
   "configs": {
     "name": "Default",
     "children": [],
@@ -61,13 +60,13 @@
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
   ],
   "TextureGroups": [
-    {"isScaled":false,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
+    {"isScaled":false,"compressFormat":"bz2","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.5.589",
+    "IDEVersion": "2022.6.0.23",
   },
-  "resourceVersion": "1.4",
+  "resourceVersion": "1.5",
   "name": "GMLinear",
   "tags": [],
   "resourceType": "GMProject",

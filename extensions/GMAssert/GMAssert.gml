@@ -187,6 +187,12 @@
     case "vec4":
       dv = "vec4(" + string(argument[0]) + ")";
     break;
+    case "ref":
+      dv = string(argument[0]);
+    break;
+    default:
+      dv = typeof(argument[0]) + "(" + string(argument[0]) + ")";
+    break;
   }
   if (argument_count > 1 && argument[1]) {
     return dv;
@@ -2069,6 +2075,7 @@
     _noarg = true;
   }
   //Check assertion
+  var _arg1 = argument[1]; //Workaround for lost arguments in Runtime 23.1.1.254 (2.3.2 beta)
   try {
     if (_noarg) {
       _func();
@@ -2076,8 +2083,8 @@
       _func(_arg);
     }
   } catch (exc) {
-    if (__gma_equal__(exc, argument[1])) {
-      __gma_assert_error_raw__(msg, "No throw " + __gma_debug_value__(argument[1]), "throw " + __gma_debug_value__(exc));
+    if (__gma_equal__(exc, _arg1)) {
+      __gma_assert_error_raw__(msg, "No throw " + __gma_debug_value__(_arg1), "throw " + __gma_debug_value__(exc));
     }
     exit;
   }
@@ -2115,6 +2122,7 @@
     _noarg = true;
   }
   //Check assertion
+  var _arg1 = argument[1]; //Workaround for lost arguments in Runtime 23.1.1.254 (2.3.2 beta)
   try {
     if (_noarg) {
       _func();
@@ -2122,8 +2130,8 @@
       _func(_arg);
     }
   } catch (exc) {
-    if (typeof(exc) == argument[1] || (is_struct(exc) && instanceof(exc) == argument[1])) {
-      __gma_assert_error_raw__(msg, "throw type other than " + argument[1], "throw " + __gma_debug_value__(exc));
+    if (typeof(exc) == _arg1 || (is_struct(exc) && instanceof(exc) == _arg1)) {
+      __gma_assert_error_raw__(msg, "throw type other than " + _arg1, "throw " + __gma_debug_value__(exc));
     }
     exit;
   }
@@ -2470,6 +2478,7 @@
     _noarg = true;
   }
   //Check assertion
+  var _arg1 = argument[1]; //Workaround for lost arguments in Runtime 23.1.1.254 (2.3.2 beta)
   try {
     if (_noarg) {
       _func();
@@ -2477,8 +2486,8 @@
       _func(_arg);
     }
   } catch (exc) {
-    if (!__gma_equal__(exc, argument[1])) {
-      __gma_assert_error_raw__(msg, "throw " + __gma_debug_value__(argument[1]), "throw " + __gma_debug_value__(exc));
+    if (!__gma_equal__(exc, _arg1)) {
+      __gma_assert_error_raw__(msg, "throw " + __gma_debug_value__(_arg1), "throw " + __gma_debug_value__(exc));
     }
     exit;
   }
@@ -2517,6 +2526,7 @@
     _noarg = true;
   }
   //Check assertion
+  var _arg1 = argument[1]; //Workaround for lost arguments in Runtime 23.1.1.254 (2.3.2 beta)
   try {
     if (_noarg) {
       _func();
@@ -2524,8 +2534,8 @@
       _func(_arg);
     }
   } catch (exc) {
-    if (typeof(exc) != argument[1] && (!is_struct(exc) || instanceof(exc) != argument[1])) {
-      __gma_assert_error_raw__(msg, "throw type " + argument[1], "throw " + __gma_debug_value__(exc));
+    if (typeof(exc) != _arg1 && (!is_struct(exc) || instanceof(exc) != _arg1)) {
+      __gma_assert_error_raw__(msg, "throw type " + _arg1, "throw " + __gma_debug_value__(exc));
     }
     exit;
   }
