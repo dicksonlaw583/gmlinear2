@@ -106,6 +106,14 @@ function r3_norm(v) {
 	return point_distance_3d(0, 0, 0, v[0], v[1], v[2]);
 }
 
+///@func r3_sqrnorm(v)
+///@arg {Array<Real>} v The 3D vector to operate on.
+///@desc Return the squared Euclidean norm of the 3D vector.
+function r3_sqrnorm(v) {
+	GMLINEAR_INLINE
+	return v[0] * v[0] + v[1] * v[1] + v[2] * v[2];
+}
+
 ///@func r3_dist(v1, v2)
 ///@arg {Array<Real>} v1 The first 3D vector.
 ///@arg {Array<Real>} v2 The second 3D vector.

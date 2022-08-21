@@ -96,6 +96,18 @@ function rn_norm(v) {
 	return sqrt(result);
 }
 
+///@func rn_sqrnorm(v)
+///@arg {Array<Real>} v The n-dimensional vector to operate on.
+///@desc Return the squared Euclidean norm of the n-dimensional vector.
+function rn_sqrnorm(v) {
+	GMLINEAR_INLINE
+	var result = 0;
+	for (var i = array_length(v)-1; i >= 0; --i) {
+		result += v[i]*v[i];
+	}
+    return result;
+}
+
 ///@func rn_dist(v1, v2)
 ///@arg {Array<Real>} v1 The first n-dimensional vector.
 ///@arg {Array<Real>} v2 The second n-dimensional vector.
