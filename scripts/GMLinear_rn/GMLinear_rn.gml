@@ -122,6 +122,19 @@ function rn_dist(v1, v2) {
 	return sqrt(result);
 }
 
+///@func rn_sqrdist(v1, v2)
+///@arg {Array<Real>} v1 The first n-dimensional vector.
+///@arg {Array<Real>} v2 The second n-dimensional vector.
+///@desc Return the squared Euclidean distance between v1 and v2.
+function rn_sqrdist(v1, v2) {
+	GMLINEAR_INLINE
+	var result = 0;
+	for (var i = array_length(v1)-1; i >= 0; --i) {
+		result += sqr(v2[i]-v1[i]);
+	}
+	return result;
+}
+
 ///@func rn_1norm(v)
 ///@arg {Array<Real>} v The n-dimensional vector to operate on.
 ///@desc Return the Manhattan norm of the n-dimensional vector.

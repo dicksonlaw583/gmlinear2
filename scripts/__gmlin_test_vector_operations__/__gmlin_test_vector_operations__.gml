@@ -423,6 +423,18 @@ function __gmlin_test_vector_operations__() {
 	  assert_equalish(rn_sqrnorm(r4(1, -2, 8, -10)), 169, "rn_sqrnorm() at 4D failed!");
 	  assert_equalish(rn_sqrnorm(rn(8, -9, 7, -1, -4, 3, 2, 1)), 225, "rn_sqrnorm() at 8D failed!");
 
+	  //r2_sqrdist(v1, v2)
+	  assert_equalish(r2_sqrdist(r2(6, -8), r2(3, -4)), 25, "r2_sqrdist() failed!");
+	  //r3_sqrdist(v1, v2)
+	  assert_equalish(r3_sqrdist(r3(2, -10, 11), r3(4, 0, 22)), 225, "r3_sqrdist() failed!");
+	  //r4_sqrdist(v1, v2)
+	  assert_equalish(r4_sqrdist(r4(1, -2, 8, -10), r4(2, 0, 16, -20)), 169, "r4_sqrdist() failed!");
+	  //rn_sqrdist(v1, v2)
+	  assert_equalish(rn_sqrdist(r2(6, -8), r2(3, -4)), 25, "rn_sqrdist() at 2D failed!");
+	  assert_equalish(rn_sqrdist(r3(2, -10, 11), r3(4, 0, 22)), 225, "rn_sqrdist() at 3D failed!");
+	  assert_equalish(rn_sqrdist(r4(1, -2, 8, -10), r4(2, 0, 16, -20)), 169, "rn_sqrdist() at 4D failed!");
+	  assert_equalish(rn_sqrdist(rn(8, -9, 7, -1, -4, 3, 2, 1), rn(16, -18, 0, -2, 0, 0, 4, 2)), 225, "rn_sqrdist() at 8D failed!");
+
 	  //r2_1norm(v)
 	  assert_equalish(r2_1norm(r2(3, -4)), 7, "r2_1norm() failed!");
 	  //r3_1norm(v)
