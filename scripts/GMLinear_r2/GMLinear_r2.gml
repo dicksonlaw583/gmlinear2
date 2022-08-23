@@ -82,6 +82,16 @@ function r2_norm(v) {
 	return point_distance(0, 0, v[0], v[1]);
 }
 
+
+///@func r2_sqrnorm(v)
+///@arg {Array<Real>} v The 2D vector to operate on.
+///@desc Return the squared Euclidean norm of the 2D vector.
+function r2_sqrnorm(v) {
+	GMLINEAR_INLINE
+	return v[0] * v[0] + v[1] * v[1];
+}
+
+
 ///@func r2_dist(v1, v2)
 ///@arg {Array<Real>} v1 The first 2D vector.
 ///@arg {Array<Real>} v2 The second 2D vector.
@@ -89,6 +99,15 @@ function r2_norm(v) {
 function r2_dist(v1, v2) {
 	GMLINEAR_INLINE
 	return point_distance(v1[0], v1[1], v2[0], v2[1]);
+}
+
+///@func r2_sqrdist(v1, v2)
+///@arg {Array<Real>} v1 The first 2D vector.
+///@arg {Array<Real>} v2 The second 2D vector.
+///@desc Return the squared Euclidean distance between v1 and v2.
+function r2_sqrdist(v1, v2) {
+	GMLINEAR_INLINE
+	return sqr(v2[0]-v1[0]) + sqr(v2[1]-v1[1]);
 }
 
 ///@func r2_1norm(v)

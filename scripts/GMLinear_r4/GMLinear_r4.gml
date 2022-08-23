@@ -92,6 +92,14 @@ function r4_norm(v) {
 	return sqrt(v[0]*v[0]+v[1]*v[1]+v[2]*v[2]+v[3]*v[3]);
 }
 
+///@func r4_sqrnorm(v)
+///@arg {Array<Real>} v The 4D vector to operate on.
+///@desc Return the squared Euclidean norm of the 4D vector.
+function r4_sqrnorm(v) {
+	GMLINEAR_INLINE
+	return v[0] * v[0] + v[1] * v[1] + v[2] * v[2] + v[3] * v[3];
+}
+
 ///@func r4_dist(v1, v2)
 ///@arg {Array<Real>} v1 The first 4D vector.
 ///@arg {Array<Real>} v2 The second 4D vector.
@@ -103,6 +111,15 @@ function r4_dist(v1, v2) {
 	var d2 = v2[2]-v1[2];
 	var d3 = v2[3]-v1[3];
 	return sqrt(d0*d0 + d1*d1 + d2*d2 + d3*d3);
+}
+
+///@func r4_sqrdist(v1, v2)
+///@arg {Array<Real>} v1 The first 4D vector.
+///@arg {Array<Real>} v2 The second 4D vector.
+///@desc Return the squared Euclidean distance between v1 and v2.
+function r4_sqrdist(v1, v2) {
+	GMLINEAR_INLINE
+	return sqr(v2[0]-v1[0]) + sqr(v2[1]-v1[1]) + sqr(v2[2]-v1[2]) + sqr(v2[3]-v1[3]);
 }
 
 ///@func r4_1norm(v)
