@@ -97,7 +97,7 @@ function r4_norm(v) {
 ///@desc Return the squared Euclidean norm of the 4D vector.
 function r4_sqrnorm(v) {
 	GMLINEAR_INLINE
-	return v[0] * v[0] + v[1] * v[1] + v[2] * v[2] * v[3] * v[3];
+	return v[0] * v[0] + v[1] * v[1] + v[2] * v[2] + v[3] * v[3];
 }
 
 ///@func r4_dist(v1, v2)
