@@ -218,6 +218,7 @@ function rmn_solve_qr(Q, R, b, vout=array_create(array_length(R[0]), 0)) {
 	for (var i = m-1; i >= 0; --i) {
 		var R_i = R[i];
 		// Seek to pivot
+		///Feather disable GM2043
 		for (var p = 0; p < n && R_i[p] == 0; ++p) {}
 		if (p < n) {
 			var vout_p = qtb[i];
@@ -226,6 +227,7 @@ function rmn_solve_qr(Q, R, b, vout=array_create(array_length(R[0]), 0)) {
 			}
 			vout[@p] = vout_p/R_i[p];
 		}
+		///Feather enable GM2043
 	}
 	return vout;
 }
@@ -244,6 +246,7 @@ function rnn_solve_lu(L, U, b, vout=array_create(array_length(b), 0)) {
 	for (var i = 0; i < n; ++i) {
 		var L_i = L[i];
 		// Seek to pivot
+		///Feather disable GM2043
 		for (var p = n-1; p >= 0 && L_i[p] == 0; --p) {}
 		if (p >= 0) {
 			var vmid_p = b[i];
@@ -252,6 +255,7 @@ function rnn_solve_lu(L, U, b, vout=array_create(array_length(b), 0)) {
 			}
 			vmid[@p] = vmid_p/L_i[p];
 		}
+		///Feather enable GM2043
 	}
 	// Clear vout to 0
 	for (var i = n-1; i >= 0; --i) {
@@ -290,6 +294,7 @@ function rnn_solve_palu(P, L, U, b, vout=array_create(array_length(b), 0)) {
 	for (var i = 0; i < n; ++i) {
 		var L_i = L[i];
 		// Seek to pivot
+		///Feather disable GM2043
 		for (var p = n-1; p >= 0 && L_i[p] == 0; --p) {}
 		if (p >= 0) {
 			//Feather disable GM1061
@@ -300,6 +305,7 @@ function rnn_solve_palu(P, L, U, b, vout=array_create(array_length(b), 0)) {
 			}
 			vmid[@p] = vmid_p/L_i[p];
 		}
+		///Feather enable GM2043
 	}
 	// Clear vout to 0
 	for (var i = n-1; i >= 0; --i) {
