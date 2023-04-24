@@ -1,5 +1,6 @@
 // feather disable all
 function __gmlin_test_vector_operations__() {
+	///Feather disable GM2023
 	{
 	  //r2_clone(v)
 	  var test_r2_original = r2(3, 2);
@@ -1048,4 +1049,4 @@ function __gmlin_test_vector_operations__() {
 
 
 }
-// feather enable all
+///Feather enable GM2023

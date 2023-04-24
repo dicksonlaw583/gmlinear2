@@ -219,9 +219,8 @@ function rnn_invert(M, Mout=rnn_zero(array_length(M))) {
 		var original_i = original[i];
 		var result_i = result[i];
 		var highest_row_abs = abs(original_i[i]);
-		var current_row_abs;
 		for (var ii = i+1; ii < n; ii++) {
-			current_row_abs = abs(original[ii][i]);
+			var current_row_abs = abs(original[ii][i]);
 			if (current_row_abs > highest_row_abs) {
 				highest_row_i = ii;
 				highest_row_abs = current_row_abs;
@@ -237,8 +236,7 @@ function rnn_invert(M, Mout=rnn_zero(array_length(M))) {
 			var original_highest_row_i = original[highest_row_i];
 			var result_highest_row_i = result[highest_row_i];
 			for (var j = 0; j < n; j++) {
-				var tmp;
-				tmp = original_i[j];
+				var tmp = original_i[j];
 				original_i[@j] = original_highest_row_i[j];
 				original_highest_row_i[@j] = tmp;
 				tmp = result_i[j];
