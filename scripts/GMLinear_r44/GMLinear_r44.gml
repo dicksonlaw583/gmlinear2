@@ -507,3 +507,61 @@ function r44_decode_base64(enc, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], 
 	return Mout;
 }
 #macro r44_decode_base64_to r44_decode_base64
+
+///@func r44_to_matrix(M, [MatOut])
+///@arg {Array<Array<Real>>} M The 4x4 GMLinear matrix to convert.
+///@arg {Array<Real>} [MatOut] (Optional) The output 16-entry matrix to overwrite. If unspecified, return a new 16-entry matrix.
+///@desc Return the GML-native form of 4x4 matrix M.
+function r44_to_matrix(M, MatOut=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]) {
+	var Mrow;
+	Mrow = M[0];
+	MatOut[@0] = Mrow[0];
+	MatOut[@4] = Mrow[1];
+	MatOut[@8] = Mrow[2];
+	MatOut[@12] = Mrow[3];
+	Mrow = M[1];
+	MatOut[@1] = Mrow[0];
+	MatOut[@5] = Mrow[1];
+	MatOut[@9] = Mrow[2];
+	MatOut[@13] = Mrow[3];
+	Mrow = M[2];
+	MatOut[@2] = Mrow[0];
+	MatOut[@6] = Mrow[1];
+	MatOut[@10] = Mrow[2];
+	MatOut[@14] = Mrow[3];
+	Mrow = M[3];
+	MatOut[@3] = Mrow[0];
+	MatOut[@7] = Mrow[1];
+	MatOut[@11] = Mrow[2];
+	MatOut[@15] = Mrow[3];
+	return MatOut;
+}
+
+///@func matrix_to_r44(MatIn, [Mout])
+///@arg {Array<Real>} MatIn The 16-entry matrix to convert.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 4x4 matrix to overwrite. If unspecified, return a new 4x4 matrix.
+///@desc Return the GMLinear 4x4 matrix form of GML-native matrix MatIn.
+function matrix_to_r44(MatIn, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]) {
+	var Mrow;
+	Mrow = Mout[0];
+	Mrow[@0] = MatIn[0];
+	Mrow[@1] = MatIn[4];
+	Mrow[@2] = MatIn[8];
+	Mrow[@3] = MatIn[12];
+	Mrow = Mout[1];
+	Mrow[@0] = MatIn[1];
+	Mrow[@1] = MatIn[5];
+	Mrow[@2] = MatIn[9];
+	Mrow[@3] = MatIn[13];
+	Mrow = Mout[2];
+	Mrow[@0] = MatIn[2];
+	Mrow[@1] = MatIn[6];
+	Mrow[@2] = MatIn[10];
+	Mrow[@3] = MatIn[14];
+	Mrow = Mout[3];
+	Mrow[@0] = MatIn[3];
+	Mrow[@1] = MatIn[7];
+	Mrow[@2] = MatIn[11];
+	Mrow[@3] = MatIn[15];
+	return Mout;
+}

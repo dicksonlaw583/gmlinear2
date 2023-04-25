@@ -895,7 +895,15 @@ function __gmlin_test_matrix_operations__() {
 	  }
 	}
 
-
-
+	//r44_to_matrix(M, <MatOut>)
+	var test_r44_to_matrix_out = matrix_build(0, 0, 0, 0, 0, 0, 0, 0, 0);
+	assert_equal(r44_to_matrix(r44(2, 0, 0, 5, 0, 3, 0, 6, 0, 0, 4, 7, 0, 0, 0, 1)), matrix_build(5, 6, 7, 0, 0, 0, 2, 3, 4), "r44_to_matrix() failed!");
+	assert_is(r44_to_matrix(r44(2, 0, 0, 7, 0, 3, 0, 8, 0, 0, 4, 9, 0, 0, 0, 1), test_r44_to_matrix_out), test_r44_to_matrix_out, "r44_to_matrix() with output mismatched!");
+	assert_equal(test_r44_to_matrix_out, matrix_build(7, 8, 9, 0, 0, 0, 2, 3, 4), "r44_to_matrix() with output failed!");
+	//matrix_to_r44(MatIn, <Mout>)
+	var test_matrix_to_r44_mout = r44_zero();
+	assert_equal(matrix_to_r44(matrix_build(5, 6, 7, 0, 0, 0, 2, 3, 4)), r44(2, 0, 0, 5, 0, 3, 0, 6, 0, 0, 4, 7, 0, 0, 0, 1), "matrix_to_r44() failed!");
+	assert_is(matrix_to_r44(matrix_build(7, 8, 9, 0, 0, 0, 2, 3, 4), test_matrix_to_r44_mout), test_matrix_to_r44_mout, "matrix_to_r44() with output mismatched!");
+	assert_equal(test_matrix_to_r44_mout, r44(2, 0, 0, 7, 0, 3, 0, 8, 0, 0, 4, 9, 0, 0, 0, 1), "matrix_to_r44() with output failed!");
 }
 // feather enable all
