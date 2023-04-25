@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "gmlin_test_all",
+  "name": "__gmlin_test_solution_operations__",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

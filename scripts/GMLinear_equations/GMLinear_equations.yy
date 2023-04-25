@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "gmlin_test_all",
+  "name": "GMLinear_equations",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "GMLinear_test",
-    "path": "folders/Libraries_test/GMLinear_test.yy",
+    "name": "GMLinear",
+    "path": "folders/Libraries/GMLinear.yy",
   },
 }
