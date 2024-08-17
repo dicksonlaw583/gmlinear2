@@ -1,6 +1,6 @@
-# GMLinear v2.3.0
+# GMLinear 2
 
-Matrix and vector library for GameMaker Studio 2.3.3+
+Matrix and vector library for GameMaker 2
 
 ## Introduction
 
@@ -8,7 +8,9 @@ GMLinear is an implementation of matrix and vector operations in pure GML. You c
 
 ## Requirements
 
-- GameMaker Studio 2.3.3 or above
+- GameMaker 2022 LTS or above
+
+If you use GameMaker Studio 2.3.0 to 2.3.7, please use v2.3.0.
 
 If you use GameMaker Studio 2.2 or below, please use v2.0.0.
 
