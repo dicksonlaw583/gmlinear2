@@ -32,9 +32,9 @@ function r22_zero() {
 	];
 }
 
-///@func r22_clone(M, <Mout>)
+///@func r22_clone(M, [Mout])
 ///@arg {Array<Array<Real>>} M The original 2x2 matrix
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output 2x2 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 2x2 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return a clone of M.
 function r22_clone(M, Mout=[[0, 0], [0, 0]]) {
 	GMLINEAR_INLINE
@@ -46,10 +46,10 @@ function r22_clone(M, Mout=[[0, 0], [0, 0]]) {
 }
 #macro r22_clone_to r22_clone
 
-///@func r22_add(M1, M2, <Mout>)
+///@func r22_add(M1, M2, [Mout])
 ///@arg {Array<Array<Real>>} M1 The first 2x2 matrix.
 ///@arg {Array<Array<Real>>} M2 The second 2x2 matrix.
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output 2x2 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 2x2 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return M1+M2.
 function r22_add(M1, M2, Mout=[[0, 0], [0, 0]]) {
 	GMLINEAR_INLINE
@@ -61,10 +61,10 @@ function r22_add(M1, M2, Mout=[[0, 0], [0, 0]]) {
 }
 #macro r22_add_to r22_add
 
-///@func r22_subtract(M1, M2, <Mout>)
+///@func r22_subtract(M1, M2, [Mout])
 ///@arg {Array<Array<Real>>} M1 The first 2x2 matrix.
 ///@arg {Array<Array<Real>>} M2 The second 2x2 matrix.
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output 2x2 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 2x2 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return M1-M2.
 function r22_subtract(M1, M2, Mout=[[0, 0], [0, 0]]) {
 	GMLINEAR_INLINE
@@ -76,10 +76,10 @@ function r22_subtract(M1, M2, Mout=[[0, 0], [0, 0]]) {
 }
 #macro r22_subtract_to r22_subtract
 
-///@func r22_scale(M, r, <Mout>)
+///@func r22_scale(M, r, [Mout])
 ///@arg {Array<Array<Real>>} M The original 2x2 matrix
 ///@arg {real} r The scaling factor
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output 2x2 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 2x2 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return rM.
 function r22_scale(M, r, Mout=[[0, 0], [0, 0]]) {
 	GMLINEAR_INLINE
@@ -91,9 +91,9 @@ function r22_scale(M, r, Mout=[[0, 0], [0, 0]]) {
 }
 #macro r22_scale_to r22_scale
 
-///@func r22_transpose(M, <Mout>)
+///@func r22_transpose(M, [Mout])
 ///@arg {Array<Array<Real>>} M The original 2x2 matrix
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output 2x2 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 2x2 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return a transpose of M.
 function r22_transpose(M, Mout=[[0, 0], [0, 0]]) {
 	GMLINEAR_INLINE
@@ -109,10 +109,10 @@ function r22_transpose(M, Mout=[[0, 0], [0, 0]]) {
 }
 #macro r22_transpose_to r22_transpose
 
-///@func r22_multiply(M1, M2, <Mout>)
+///@func r22_multiply(M1, M2, [Mout])
 ///@arg {Array<Array<Real>>} M1 The first 2x2 matrix.
 ///@arg {Array<Array<Real>>} M2 The second 2x2 matrix.
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output 2x2 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 2x2 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return M1*M2.
 function r22_multiply(M1, M2, Mout=[[0, 0], [0, 0]]) {
 	GMLINEAR_INLINE
@@ -132,10 +132,10 @@ function r22_multiply(M1, M2, Mout=[[0, 0], [0, 0]]) {
 }
 #macro r22_multiply_to r22_multiply
 
-///@func r22_transform(M, v, <vout>)
+///@func r22_transform(M, v, [vout])
 ///@arg {Array<Array<Real>>} M The 2x2 matrix.
 ///@arg {Array<Real>} v The 2D vector to transform.
-///@arg {Array<Real>} <vout> (Optional) The output 2D vector to overwrite. If not specified, a new vector will be created.
+///@arg {Array<Real>} [vout] (Optional) The output 2D vector to overwrite. If not specified, a new vector will be created.
 ///@desc Return Mv.
 function r22_transform(M, v, vout=[0, 0]) {
 	GMLINEAR_INLINE
@@ -151,9 +151,9 @@ function r22_transform(M, v, vout=[0, 0]) {
 }
 #macro r22_transform_to r22_transform
 
-///@func r22_invert(M, <Mout>)
+///@func r22_invert(M, [Mout])
 ///@arg {Array<Array<Real>>} M The original 2x2 matrix
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output 2x2 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 2x2 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return a inverse of M. If singular, return undefined.
 function r22_invert(M, Mout=[[0, 0], [0, 0]]) {
 	GMLINEAR_INLINE
@@ -203,9 +203,9 @@ function r22_encode_string(M) {
 	, " ", "");
 }
 
-///@description r22_decode_string(str, <Mout>)
+///@description r22_decode_string(str, [Mout])
 ///@arg {string} _str The string to decode.
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output 2x2 matrix to overwrite. If unspecified, return a new matrix.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 2x2 matrix to overwrite. If unspecified, return a new matrix.
 ///@desc Return the decoded form of str.
 function r22_decode_string(_str, Mout=[[0, 0], [0, 0]]) {
 	GMLINEAR_INLINE
@@ -239,9 +239,9 @@ function r22_encode_base64(M) {
 	return result;
 }
 
-///@func r22_decode_base64(enc, <Mout>)
+///@func r22_decode_base64(enc, [Mout])
 ///@arg {string} enc The string to decode.
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output 2x2 matrix to overwrite. If unspecified, return a new matrix.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 2x2 matrix to overwrite. If unspecified, return a new matrix.
 ///@desc Return the base64-decoded form of str.
 function r22_decode_base64(enc, Mout=[[0, 0], [0, 0]]) {
 	GMLINEAR_INLINE

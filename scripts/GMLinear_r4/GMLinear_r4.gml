@@ -16,9 +16,9 @@ function r4_zero() {
 	return [0, 0, 0, 0];
 }
 
-///@func r4_clone(v, <vout>)
+///@func r4_clone(v, [vout])
 ///@arg {Array<Real>} v The 4D vector to operate on.
-///@arg {Array<Real>} <vout> (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return a clone of the given 4D vector.
 function r4_clone(v, vout=[0, 0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -30,10 +30,10 @@ function r4_clone(v, vout=[0, 0, 0, 0]) {
 }
 #macro r4_clone_to r4_clone
 
-///@func r4_add(v1, v2, <vout>)
+///@func r4_add(v1, v2, [vout])
 ///@arg {Array<Real>} v1 The first 4D vector.
 ///@arg {Array<Real>} v2 The second 4D vector.
-///@arg {Array<Real>} <vout> (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return v1+v2.
 function r4_add(v1, v2, vout=[0, 0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -45,10 +45,10 @@ function r4_add(v1, v2, vout=[0, 0, 0, 0]) {
 }
 #macro r4_add_to r4_add
 
-///@func r4_subtract(v1, v2, <vout>)
+///@func r4_subtract(v1, v2, [vout])
 ///@arg {Array<Real>} v1 The first 4D vector.
 ///@arg {Array<Real>} v2 The second 4D vector.
-///@arg {Array<Real>} <vout> (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return v1-v2.
 function r4_subtract(v1, v2, vout=[0, 0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -60,10 +60,10 @@ function r4_subtract(v1, v2, vout=[0, 0, 0, 0]) {
 }
 #macro r4_subtract_to r4_subtract
 
-///@func r4_scale(v, r, <vout>)
+///@func r4_scale(v, r, [vout])
 ///@arg {Array<Real>} v The 4D vector to use.
 ///@arg {real} r The scaling factor.
-///@arg {Array<Real>} <vout> (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return rv.
 function r4_scale(v, r, vout=[0, 0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -147,9 +147,9 @@ function r4_maxnorm(v) {
 	return max(abs(v[0]), abs(v[1]), abs(v[2]), abs(v[3]));
 }
 
-///@func r4_unit(v, <vout>)
+///@func r4_unit(v, [vout])
 ///@arg {Array<Real>} v The 4D vector to operate on.
-///@arg {Array<Real>} <vout> (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the 4D unit vector in the direction of v.
 function r4_unit(v, vout=[0, 0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -169,11 +169,11 @@ function r4_unit(v, vout=[0, 0, 0, 0]) {
 }
 #macro r4_unit_to r4_unit
 
-///@func r4_lerp(v1, v2, amount, <vout>)
+///@func r4_lerp(v1, v2, amount, [vout])
 ///@arg {Array<Real>} v1 The first 4D vector.
 ///@arg {Array<Real>} v2 The second 4D vector.
 ///@arg {real} amount The interpolation factor. 0=first vector, 1=second vector
-///@arg {Array<Real>} <vout> (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the linear interpolation between 4D vectors v1 and v2.
 function r4_lerp(v1, v2, amount, vout=[0, 0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -185,10 +185,10 @@ function r4_lerp(v1, v2, amount, vout=[0, 0, 0, 0]) {
 }
 #macro r4_lerp_to r4_lerp
 
-///@func r4_proj(v1, v2, <vout>)
+///@func r4_proj(v1, v2, [vout])
 ///@arg {Array<Real>} v1 The first 4D vector.
 ///@arg {Array<Real>} v2 The second 4D vector.
-///@arg {Array<Real>} <vout> (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the projection from v1 onto v2
 function r4_proj(v1, v2, vout=[0, 0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -205,10 +205,10 @@ function r4_proj(v1, v2, vout=[0, 0, 0, 0]) {
 }
 #macro r4_proj_to r4_proj
 
-///@func r4_rej(v1, v2, <vout>)
+///@func r4_rej(v1, v2, [vout])
 ///@arg {Array<Real>} v1 The first 4D vector.
 ///@arg {Array<Real>} v2 The second 4D vector.
-///@arg {Array<Real>} <vout> (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the rejection from v1 onto v2
 function r4_rej(v1, v2, vout=[0, 0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -233,9 +233,9 @@ function r4_encode_string(v) {
 	return string_replace_all(string_format(v[0], 15, 14)+","+string_format(v[1], 15, 14)+","+string_format(v[2], 15, 14)+","+string_format(v[3], 15, 14), " ", "");
 }
 
-///@func r4_decode_string(str, <vout>)
+///@func r4_decode_string(str, [vout])
 ///@arg {string} str The string to decode.
-///@arg {Array<Real>} <vout> (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the decoded form of str.
 function r4_decode_string(str, vout=[0, 0]) {
 	GMLINEAR_INLINE
@@ -269,9 +269,9 @@ function r4_encode_base64(v) {
 	return result;
 }
 
-///@func r4_decode_base64(enc, <vout>)
+///@func r4_decode_base64(enc, [vout])
 ///@arg {string} enc The string to decode.
-///@arg {Array<Real>} <vout> (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 4D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the base64-decoded form of str.
 function r4_decode_base64(enc, vout=[0, 0]) {
 	GMLINEAR_INLINE

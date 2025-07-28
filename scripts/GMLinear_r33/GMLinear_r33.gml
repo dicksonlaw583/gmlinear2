@@ -40,9 +40,9 @@ function r33_zero() {
 	];
 }
 
-///@func r33_clone(M, <Mout>)
+///@func r33_clone(M, [Mout])
 ///@arg {Array<Array<Real>>} M The original 3x3 matrix
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output 3x3 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 3x3 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return a clone of M.
 function r33_clone(M, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 	GMLINEAR_INLINE
@@ -59,10 +59,10 @@ function r33_clone(M, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 }
 #macro r33_clone_to r33_clone
 
-///@func r33_add(M1, M2, <Mout>)
+///@func r33_add(M1, M2, [Mout])
 ///@arg {Array<Array<Real>>} M1 The first 3x3 matrix.
 ///@arg {Array<Array<Real>>} M2 The second 3x3 matrix.
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output 3x3 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 3x3 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return M1+M2.
 function r33_add(M1, M2, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 	GMLINEAR_INLINE
@@ -79,10 +79,10 @@ function r33_add(M1, M2, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 }
 #macro r33_add_to r33_add
 
-///@func r33_subtract(M1, M2, <Mout>)
+///@func r33_subtract(M1, M2, [Mout])
 ///@arg {Array<Array<Real>>} M1 The first 3x3 matrix.
 ///@arg {Array<Array<Real>>} M2 The second 3x3 matrix.
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output 3x3 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 3x3 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return M1-M2.
 function r33_subtract(M1, M2, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 	GMLINEAR_INLINE
@@ -99,10 +99,10 @@ function r33_subtract(M1, M2, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 }
 #macro r33_subtract_to r33_subtract
 
-///@func r33_scale(M, r, <Mout>)
+///@func r33_scale(M, r, [Mout])
 ///@arg {Array<Array<Real>>} M The original 3x3 matrix
 ///@arg {real} r The scaling factor
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output 3x3 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 3x3 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return rM.
 function r33_scale(M, r, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 	GMLINEAR_INLINE
@@ -119,9 +119,9 @@ function r33_scale(M, r, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 }
 #macro r33_scale_to r33_scale
 
-///@func r33_transpose(M, <Mout>)
+///@func r33_transpose(M, [Mout])
 ///@arg {Array<Array<Real>>} M The original 3x3 matrix
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output 3x3 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 3x3 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return a transpose of M.
 function r33_transpose(M, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 	GMLINEAR_INLINE
@@ -147,10 +147,10 @@ function r33_transpose(M, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 }
 #macro r33_transpose_to r33_transpose
 
-///@func r33_multiply(M1, M2, <Mout>)
+///@func r33_multiply(M1, M2, [Mout])
 ///@arg {Array<Array<Real>>} M1 The first 3x3 matrix.
 ///@arg {Array<Array<Real>>} M2 The second 3x3 matrix.
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output 3x3 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 3x3 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return M1*M2.
 function r33_multiply(M1, M2, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 	GMLINEAR_INLINE
@@ -185,10 +185,10 @@ function r33_multiply(M1, M2, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 }
 #macro r33_multiply_to r33_multiply
 
-///@func r33_transform(M, v, <vout>)
+///@func r33_transform(M, v, [vout])
 ///@arg {Array<Array<Real>>} M The 3x3 matrix.
 ///@arg {Array<Real>} v The 3D vector to transform.
-///@arg {Array<Real>} <vout> (Optional) The output 3D vector to overwrite. If not specified, a new vector will be created.
+///@arg {Array<Real>} [vout] (Optional) The output 3D vector to overwrite. If not specified, a new vector will be created.
 ///@desc Return Mv.
 function r33_transform(M, v, vout=[0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -211,9 +211,9 @@ function r33_transform(M, v, vout=[0, 0, 0]) {
 }
 #macro r33_transform_to r33_transform
 
-///@func r33_invert(M, <Mout>)
+///@func r33_invert(M, [Mout])
 ///@arg {Array<Array<Real>>} M The original 3x3 matrix
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output 3x3 matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 3x3 matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return a inverse of M. If singular, return undefined.
 function r33_invert(M, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 	GMLINEAR_INLINE
@@ -280,9 +280,9 @@ function r33_encode_string(M) {
 	, " ", "");
 }
 
-///@description r33_decode_string(str, <Mout>)
+///@description r33_decode_string(str, [Mout])
 ///@arg {string} _str The string to decode.
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output 3x3 matrix to overwrite. If unspecified, return a new matrix.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 3x3 matrix to overwrite. If unspecified, return a new matrix.
 ///@desc Return the decoded form of str.
 function r33_decode_string(_str, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 	GMLINEAR_INLINE
@@ -336,9 +336,9 @@ function r33_encode_base64(M) {
 	return result;
 }
 
-///@func r33_decode_base64(enc, <Mout>)
+///@func r33_decode_base64(enc, [Mout])
 ///@arg {string} enc The string to decode.
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output 4x4 matrix to overwrite. If unspecified, return a new matrix.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output 4x4 matrix to overwrite. If unspecified, return a new matrix.
 ///@desc Return the base64-decoded form of str.
 function r33_decode_base64(enc, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 	GMLINEAR_INLINE

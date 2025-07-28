@@ -190,11 +190,11 @@ function rnn_palu(M, P, L, U) {
 	}
 }
 
-///@func rmn_solve_qr(Q, R, b, <vout>)
+///@func rmn_solve_qr(Q, R, b, [vout])
 ///@arg {Array<Array<Real>>} Q The mxm matrix from QR decomposition
 ///@arg {Array<Array<Real>>} R The mxn matrix from QR decomposition
 ///@arg {Array<Real>} b The m-dimensional vector.
-///@arg {Array<Real>} <vout> (Optional) The n-dimensional solution vector to output to. If not given, create the new vector.
+///@arg {Array<Real>} [vout] (Optional) The n-dimensional solution vector to output to. If not given, create the new vector.
 ///@desc Solve QRx = b for x and return that.
 function rmn_solve_qr(Q, R, b, vout=array_create(array_length(R[0]), 0)) {
 	GMLINEAR_INLINE
@@ -233,11 +233,11 @@ function rmn_solve_qr(Q, R, b, vout=array_create(array_length(R[0]), 0)) {
 	return vout;
 }
 
-///@func rnn_solve_lu(L, U, b, <vout>)
+///@func rnn_solve_lu(L, U, b, [vout])
 ///@arg {Array<Array<Real>>} L The nxn lower-triangular matrix from LU decomposition
 ///@arg {Array<Array<Real>>} U The nxn upper-triangular matrix from LU decomposition
 ///@arg {Array<Real>} b The n-dimensional vector.
-///@arg {Array<Real>} <vout> (Optional) The n-dimensional solution vector to output to. If not given, create the new vector.
+///@arg {Array<Real>} [vout] (Optional) The n-dimensional solution vector to output to. If not given, create the new vector.
 ///@desc Solve LUx = b for x and return that.
 function rnn_solve_lu(L, U, b, vout=array_create(array_length(b), 0)) {
 	GMLINEAR_INLINE
@@ -282,12 +282,12 @@ function rnn_solve_lu(L, U, b, vout=array_create(array_length(b), 0)) {
 	return vout;
 }
 
-///@func rnn_solve_palu(P, L, U, b, <vout>)
+///@func rnn_solve_palu(P, L, U, b, [vout])
 ///@arg {Array<Array<Real>>} P The nxn permutation matrix from PA=LU decomposition
 ///@arg {Array<Array<Real>>} L The nxn lower-triangular matrix from PA=LU decomposition
 ///@arg {Array<Array<Real>>} U The nxn upper-triangular matrix from PA=LU decomposition
 ///@arg {Array<Real>} b The n-dimensional vector.
-///@arg {Array<Real>} <vout> (Optional) The n-dimensional solution vector to output to. If not given, create the new vector.
+///@arg {Array<Real>} [vout] (Optional) The n-dimensional solution vector to output to. If not given, create the new vector.
 ///@desc Solve LUx = Pb for x and return that.
 function rnn_solve_palu(P, L, U, b, vout=array_create(array_length(b), 0)) {
 	GMLINEAR_INLINE

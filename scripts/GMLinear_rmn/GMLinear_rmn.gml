@@ -42,9 +42,9 @@ function rmn_zero(m, n) {
 	return M;
 }
 
-///@func rmn_clone(M, <Mout>)
+///@func rmn_clone(M, [Mout])
 ///@arg {Array<Array<Real>>} M The original mxn matrix
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output mxn matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output mxn matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return a clone of M.
 function rmn_clone(M, Mout=rmn_zero(array_length(M), array_length(M[0]))) {
 	GMLINEAR_INLINE
@@ -57,10 +57,10 @@ function rmn_clone(M, Mout=rmn_zero(array_length(M), array_length(M[0]))) {
 }
 #macro rmn_clone_to rmn_clone
 
-///@func rmn_add(M1, M2, <Mout>)
+///@func rmn_add(M1, M2, [Mout])
 ///@arg {Array<Array<Real>>} M1 The first mxn matrix.
 ///@arg {Array<Array<Real>>} M2 The second nxp matrix.
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output mxp matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output mxp matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return M1+M2.
 function rmn_add(M1, M2, Mout=rmn_zero(array_length(M1), array_length(M1[0]))) {
 	GMLINEAR_INLINE
@@ -78,10 +78,10 @@ function rmn_add(M1, M2, Mout=rmn_zero(array_length(M1), array_length(M1[0]))) {
 }
 #macro rmn_add_to rmn_add
 
-///@func rmn_subtract(M1, M2, <Mout>)
+///@func rmn_subtract(M1, M2, [Mout])
 ///@arg {Array<Array<Real>>} M1 The first mxn matrix.
 ///@arg {Array<Array<Real>>} M2 The second mxn matrix.
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output mxn matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output mxn matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return M1-M2.
 function rmn_subtract(M1, M2, Mout=rmn_zero(array_length(M1), array_length(M1[0]))) {
 	GMLINEAR_INLINE
@@ -99,10 +99,10 @@ function rmn_subtract(M1, M2, Mout=rmn_zero(array_length(M1), array_length(M1[0]
 }
 #macro rmn_subtract_to rmn_subtract
 
-///@func rmn_scale(M, r, <Mout>)
+///@func rmn_scale(M, r, [Mout])
 ///@arg {Array<Array<Real>>} M The original mxn matrix
 ///@arg {real} r The scaling factor
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output mxn matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output mxn matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return rM.
 function rmn_scale(M, r, Mout=rmn_zero(array_length(M), array_length(M[0]))) {
 	GMLINEAR_INLINE
@@ -119,9 +119,9 @@ function rmn_scale(M, r, Mout=rmn_zero(array_length(M), array_length(M[0]))) {
 }
 #macro rmn_scale_to rmn_scale
 
-///@func rmn_transpose(M, <Mout>)
+///@func rmn_transpose(M, [Mout])
 ///@arg {Array<Array<Real>>} M The original mxn matrix
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output nxm matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output nxm matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return a transpose of M.
 function rmn_transpose(M, Mout=rmn_zero(array_length(M[0]), array_length(M))) {
 	GMLINEAR_INLINE
@@ -141,10 +141,10 @@ function rmn_transpose(M, Mout=rmn_zero(array_length(M[0]), array_length(M))) {
 }
 #macro rmn_transpose_to rmn_transpose
 
-///@func rmn_multiply(M1, M2, <Mout>)
+///@func rmn_multiply(M1, M2, [Mout])
 ///@arg {Array<Array<Real>>} M1 The first mxn matrix.
 ///@arg {Array<Array<Real>>} M2 The second nxp matrix.
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output mxp matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output mxp matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return M1*M2.
 function rmn_multiply(M1, M2, Mout=rmn_zero(array_length(M1), array_length(M2[0]))) {
 	GMLINEAR_INLINE
@@ -169,10 +169,10 @@ function rmn_multiply(M1, M2, Mout=rmn_zero(array_length(M1), array_length(M2[0]
 }
 #macro rmn_multiply_to rmn_multiply
 
-///@func rmn_transform(M, v, <vout>)
+///@func rmn_transform(M, v, [vout])
 ///@arg {Array<Array<Real>>} M The mxn matrix.
 ///@arg {Array<Real>} v The n-dimensional vector to transform.
-///@arg {Array<Real>} <vout> (Optional) The output m-dimensional vector to overwrite. If not specified, a new vector will be created.
+///@arg {Array<Real>} [vout] (Optional) The output m-dimensional vector to overwrite. If not specified, a new vector will be created.
 ///@desc Return Mv.
 function rmn_transform(M, v, vout=array_create(array_length(M))) {
 	GMLINEAR_INLINE
@@ -216,7 +216,7 @@ function rmn_encode_string(M) {
 
 ///@func rmn_decode_string(str)
 ///@arg {string} _str The string to decode.
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output mxn matrix to overwrite. If unspecified, return a new matrix.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output mxn matrix to overwrite. If unspecified, return a new matrix.
 ///@desc Return the decoded form of str.
 function rmn_decode_string(_str, Mout=rmn_zero(string_count(";", _str)+1, string_count(",", string_copy(_str, 1, string_pos(";", _str)))+1)) {
 	var str = _str;
@@ -266,11 +266,11 @@ function rmn_encode_base64(M) {
 	return result;
 }
 
-///@func rmn_decode_base64(enc, m, n, <Mout>)
+///@func rmn_decode_base64(enc, m, n, [Mout])
 ///@arg {string} enc The string to decode.
 ///@arg {Real} m
 ///@arg {Real} n
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output mxn matrix to overwrite. If unspecified, return a new matrix.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output mxn matrix to overwrite. If unspecified, return a new matrix.
 ///@desc Return the base64-decoded form of str.
 function rmn_decode_base64(enc, m, n, Mout=rmn_zero(m, n)) {
 	GMLINEAR_INLINE

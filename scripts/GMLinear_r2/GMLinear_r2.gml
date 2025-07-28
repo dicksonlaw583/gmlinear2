@@ -14,9 +14,9 @@ function r2_zero() {
 	return [0, 0];
 }
 
-///@func r2_clone(v, <vout>)
+///@func r2_clone(v, [vout])
 ///@arg {Array<Real>} v The 2D vector to operate on.
-///@arg {Array<Real>} <vout> (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return a clone of the given 2D vector.
 function r2_clone(v, vout=[0, 0]) {
 	GMLINEAR_INLINE
@@ -26,10 +26,10 @@ function r2_clone(v, vout=[0, 0]) {
 }
 #macro r2_clone_to r2_clone
 
-///@func r2_add(v1, v2, <vout>)
+///@func r2_add(v1, v2, [vout])
 ///@arg {Array<Real>} v1 The first 2D vector.
 ///@arg {Array<Real>} v2 The second 2D vector.
-///@arg {Array<Real>} <vout> (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return v1+v2.
 function r2_add(v1, v2, vout=[0, 0]) {
 	GMLINEAR_INLINE
@@ -39,10 +39,10 @@ function r2_add(v1, v2, vout=[0, 0]) {
 }
 #macro r2_add_to r2_add
 
-///@func r2_subtract(v1, v2, <vout>)
+///@func r2_subtract(v1, v2, [vout])
 ///@arg {Array<Real>} v1 The first 2D vector.
 ///@arg {Array<Real>} v2 The second 2D vector.
-///@arg {Array<Real>} <vout> (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return v1-v2.
 function r2_subtract(v1, v2, vout=[0, 0]) {
 	GMLINEAR_INLINE
@@ -52,10 +52,10 @@ function r2_subtract(v1, v2, vout=[0, 0]) {
 }
 #macro r2_subtract_to r2_subtract
 
-///@func r2_scale(v, r, <vout>)
+///@func r2_scale(v, r, [vout])
 ///@arg {Array<Real>} v The 2D vector to use.
 ///@arg {real} r The scaling factor.
-///@arg {Array<Real>} <vout> (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return rv.
 function r2_scale(v, r, vout=[0, 0]) {
 	GMLINEAR_INLINE
@@ -135,9 +135,9 @@ function r2_maxnorm(v) {
 	return max(abs(v[0]), abs(v[1]));
 }
 
-///@func r2_unit(v, <vout>)
+///@func r2_unit(v, [vout])
 ///@arg {Array<Real>} v The 2D vector to operate on.
-///@arg {Array<Real>} <vout> (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the 2D unit vector in the direction of v.
 function r2_unit(v, vout=[0, 0]) {
 	GMLINEAR_INLINE
@@ -153,11 +153,11 @@ function r2_unit(v, vout=[0, 0]) {
 }
 #macro r2_unit_to r2_unit
 
-///@func r2_lerp(v1, v2, amount, <vout>)
+///@func r2_lerp(v1, v2, amount, [vout])
 ///@arg {Array<Real>} v1 The first 2D vector.
 ///@arg {Array<Real>} v2 The second 2D vector.
 ///@arg {real} amount The interpolation factor. 0=first vector, 1=second vector
-///@arg {Array<Real>} <vout> (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the linear interpolation between 2D vectors v1 and v2.
 function r2_lerp(v1, v2, amount, vout=[0, 0]) {
 	GMLINEAR_INLINE
@@ -167,10 +167,10 @@ function r2_lerp(v1, v2, amount, vout=[0, 0]) {
 }
 #macro r2_lerp_to r2_lerp
 
-///@func r2_proj(v1, v2, <vout>)
+///@func r2_proj(v1, v2, [vout])
 ///@arg {Array<Real>} v1 The first 2D vector.
 ///@arg {Array<Real>} v2 The second 2D vector.
-///@arg {Array<Real>} <vout> (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the projection from v1 onto v2
 function r2_proj(v1, v2, vout=[0, 0]) {
 	GMLINEAR_INLINE
@@ -183,10 +183,10 @@ function r2_proj(v1, v2, vout=[0, 0]) {
 }
 #macro r2_proj_to r2_proj
 
-///@func r2_rej(v1, v2, <vout>)
+///@func r2_rej(v1, v2, [vout])
 ///@arg {Array<Real>} v1 The first 2D vector.
 ///@arg {Array<Real>} v2 The second 2D vector.
-///@arg {Array<Real>} <vout> (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the rejection from v1 onto v2
 function r2_rej(v1, v2, vout=[0, 0]) {
 	GMLINEAR_INLINE
@@ -207,9 +207,9 @@ function r2_encode_string(v) {
 	return string_replace_all(string_format(v[0], 15, 14)+","+string_format(v[1], 15, 14), " ", "");
 }
 
-///@func r2_decode_string(str, <vout>)
+///@func r2_decode_string(str, [vout])
 ///@arg {string} str The string to decode.
-///@arg {Array<Real>} <vout> (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the decoded form of str.
 function r2_decode_string(str, vout=[0, 0]) {
 	GMLINEAR_INLINE
@@ -233,9 +233,9 @@ function r2_encode_base64(v) {
 	return result;
 }
 
-///@func r2_decode_base64(enc, <vout>)
+///@func r2_decode_base64(enc, [vout])
 ///@arg {string} enc The string to decode.
-///@arg {Array<Real>} <vout> (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 2D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the base64-decoded form of str.
 function r2_decode_base64(enc, vout=[0, 0]) {
 	GMLINEAR_INLINE

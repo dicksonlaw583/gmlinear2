@@ -18,9 +18,9 @@ function rn_zero(n) {
 	return array_create(n, 0);
 }
 
-///@func rn_clone(v, <vout>)
+///@func rn_clone(v, [vout])
 ///@arg {Array<Real>} v The n-dimensional vector to operate on.
-///@arg {Array<Real>} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return a clone of the given n-dimensional vector.
 function rn_clone(v, vout=array_create(array_length(v), 0)) {
 	GMLINEAR_INLINE
@@ -29,10 +29,10 @@ function rn_clone(v, vout=array_create(array_length(v), 0)) {
 }
 #macro rn_clone_to rn_clone
 
-///@func rn_add(v1, v2, <vout>)
+///@func rn_add(v1, v2, [vout])
 ///@arg {Array<Real>} v1 The first n-dimensional vector.
 ///@arg {Array<Real>} v2 The second n-dimensional vector.
-///@arg {Array<Real>} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return v1+v2.
 function rn_add(v1, v2, vout=array_create(array_length(v1), 0)) {
 	GMLINEAR_INLINE
@@ -43,10 +43,10 @@ function rn_add(v1, v2, vout=array_create(array_length(v1), 0)) {
 }
 #macro rn_add_to rn_add
 
-///@func rn_subtract(v1, v2, <vout>)
+///@func rn_subtract(v1, v2, [vout])
 ///@arg {Array<Real>} v1 The first n-dimensional vector.
 ///@arg {Array<Real>} v2 The second n-dimensional vector.
-///@arg {Array<Real>} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return v1-v2.
 function rn_subtract(v1, v2, vout=array_create(array_length(v1), 0)) {
 	GMLINEAR_INLINE
@@ -57,10 +57,10 @@ function rn_subtract(v1, v2, vout=array_create(array_length(v1), 0)) {
 }
 #macro rn_subtract_to rn_subtract
 
-///@func rn_scale(v, r, <vout>)
+///@func rn_scale(v, r, [vout])
 ///@arg {Array<Real>} v The n-dimensional vector to use.
 ///@arg {real} r The scaling factor.
-///@arg {Array<Real>} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return rv.
 function rn_scale(v, r, vout=array_create(array_length(v), 0)) {
 	GMLINEAR_INLINE
@@ -175,9 +175,9 @@ function rn_maxnorm(v) {
 	return result;
 }
 
-///@func rn_unit(v, <vout>)
+///@func rn_unit(v, [vout])
 ///@arg {Array<Real>} v The n-dimensional vector to operate on.
-///@arg {Array<Real>} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the n-dimensional unit vector in the direction of v.
 function rn_unit(v, vout=array_create(array_length(v), 0)) {
 	GMLINEAR_INLINE
@@ -201,11 +201,11 @@ function rn_unit(v, vout=array_create(array_length(v), 0)) {
 }
 #macro rn_unit_to rn_unit
 
-///@func rn_lerp(v1, v2, amount, <vout>)
+///@func rn_lerp(v1, v2, amount, [vout])
 ///@arg {Array<Real>} v1 The first n-dimensional vector.
 ///@arg {Array<Real>} v2 The second n-dimensional vector.
 ///@arg {real} amount The interpolation factor. 0=first vector, 1=second vector
-///@arg {Array<Real>} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the linear interpolation between n-dimensional vectors v1 and v2.
 function rn_lerp(v1, v2, amount, vout=array_create(array_length(v1), 0)) {
 	GMLINEAR_INLINE
@@ -216,10 +216,10 @@ function rn_lerp(v1, v2, amount, vout=array_create(array_length(v1), 0)) {
 }
 #macro rn_lerp_to rn_lerp
 
-///@func rn_proj(v1, v2, <vout>)
+///@func rn_proj(v1, v2, [vout])
 ///@arg {Array<Real>} v1 The first n-dimensional vector.
 ///@arg {Array<Real>} v2 The second n-dimensional vector.
-///@arg {Array<Real>} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the projection from v1 onto v2
 function rn_proj(v1, v2, vout=array_create(array_length(v1), 0)) {
 	GMLINEAR_INLINE
@@ -239,10 +239,10 @@ function rn_proj(v1, v2, vout=array_create(array_length(v1), 0)) {
 }
 #macro rn_proj_to rn_proj
 
-///@func rn_rej(v1, v2, <vout>)
+///@func rn_rej(v1, v2, [vout])
 ///@arg {Array<Real>} v1 The first n-dimensional vector.
 ///@arg {Array<Real>} v2 The second n-dimensional vector.
-///@arg {Array<Real>} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the rejection from v1 onto v2
 function rn_rej(v1, v2, vout=array_create(array_length(v1), 0)) {
 	GMLINEAR_INLINE
@@ -278,9 +278,9 @@ function rn_encode_string(v) {
 	return string_replace_all(result, " ", "");
 }
 
-///@func rn_decode_string(str, <vout>)
+///@func rn_decode_string(str, [vout])
 ///@arg {string} str The string to decode.
-///@arg {Array<Real>} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the decoded form of str.
 function rn_decode_string(str, vout=[]) {
 	GMLINEAR_INLINE
@@ -312,10 +312,10 @@ function rn_encode_base64(v) {
 	return result;
 }
 
-///@func rn_decode_base64(enc, n, <vout>)
+///@func rn_decode_base64(enc, n, [vout])
 ///@arg {string} enc The string to decode.
 ///@arg {Real} n The dimension of the vector.
-///@arg {Array<Real>} <vout> (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output n-dimensional vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the base64-decoded form of str.
 function rn_decode_base64(enc, n, vout=[]) {
 	GMLINEAR_INLINE

@@ -1,6 +1,6 @@
-///@func r3_rec_cyl_to(vi_xyz, <vo_rpz>)
+///@func r3_rec_cyl_to(vi_xyz, [vo_rpz])
 ///@arg {Array<Real>} vi_xyz Input 3D vector in rectangular coordinates
-///@arg {Array<Real>} <vo_rpz> (Optional) Output 3D vector in cylindrical coordinates. If unspecified, return a new vector.
+///@arg {Array<Real>} [vo_rpz] (Optional) Output 3D vector in cylindrical coordinates. If unspecified, return a new vector.
 ///@desc Return the cylindrical equivalent of the 3D rectangular vector.
 function r3_rec_cyl(vi_xyz, vo_rpz=[0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -18,9 +18,9 @@ function r3_rec_cyl(vi_xyz, vo_rpz=[0, 0, 0]) {
 }
 #macro r3_rec_cyl_to r3_rec_cyl
 
-///@func r3_cyl_rec(vi_rpz, <vo_xyz>)
+///@func r3_cyl_rec(vi_rpz, [vo_xyz])
 ///@arg {Array<Real>} vi_rpz Input 3D vector in cylindrical coordinates
-///@arg {Array<Real>} <vo_xyz> (Optional) Output 3D vector in rectangular coordinates. If unspecified, return a new vector.
+///@arg {Array<Real>} [vo_xyz] (Optional) Output 3D vector in rectangular coordinates. If unspecified, return a new vector.
 ///@desc Return the rectangular equivalent of the 3D cylindrical vector.
 function r3_cyl_rec(vi_rpz, vo_xyz=[0, 0, 0]){
 	GMLINEAR_INLINE
@@ -33,9 +33,9 @@ function r3_cyl_rec(vi_rpz, vo_xyz=[0, 0, 0]){
 }
 #macro r3_cyl_rec_to r3_cyl_rec
 
-///@func r3_rec_sph(vi_xyz, <vo_rpt>)
+///@func r3_rec_sph(vi_xyz, [vo_rpt])
 ///@arg {Array<Real>} vi_xyz Input 3D vector in rectangular coordinates
-///@arg {Array<Real>} <vo_rpt> (Optional) Output 3D vector in spherical coordinates. If unspecified, return a new vector.
+///@arg {Array<Real>} [vo_rpt] (Optional) Output 3D vector in spherical coordinates. If unspecified, return a new vector.
 ///@desc Return the spherical equivalent of the 3D rectangular vector.
 function r3_rec_sph(vi_xyz, vo_rpt=[0, 0, 0]){
 	GMLINEAR_INLINE
@@ -55,9 +55,9 @@ function r3_rec_sph(vi_xyz, vo_rpt=[0, 0, 0]){
 }
 #macro r3_rec_sph_to r3_rec_sph
 
-///@func r3_sph_rec(vi_rpt, <vo_xyz>)
+///@func r3_sph_rec(vi_rpt, [vo_xyz])
 ///@arg {Array<Real>} vi_rpt Input 3D vector in spherical coordinates
-///@arg {Array<Real>} <vo_xyz> (Optional) Output 3D vector in rectangular coordinates. If unspecified, return a new vector.
+///@arg {Array<Real>} [vo_xyz] (Optional) Output 3D vector in rectangular coordinates. If unspecified, return a new vector.
 ///@desc Return the rectangular equivalent of the 3D spherical vector.
 function r3_sph_rec(vi_rpt, vo_xyz=[0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -71,9 +71,9 @@ function r3_sph_rec(vi_rpt, vo_xyz=[0, 0, 0]) {
 }
 #macro r3_sph_rec_to r3_sph_rec
 
-///@func r3_cyl_sph(vi_rpz, <vo_rpt>)
+///@func r3_cyl_sph(vi_rpz, [vo_rpt])
 ///@arg {Array<Real>} vi_rpz Input 3D vector in cylindrical coordinates
-///@arg {Array<Real>} <vo_rpt> (Optional) Output 3D vector in spherical coordinates. If unspecified, return a new vector.
+///@arg {Array<Real>} [vo_rpt] (Optional) Output 3D vector in spherical coordinates. If unspecified, return a new vector.
 ///@desc Return the spherical equivalent of the 3D cylindrical vector.
 function r3_cyl_sph(vi_rpz, vo_rpt=[0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -86,9 +86,9 @@ function r3_cyl_sph(vi_rpz, vo_rpt=[0, 0, 0]) {
 }
 #macro r3_cyl_sph_to r3_cyl_sph
 
-///@func r3_sph_cyl_to(vi_rpt, <vo_rpz>)
+///@func r3_sph_cyl_to(vi_rpt, [vo_rpz])
 ///@arg {Array<Real>} vi_rpt Input 3D vector in spherical coordinates
-///@arg {Array<Real>} <vo_rpz> (Optional) Output 3D vector in cylindrical coordinates. If unspecified, return a new vector.
+///@arg {Array<Real>} [vo_rpz] (Optional) Output 3D vector in cylindrical coordinates. If unspecified, return a new vector.
 ///@desc Return the cylindrical equivalent of the 3D spherical vector.
 function r3_sph_cyl_to(vi_rpt, vo_rpz=[0, 0, 0]) {
 	GMLINEAR_INLINE

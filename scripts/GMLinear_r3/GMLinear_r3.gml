@@ -15,9 +15,9 @@ function r3_zero() {
 	return [0, 0, 0];
 }
 
-///@func r3_clone(v, <vout>)
+///@func r3_clone(v, [vout])
 ///@arg {Array<Real>} v The 3D vector to operate on.
-///@arg {Array<Real>} <vout> (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return a clone of the given 3D vector.
 function r3_clone(v, vout=[0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -28,10 +28,10 @@ function r3_clone(v, vout=[0, 0, 0]) {
 }
 #macro r3_clone_to r3_clone
 
-///@func r3_add(v1, v2, <vout>)
+///@func r3_add(v1, v2, [vout])
 ///@arg {Array<Real>} v1 The first 3D vector.
 ///@arg {Array<Real>} v2 The second 3D vector.
-///@arg {Array<Real>} <vout> (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return v1+v2.
 function r3_add(v1, v2, vout=[0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -42,10 +42,10 @@ function r3_add(v1, v2, vout=[0, 0, 0]) {
 }
 #macro r3_add_to r3_add
 
-///@func r3_subtract(v1, v2, <vout>)
+///@func r3_subtract(v1, v2, [vout])
 ///@arg {Array<Real>} v1 The first 3D vector.
 ///@arg {Array<Real>} v2 The second 3D vector.
-///@arg {Array<Real>} <vout> (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return v1-v2.
 function r3_subtract(v1, v2, vout=[0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -56,10 +56,10 @@ function r3_subtract(v1, v2, vout=[0, 0, 0]) {
 }
 #macro r3_subtract_to r3_subtract
 
-///@func r3_scale(v, r, <vout>)
+///@func r3_scale(v, r, [vout])
 ///@arg {Array<Real>} v The 3D vector to use.
 ///@arg {real} r The scaling factor.
-///@arg {Array<Real>} <vout> (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return rv.
 function r3_scale(v, r, vout=[0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -79,10 +79,10 @@ function r3_dot(v1, v2) {
 	return v1[0]*v2[0]+v1[1]*v2[1]+v1[2]*v2[2];
 }
 
-///@func r3_cross(v1, v2, <vout>)
+///@func r3_cross(v1, v2, [vout])
 ///@arg {Array<Real>} v1 The first 3D vector.
 ///@arg {Array<Real>} v2 The second 3D vector.
-///@arg {Array<Real>} <vout> (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return v1 x v2.
 function r3_cross(v1, v2, vout=[0, 0, 0]) {
 	var a0 = v1[0];
@@ -157,9 +157,9 @@ function r3_maxnorm(v) {
 	return max(abs(v[0]), abs(v[1]), abs(v[2]));
 }
 
-///@func r3_unit(v, <vout>)
+///@func r3_unit(v, [vout])
 ///@arg {Array<Real>} v The 3D vector to operate on.
-///@arg {Array<Real>} <vout> (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the 3D unit vector in the direction of v.
 function r3_unit(v, vout=[0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -177,11 +177,11 @@ function r3_unit(v, vout=[0, 0, 0]) {
 }
 #macro r3_unit_to r3_unit
 
-///@func r3_lerp(v1, v2, amount, <vout>)
+///@func r3_lerp(v1, v2, amount, [vout])
 ///@arg {Array<Real>} v1 The first 3D vector.
 ///@arg {Array<Real>} v2 The second 3D vector.
 ///@arg {real} amount The interpolation factor. 0=first vector, 1=second vector
-///@arg {Array<Real>} <vout> (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the linear interpolation between 3D vectors v1 and v2.
 function r3_lerp(v1, v2, amount, vout=[0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -192,10 +192,10 @@ function r3_lerp(v1, v2, amount, vout=[0, 0, 0]) {
 }
 #macro r3_lerp_to r3_lerp
 
-///@func r3_proj(v1, v2, <vout>)
+///@func r3_proj(v1, v2, [vout])
 ///@arg {Array<Real>} v1 The first 3D vector.
 ///@arg {Array<Real>} v2 The second 3D vector.
-///@arg {Array<Real>} <vout> (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the projection from v1 onto v2
 function r3_proj(v1, v2, vout=[0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -210,10 +210,10 @@ function r3_proj(v1, v2, vout=[0, 0, 0]) {
 }
 #macro r3_proj_to r3_proj
 
-///@func r3_rej(v1, v2, <vout>)
+///@func r3_rej(v1, v2, [vout])
 ///@arg {Array<Real>} v1 The first 3D vector.
 ///@arg {Array<Real>} v2 The second 3D vector.
-///@arg {Array<Real>} <vout> (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the rejection from v1 onto v2
 function r3_rej(v1, v2, vout=[0, 0, 0]) {
 	GMLINEAR_INLINE
@@ -236,9 +236,9 @@ function r3_encode_string(v) {
 	return string_replace_all(string_format(v[0], 15, 14)+","+string_format(v[1], 15, 14)+","+string_format(v[2], 15, 14), " ", "");
 }
 
-///@func r3_decode_string(str, <vout>)
+///@func r3_decode_string(str, [vout])
 ///@arg {string} str The string to decode.
-///@arg {Array<Real>} <vout> (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the decoded form of str.
 function r3_decode_string(str, vout=[0, 0]) {
 	GMLINEAR_INLINE
@@ -268,9 +268,9 @@ function r3_encode_base64(v) {
 	return result;
 }
 
-///@func r3_decode_base64(enc, <vout>)
+///@func r3_decode_base64(enc, [vout])
 ///@arg {string} enc The string to decode.
-///@arg {Array<Real>} <vout> (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vout] (Optional) The output 3D vector to overwrite. If unspecified, return a new vector.
 ///@desc Return the base64-decoded form of str.
 function r3_decode_base64(enc, vout=[0, 0]) {
 	GMLINEAR_INLINE

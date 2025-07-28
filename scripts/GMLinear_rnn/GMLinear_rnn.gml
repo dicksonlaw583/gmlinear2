@@ -56,9 +56,9 @@ function rnn_zero(n) {
 	return M;
 }
 
-///@func rnn_clone(M, <Mout>)
+///@func rnn_clone(M, [Mout])
 ///@arg {Array<Array<Real>>} M The original nxn matrix
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output nxn matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output nxn matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return a clone of M.
 function rnn_clone(M, Mout=rnn_zero(array_length(M))) {
 	GMLINEAR_INLINE
@@ -70,10 +70,10 @@ function rnn_clone(M, Mout=rnn_zero(array_length(M))) {
 }
 #macro rnn_clone_to rnn_clone
 
-///@func rnn_add(M1, M2, <Mout>)
+///@func rnn_add(M1, M2, [Mout])
 ///@arg {Array<Array<Real>>} M1 The first nxn matrix.
 ///@arg {Array<Array<Real>>} M2 The second nxn matrix.
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output nxn matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output nxn matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return M1+M2.
 function rnn_add(M1, M2, Mout=rnn_zero(array_length(M1))) {
 	GMLINEAR_INLINE
@@ -90,10 +90,10 @@ function rnn_add(M1, M2, Mout=rnn_zero(array_length(M1))) {
 }
 #macro rnn_add_to rnn_add
 
-///@func rnn_subtract(M1, M2, <Mout>)
+///@func rnn_subtract(M1, M2, [Mout])
 ///@arg {Array<Array<Real>>} M1 The first nxn matrix.
 ///@arg {Array<Array<Real>>} M2 The second nxn matrix.
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output nxn matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output nxn matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return M1-M2.
 function rnn_subtract(M1, M2, Mout=rnn_zero(array_length(M1))) {
 	GMLINEAR_INLINE
@@ -110,10 +110,10 @@ function rnn_subtract(M1, M2, Mout=rnn_zero(array_length(M1))) {
 }
 #macro rnn_subtract_to rnn_subtract
 
-///@func rnn_scale(M, r, <Mout>)
+///@func rnn_scale(M, r, [Mout])
 ///@arg {Array<Array<Real>>} M The original nxn matrix
 ///@arg {real} r The scaling factor
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output nxn matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output nxn matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return rM.
 function rnn_scale(M, r, Mout=rnn_zero(array_length(M))) {
 	GMLINEAR_INLINE
@@ -129,9 +129,9 @@ function rnn_scale(M, r, Mout=rnn_zero(array_length(M))) {
 }
 #macro rnn_scale_to rnn_scale
 
-///@func rnn_transpose(M, <Mout>)
+///@func rnn_transpose(M, [Mout])
 ///@arg {Array<Array<Real>>} M The original nxn matrix
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output nxn matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output nxn matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return a transpose of M.
 function rnn_transpose(M, Mout=rnn_zero(array_length(M))) {
 	GMLINEAR_INLINE
@@ -149,10 +149,10 @@ function rnn_transpose(M, Mout=rnn_zero(array_length(M))) {
 }
 #macro rnn_transpose_to rnn_transpose
 
-///@func rnn_multiply(M1, M2, <Mout>)
+///@func rnn_multiply(M1, M2, [Mout])
 ///@arg {Array<Array<Real>>} M1 The first nxn matrix.
 ///@arg {Array<Array<Real>>} M2 The second nxn matrix.
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output nxn matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output nxn matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return M1*M2.
 ///@returns {Array<Array<Real>>}
 function rnn_multiply(M1, M2, Mout=rnn_zero(array_length(M1))) {
@@ -179,10 +179,10 @@ function rnn_multiply(M1, M2, Mout=rnn_zero(array_length(M1))) {
 }
 #macro rnn_multiply_to rnn_multiply
 
-///@func rnn_transform(M, v, <vout>)
+///@func rnn_transform(M, v, [vout])
 ///@arg {Array<Array<Real>>} M The nxn matrix.
 ///@arg {Array<Real>} v The n-dimensional vector to transform.
-///@arg {Array<Real>} <vout> (Optional) The output n-dimensional vector to overwrite. If not specified, a new vector will be created.
+///@arg {Array<Real>} [vout] (Optional) The output n-dimensional vector to overwrite. If not specified, a new vector will be created.
 ///@desc Return Mv.
 function rnn_transform(M, v, vout=[]) {
 	GMLINEAR_INLINE
@@ -202,9 +202,9 @@ function rnn_transform(M, v, vout=[]) {
 }
 #macro rnn_transform_to rnn_transform
 
-///@func rnn_invert(M, <Mout>)
+///@func rnn_invert(M, [Mout])
 ///@arg {Array<Array<Real>>} M The original nxn matrix
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output nxn matrix to overwrite. If not specified, a new matrix will be created.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output nxn matrix to overwrite. If not specified, a new matrix will be created.
 ///@desc Return a inverse of M. If singular, return undefined.
 ///@returns {Array<Array<Real>>}
 function rnn_invert(M, Mout=rnn_zero(array_length(M))) {
@@ -362,7 +362,7 @@ function rnn_encode_string(M) {
 
 ///@func rnn_decode_string(str)
 ///@arg {string} _str The string to decode.
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output nxn matrix to overwrite. If unspecified, return a new matrix.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output nxn matrix to overwrite. If unspecified, return a new matrix.
 ///@desc Return the decoded form of str.
 ///@returns {Array<Array<Real>>}
 function rnn_decode_string(_str, Mout=rnn_zero(string_count(";", _str)+1)) {
@@ -412,10 +412,10 @@ function rnn_encode_base64(M) {
 	return result;
 }
 
-///@func rnn_decode_base64(enc, n, <Mout>)
+///@func rnn_decode_base64(enc, n, [Mout])
 ///@arg {string} enc The string to decode.
 ///@arg {Real} n
-///@arg {Array<Array<Real>>} <Mout> (Optional) The output nxn matrix to overwrite. If unspecified, return a new matrix.
+///@arg {Array<Array<Real>>} [Mout] (Optional) The output nxn matrix to overwrite. If unspecified, return a new matrix.
 ///@desc Return the base64-decoded form of str.
 function rnn_decode_base64(enc, n, Mout=rnn_zero(n)) {
 	GMLINEAR_INLINE

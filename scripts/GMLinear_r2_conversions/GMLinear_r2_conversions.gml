@@ -1,6 +1,6 @@
-///@func r2_rec_gmp(vi_xy, <vo_ld>)
+///@func r2_rec_gmp(vi_xy, [vo_ld])
 ///@arg {Array<Real>} vi_xy Input 2D vector in rectangular coordinates
-///@arg {Array<Real>} <vo_ld> (Optional) Output 2D vector in GM polar coordinates to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vo_ld] (Optional) Output 2D vector in GM polar coordinates to overwrite. If unspecified, return a new vector.
 ///@desc Return the GM polar equivalent of the 2D rectangular vector.
 function r2_rec_gmp(vi_xy, vo_ld=[0, 0]) {
 	GMLINEAR_INLINE
@@ -12,9 +12,9 @@ function r2_rec_gmp(vi_xy, vo_ld=[0, 0]) {
 }
 #macro r2_rec_gmp_to r2_rec_gmp
 
-///@func r2_gmp_rec(vi_xy, <vo_ld>)
+///@func r2_gmp_rec(vi_ld, [vo_xy])
 ///@arg {Array<Real>} vi_ld Input 2D vector in GM polar coordinates
-///@arg {Array<Real>} <vo_xy> (Optional) Output 2D vector in rectangular coordinates to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vo_xy] (Optional) Output 2D vector in rectangular coordinates to overwrite. If unspecified, return a new vector.
 ///@desc Return the rectangular equivalent of the 2D GM polar vector.
 function r2_gmp_rec(vi_ld, vo_xy=[0, 0]) {
 	GMLINEAR_INLINE
@@ -26,9 +26,9 @@ function r2_gmp_rec(vi_ld, vo_xy=[0, 0]) {
 }
 #macro r2_gmp_rec_to r2_gmp_rec
 
-///@func r2_rec_pol(vi_xy, <vo_rt>)
+///@func r2_rec_pol(vi_xy, [vo_rt])
 ///@arg {Array<Real>} vi_xy Input 2D vector in rectangular coordinates
-///@arg {Array<Real>} <vo_rt> (Optional) Output 2D vector in conventional polar coordinates to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vo_rt] (Optional) Output 2D vector in conventional polar coordinates to overwrite. If unspecified, return a new vector.
 ///@desc Return the conventional polar equivalent of the 2D rectangular vector.
 function r2_rec_pol(vi_xy, vo_rt=[0, 0]) {
 	GMLINEAR_INLINE
@@ -40,9 +40,9 @@ function r2_rec_pol(vi_xy, vo_rt=[0, 0]) {
 }
 #macro r2_rec_pol_to r2_rec_pol
 
-///@func r2_pol_rec(vi_rt, <vo_xy>)
+///@func r2_pol_rec(vi_rt, [vo_xy])
 ///@arg {Array<Real>} vi_rt Input 2D vector in conventional polar coordinates
-///@arg {Array<Real>} <vo_xy> (Optional) Output 2D vector in rectangular coordinates to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vo_xy] (Optional) Output 2D vector in rectangular coordinates to overwrite. If unspecified, return a new vector.
 ///@desc Return the rectangular equivalent of the 2D conventional polar vector.
 function r2_pol_rec(vi_rt, vo_xy=[0, 0]) {
 	GMLINEAR_INLINE
@@ -54,9 +54,9 @@ function r2_pol_rec(vi_rt, vo_xy=[0, 0]) {
 }
 #macro r2_pol_rec_to r2_pol_rec
 
-///@func r2_gmp_pol(vi_ld, <vo_rt>)
+///@func r2_gmp_pol(vi_ld, [vo_rt])
 ///@arg {Array<Real>} vi_ld Input 2D vector in GM polar coordinates
-///@arg {Array<Real>} vo_rt (Optional) Output 2D vector in conventional polar coordinates to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vo_rt] (Optional) Output 2D vector in conventional polar coordinates to overwrite. If unspecified, return a new vector.
 ///@desc Return the conventional polar equivalent of the 2D GM polar vector.
 function r2_gmp_pol(vi_ld, vo_rt=[0, 0]) {
 	GMLINEAR_INLINE
@@ -66,9 +66,9 @@ function r2_gmp_pol(vi_ld, vo_rt=[0, 0]) {
 }
 #macro r2_gmp_pol_to r2_gmp_pol
 
-///@func r2_pol_gmp(vi_rt, <vo_ld>)
+///@func r2_pol_gmp(vi_rt, [vo_ld])
 ///@arg {Array<Real>} vi_rt Input 2D vector in conventional polar coordinates
-///@arg {Array<Real>} <vo_ld> (Optional) Output 2D vector in GM polar coordinates to overwrite. If unspecified, return a new vector.
+///@arg {Array<Real>} [vo_ld] (Optional) Output 2D vector in GM polar coordinates to overwrite. If unspecified, return a new vector.
 ///@desc Return the GM polar equivalent of the 2D conventional polar vector.
 function r2_pol_gmp(vi_rt, vo_ld=[0, 0]) {
 	GMLINEAR_INLINE
