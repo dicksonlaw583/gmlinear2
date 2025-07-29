@@ -3,6 +3,7 @@
 ///@arg {real} x01
 ///@arg {real} x10
 ///@arg {real} x11
+///@pure
 ///@desc Return a new 2x2 matrix.
 function r22(x00, x01, x10, x11) {
 	GMLINEAR_INLINE
@@ -13,6 +14,7 @@ function r22(x00, x01, x10, x11) {
 }
 
 ///@func r22_identity()
+///@pure
 ///@desc Return the 2x2 identity matrix.
 function r22_identity() {
 	GMLINEAR_INLINE
@@ -23,6 +25,7 @@ function r22_identity() {
 }
 
 ///@func r22_zero()
+///@pure
 ///@desc Return the 2x2 zero matrix.
 function r22_zero() {
 	GMLINEAR_INLINE
@@ -176,6 +179,7 @@ function r22_invert(M, Mout=[[0, 0], [0, 0]]) {
 
 ///@func r22_det(M)
 ///@arg {Array<Array<Real>>} M The original 2x2 matrix
+///@pure
 ///@func Return the determinant of 2x2 matrix M.
 function r22_det(M) {
 	GMLINEAR_INLINE
@@ -184,6 +188,7 @@ function r22_det(M) {
 
 ///@func r22_tr(M)
 ///@arg {Array<Array<Real>>} M The original 2x2 matrix
+///@pure
 ///@func Return the trace of 2x2 matrix M.
 function r22_tr(M) {
 	GMLINEAR_INLINE
@@ -192,6 +197,7 @@ function r22_tr(M) {
 
 ///@func r22_encode_string(M)
 ///@arg {Array<Array<Real>>} M The 2x2 matrix to encode.
+///@pure
 ///@desc Return the string form of 2x2 matrix M.
 function r22_encode_string(M) {
 	GMLINEAR_INLINE
@@ -226,6 +232,7 @@ function r22_decode_string(_str, Mout=[[0, 0], [0, 0]]) {
 
 ///@func r22_encode_base64(M)
 ///@arg {Array<Array<Real>>} M The 2x2 matrix to encode.
+///@pure
 ///@desc Return the base64 form of 2x2 matrix M.
 function r22_encode_base64(M) {
 	GMLINEAR_INLINE

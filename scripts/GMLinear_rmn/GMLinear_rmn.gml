@@ -2,6 +2,7 @@
 ///@arg {Real} m Number of rows
 ///@arg {Real} n Number of columns
 ///@arg ...
+///@pure
 ///@desc Return a new mxn matrix.
 function rmn() {
 	GMLINEAR_INLINE
@@ -30,6 +31,7 @@ function rmn() {
 ///@func rmn_zero(m, n)
 ///@arg {Real} m
 ///@arg {Real} n
+///@pure
 ///@desc Return the mxn zero matrix.
 ///@returns {Array<Array<Real>>}
 function rmn_zero(m, n) {
@@ -195,6 +197,7 @@ function rmn_transform(M, v, vout=array_create(array_length(M))) {
 
 ///@func rmn_encode_string(M)
 ///@arg {Array<Array<Real>>} M The mxn matrix to encode.
+///@pure
 ///@desc Return the string form of M.
 function rmn_encode_string(M) {
 	GMLINEAR_INLINE
@@ -248,6 +251,7 @@ function rmn_decode_string(_str, Mout=rmn_zero(string_count(";", _str)+1, string
 
 ///@func rmn_encode_base64(M)
 ///@arg {Array<Array<Real>>} M The mxn matrix to encode.
+///@pure
 ///@desc Return the base64 form of mxn matrix M.
 function rmn_encode_base64(M) {
 	GMLINEAR_INLINE

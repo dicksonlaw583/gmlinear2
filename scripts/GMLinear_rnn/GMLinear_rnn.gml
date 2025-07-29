@@ -1,4 +1,5 @@
 ///@func rnn(...)
+///@pure
 ///@desc Return a new square matrix up to 4 x 4 in size.
 function rnn() {
 	GMLINEAR_INLINE
@@ -30,6 +31,7 @@ function rnn() {
 
 ///@func rnn_identity(n)
 ///@arg {Real} n
+///@pure
 ///@desc Return the nxn identity matrix.
 function rnn_identity(n) {
 	GMLINEAR_INLINE
@@ -45,6 +47,7 @@ function rnn_identity(n) {
 ///@func rnn_zero(n)
 ///@arg {Real} n
 ///@desc Return the nxn zero matrix.
+///@pure
 ///@returns {Array<Array<Real>>}
 function rnn_zero(n) {
 	GMLINEAR_INLINE
@@ -277,6 +280,7 @@ function rnn_invert(M, Mout=rnn_zero(array_length(M))) {
 
 ///@func rnn_det(M)
 ///@arg {Array<Array<Real>>} M The original nxn matrix
+///@pure
 ///@func Return the determinant of nxn matrix M.
 function rnn_det(M) {
 	GMLINEAR_INLINE
@@ -330,6 +334,7 @@ function rnn_det(M) {
 
 ///@func rnn_tr(M)
 ///@arg {Array<Array<Real>>} M The original nxn matrix
+///@pure
 ///@func Return the trace of nxn matrix M.
 function rnn_tr(M) {
 	GMLINEAR_INLINE
@@ -342,6 +347,7 @@ function rnn_tr(M) {
 
 ///@func rnn_encode_string(M)
 ///@arg {Array<Array<Real>>} M The nxn matrix to encode.
+///@pure
 ///@desc Return the string form of M.
 function rnn_encode_string(M) {
 	GMLINEAR_INLINE
@@ -360,7 +366,7 @@ function rnn_encode_string(M) {
 	return string_replace_all(result, " ", "");
 }
 
-///@func rnn_decode_string(str)
+///@func rnn_decode_string(str, [Mout])
 ///@arg {string} _str The string to decode.
 ///@arg {Array<Array<Real>>} [Mout] (Optional) The output nxn matrix to overwrite. If unspecified, return a new matrix.
 ///@desc Return the decoded form of str.
@@ -395,6 +401,7 @@ function rnn_decode_string(_str, Mout=rnn_zero(string_count(";", _str)+1)) {
 
 ///@func rnn_encode_base64(M)
 ///@arg {Array<Array<Real>>} M The nxn matrix to encode.
+///@pure
 ///@desc Return the base64 form of nxn matrix M.
 function rnn_encode_base64(M) {
 	GMLINEAR_INLINE

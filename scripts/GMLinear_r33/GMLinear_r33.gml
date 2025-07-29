@@ -8,6 +8,7 @@
 ///@arg {real} x20
 ///@arg {real} x21
 ///@arg {real} x22
+///@pure
 ///@desc Return a new 3x3 matrix.
 function r33(x00, x01, x02, x10, x11, x12, x20, x21, x22) {
 	GMLINEAR_INLINE
@@ -19,6 +20,7 @@ function r33(x00, x01, x02, x10, x11, x12, x20, x21, x22) {
 }
 
 ///@func r33_identity()
+///@pure
 ///@desc Return the 3x3 identity matrix.
 function r33_identity() {
 	GMLINEAR_INLINE
@@ -30,6 +32,7 @@ function r33_identity() {
 }
 
 ///@func r33_zero()
+///@pure
 ///@desc Return the 3x3 zero matrix.
 function r33_zero() {
 	GMLINEAR_INLINE
@@ -247,6 +250,7 @@ function r33_invert(M, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 
 ///@func r33_det(M)
 ///@arg {Array<Array<Real>>} M The original 3x3 matrix
+///@pure
 ///@func Return the determinant of 3x3 matrix M.
 function r33_det(M) {
 	GMLINEAR_INLINE
@@ -256,6 +260,7 @@ function r33_det(M) {
 
 ///@func r33_tr(M)
 ///@arg {Array<Array<Real>>} M The original 3x3 matrix
+///@pure
 ///@func Return the trace of 3x3 matrix M.
 function r33_tr(M) {
 	GMLINEAR_INLINE
@@ -264,6 +269,7 @@ function r33_tr(M) {
 
 ///@func r33_encode_string(M)
 ///@arg {Array<Array<Real>>} M The 3x3 matrix to encode.
+///@pure
 ///@desc Return the string form of 3x3 matrix M.
 function r33_encode_string(M) {
 	GMLINEAR_INLINE
@@ -318,6 +324,7 @@ function r33_decode_string(_str, Mout=[[0, 0, 0], [0, 0, 0], [0, 0, 0]]) {
 
 ///@func r33_encode_base64(M)
 ///@arg {Array<Array<Real>>} M The 4x4 matrix to encode.
+///@pure
 ///@desc Return the base64 form of 3x3 matrix M.
 function r33_encode_base64(M) {
 	GMLINEAR_INLINE

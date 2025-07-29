@@ -15,6 +15,7 @@
 ///@arg {real} x31
 ///@arg {real} x32
 ///@arg {real} x33
+///@pure
 ///@desc Return a new 4x4 matrix.
 function r44(x00, x01, x02, x03, x10, x11, x12, x13, x20, x21, x22, x23, x30, x31, x32, x33) {
 	GMLINEAR_INLINE
@@ -27,6 +28,7 @@ function r44(x00, x01, x02, x03, x10, x11, x12, x13, x20, x21, x22, x23, x30, x3
 }
 
 ///@func r44_identity()
+///@pure
 ///@desc Return the 4x4 identity matrix.
 function r44_identity() {
 	GMLINEAR_INLINE
@@ -39,6 +41,7 @@ function r44_identity() {
 }
 
 ///@func r44_zero()
+///@pure
 ///@desc Return the 4x4 zero matrix.
 function r44_zero() {
 	GMLINEAR_INLINE
@@ -349,6 +352,7 @@ function r44_invert(M, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0,
 
 ///@func r44_det(M)
 ///@arg {Array<Array<Real>>} M The original 4x4 matrix
+///@pure
 ///@func Return the determinant of 4x4 matrix M.
 function r44_det(M) {
 	GMLINEAR_INLINE
@@ -364,6 +368,7 @@ function r44_det(M) {
 
 ///@func r44_tr(M)
 ///@arg {Array<Array<Real>>} M The original 4x4 matrix
+///@pure
 ///@func Return the trace of 4x4 matrix M.
 function r44_tr(M) {
 	GMLINEAR_INLINE
@@ -372,6 +377,7 @@ function r44_tr(M) {
 
 ///@func r44_encode_string(M)
 ///@arg {Array<Array<Real>>} M The 4x4 matrix to encode.
+///@pure
 ///@desc Return the string form of 4x4 matrix M.
 function r44_encode_string(M) {
 	GMLINEAR_INLINE
@@ -454,6 +460,7 @@ function r44_decode_string(_str, Mout=[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0],
 
 ///@func r44_encode_base64(M)
 ///@arg {Array<Array<Real>>} M The 4x4 matrix to encode.
+///@pure
 ///@desc Return the base64 form of 4x4 matrix M.
 function r44_encode_base64(M) {
 	GMLINEAR_INLINE

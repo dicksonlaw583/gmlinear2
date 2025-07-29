@@ -2,6 +2,7 @@
 ///@arg {real} x0
 ///@arg {real} x1
 ///@arg {real} x2
+///@pure
 ///@desc Return a new 3D vector.
 function r3(x0, x1, x2) {
 	GMLINEAR_INLINE
@@ -9,6 +10,7 @@ function r3(x0, x1, x2) {
 }
 
 ///@func r3_zero()
+///@pure
 ///@desc Return the 3D zero vector.
 function r3_zero() {
 	GMLINEAR_INLINE
@@ -73,6 +75,7 @@ function r3_scale(v, r, vout=[0, 0, 0]) {
 ///@func r3_dot(v1, v2)
 ///@arg {Array<Real>} v1 The first 3D vector.
 ///@arg {Array<Real>} v2 The second 3D vector.
+///@pure
 ///@desc Return v1.v2.
 function r3_dot(v1, v2) {
 	GMLINEAR_INLINE
@@ -100,6 +103,7 @@ function r3_cross(v1, v2, vout=[0, 0, 0]) {
 
 ///@func r3_norm(v)
 ///@arg {Array<Real>} v The 3D vector to operate on.
+///@pure
 ///@desc Return the Euclidean norm of the 3D vector.
 function r3_norm(v) {
 	GMLINEAR_INLINE
@@ -108,6 +112,7 @@ function r3_norm(v) {
 
 ///@func r3_sqrnorm(v)
 ///@arg {Array<Real>} v The 3D vector to operate on.
+///@pure
 ///@desc Return the squared Euclidean norm of the 3D vector.
 function r3_sqrnorm(v) {
 	GMLINEAR_INLINE
@@ -117,6 +122,7 @@ function r3_sqrnorm(v) {
 ///@func r3_dist(v1, v2)
 ///@arg {Array<Real>} v1 The first 3D vector.
 ///@arg {Array<Real>} v2 The second 3D vector.
+///@pure
 ///@desc Return the Euclidean distance between v1 and v2.
 function r3_dist(v1, v2) {
 	GMLINEAR_INLINE
@@ -126,6 +132,7 @@ function r3_dist(v1, v2) {
 ///@func r3_sqrdist(v1, v2)
 ///@arg {Array<Real>} v1 The first 3D vector.
 ///@arg {Array<Real>} v2 The second 3D vector.
+///@pure
 ///@desc Return the squared Euclidean distance between v1 and v2.
 function r3_sqrdist(v1, v2) {
 	GMLINEAR_INLINE
@@ -134,6 +141,7 @@ function r3_sqrdist(v1, v2) {
 
 ///@func r3_1norm(v)
 ///@arg {Array<Real>} v The 3D vector to operate on.
+///@pure
 ///@desc Return the Manhattan norm of the 3D vector.
 function r3_1norm(v) {
 	GMLINEAR_INLINE
@@ -143,6 +151,7 @@ function r3_1norm(v) {
 ///@func r3_1dist(v1, v2)
 ///@arg {Array<Real>} v1 The first 3D vector.
 ///@arg {Array<Real>} v2 The second 3D vector.
+///@pure
 ///@desc Return the Manhattan distance between v1 and v2.
 function r3_1dist(v1, v2) {
 	GMLINEAR_INLINE
@@ -151,6 +160,7 @@ function r3_1dist(v1, v2) {
 
 ///@func r3_maxnorm(v)
 ///@arg {Array<Real>} v The 3D vector to operate on.
+///@pure
 ///@desc Return the max norm of the 3D vector.
 function r3_maxnorm(v) {
 	GMLINEAR_INLINE
@@ -230,6 +240,7 @@ function r3_rej(v1, v2, vout=[0, 0, 0]) {
 
 ///@func r3_encode_string(v)
 ///@arg {Array<Real>} v The 3D vector to encode.
+///@pure
 ///@desc Return the string form of 3D vector v.
 function r3_encode_string(v) {
 	GMLINEAR_INLINE
@@ -256,6 +267,7 @@ function r3_decode_string(str, vout=[0, 0]) {
 
 ///@func r3_encode_base64(v)
 ///@arg {Array<Real>} v The 3D vector to encode.
+///@pure
 ///@desc Return the base64 form of 3D vector v.
 function r3_encode_base64(v) {
 	GMLINEAR_INLINE

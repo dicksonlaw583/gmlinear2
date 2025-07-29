@@ -1,5 +1,6 @@
 ///@func rn(...)
 ///@arg ...
+///@pure
 ///@desc Return a new n-dimensional vector.
 function rn() {
 	GMLINEAR_INLINE
@@ -12,6 +13,7 @@ function rn() {
 
 ///@func rn_zero(n)
 ///@arg {Real} n The dimension of the vector
+///@pure
 ///@desc Return the n-dimensional zero vector.
 function rn_zero(n) {
 	GMLINEAR_INLINE
@@ -74,6 +76,7 @@ function rn_scale(v, r, vout=array_create(array_length(v), 0)) {
 ///@func rn_dot(v1, v2)
 ///@arg {Array<Real>} v1 The first n-dimensional vector.
 ///@arg {Array<Real>} v2 The second n-dimensional vector.
+///@pure
 ///@desc Return v1.v2.
 function rn_dot(v1, v2) {
 	GMLINEAR_INLINE
@@ -86,6 +89,7 @@ function rn_dot(v1, v2) {
 
 ///@func rn_norm(v)
 ///@arg {Array<Real>} v The n-dimensional vector to operate on.
+///@pure
 ///@desc Return the Euclidean norm of the n-dimensional vector.
 function rn_norm(v) {
 	GMLINEAR_INLINE
@@ -98,6 +102,7 @@ function rn_norm(v) {
 
 ///@func rn_sqrnorm(v)
 ///@arg {Array<Real>} v The n-dimensional vector to operate on.
+///@pure
 ///@desc Return the squared Euclidean norm of the n-dimensional vector.
 function rn_sqrnorm(v) {
 	GMLINEAR_INLINE
@@ -111,6 +116,7 @@ function rn_sqrnorm(v) {
 ///@func rn_dist(v1, v2)
 ///@arg {Array<Real>} v1 The first n-dimensional vector.
 ///@arg {Array<Real>} v2 The second n-dimensional vector.
+///@pure
 ///@desc Return the Euclidean distance between v1 and v2.
 function rn_dist(v1, v2) {
 	GMLINEAR_INLINE
@@ -125,6 +131,7 @@ function rn_dist(v1, v2) {
 ///@func rn_sqrdist(v1, v2)
 ///@arg {Array<Real>} v1 The first n-dimensional vector.
 ///@arg {Array<Real>} v2 The second n-dimensional vector.
+///@pure
 ///@desc Return the squared Euclidean distance between v1 and v2.
 function rn_sqrdist(v1, v2) {
 	GMLINEAR_INLINE
@@ -137,6 +144,7 @@ function rn_sqrdist(v1, v2) {
 
 ///@func rn_1norm(v)
 ///@arg {Array<Real>} v The n-dimensional vector to operate on.
+///@pure
 ///@desc Return the Manhattan norm of the n-dimensional vector.
 function rn_1norm(v) {
 	GMLINEAR_INLINE
@@ -150,6 +158,7 @@ function rn_1norm(v) {
 ///@func rn_1dist(v1, v2)
 ///@arg {Array<Real>} v1 The first n-dimensional vector.
 ///@arg {Array<Real>} v2 The second n-dimensional vector.
+///@pure
 ///@desc Return the Manhattan distance between v1 and v2.
 function rn_1dist(v1, v2) {
 	GMLINEAR_INLINE
@@ -162,6 +171,7 @@ function rn_1dist(v1, v2) {
 
 ///@func rn_maxnorm(v)
 ///@arg {Array<Real>} v The n-dimensional vector to operate on.
+///@pure
 ///@desc Return the max norm of the n-dimensional vector.
 function rn_maxnorm(v) {
 	GMLINEAR_INLINE
@@ -264,6 +274,7 @@ function rn_rej(v1, v2, vout=array_create(array_length(v1), 0)) {
 
 ///@func rn_encode_string(v)
 ///@arg {Array<Real>} v The n-dimensional vector to encode.
+///@pure
 ///@desc Return the string form of n-dimensional vector v.
 function rn_encode_string(v) {
 	GMLINEAR_INLINE
@@ -299,6 +310,7 @@ function rn_decode_string(str, vout=[]) {
 
 ///@func rn_encode_base64(v)
 ///@arg {Array<Real>} v The n-dimensional vector to encode.
+///@pure
 ///@desc Return the base64 form of n-dimensional vector v.
 function rn_encode_base64(v) {
 	GMLINEAR_INLINE

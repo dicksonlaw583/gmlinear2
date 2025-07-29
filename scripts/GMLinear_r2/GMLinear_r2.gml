@@ -1,6 +1,7 @@
 ///@func r2(x0, x1)
 ///@arg {real} x0
 ///@arg {real} x1
+///@pure
 ///@desc Return a new 2D vector.
 function r2(x0, x1) {
 	GMLINEAR_INLINE
@@ -8,6 +9,7 @@ function r2(x0, x1) {
 }
 
 ///@func r2_zero()
+///@pure
 ///@desc Return the 2D zero vector.
 function r2_zero() {
 	GMLINEAR_INLINE
@@ -68,6 +70,7 @@ function r2_scale(v, r, vout=[0, 0]) {
 ///@func r2_dot(v1, v2)
 ///@arg {Array<Real>} v1 The first 2D vector.
 ///@arg {Array<Real>} v2 The second 2D vector.
+///@pure
 ///@desc Return v1.v2.
 function r2_dot(v1, v2) {
 	GMLINEAR_INLINE
@@ -76,6 +79,7 @@ function r2_dot(v1, v2) {
 
 ///@func r2_norm(v)
 ///@arg {Array<Real>} v The 2D vector to operate on.
+///@pure
 ///@desc Return the Euclidean norm of the 2D vector.
 function r2_norm(v) {
 	GMLINEAR_INLINE
@@ -85,6 +89,7 @@ function r2_norm(v) {
 
 ///@func r2_sqrnorm(v)
 ///@arg {Array<Real>} v The 2D vector to operate on.
+///@pure
 ///@desc Return the squared Euclidean norm of the 2D vector.
 function r2_sqrnorm(v) {
 	GMLINEAR_INLINE
@@ -95,6 +100,7 @@ function r2_sqrnorm(v) {
 ///@func r2_dist(v1, v2)
 ///@arg {Array<Real>} v1 The first 2D vector.
 ///@arg {Array<Real>} v2 The second 2D vector.
+///@pure
 ///@desc Return the Euclidean distance between v1 and v2.
 function r2_dist(v1, v2) {
 	GMLINEAR_INLINE
@@ -104,6 +110,7 @@ function r2_dist(v1, v2) {
 ///@func r2_sqrdist(v1, v2)
 ///@arg {Array<Real>} v1 The first 2D vector.
 ///@arg {Array<Real>} v2 The second 2D vector.
+///@pure
 ///@desc Return the squared Euclidean distance between v1 and v2.
 function r2_sqrdist(v1, v2) {
 	GMLINEAR_INLINE
@@ -112,6 +119,7 @@ function r2_sqrdist(v1, v2) {
 
 ///@func r2_1norm(v)
 ///@arg {Array<Real>} v The 2D vector to operate on.
+///@pure
 ///@desc Return the Manhattan norm of the 2D vector.
 function r2_1norm(v) {
 	GMLINEAR_INLINE
@@ -121,6 +129,7 @@ function r2_1norm(v) {
 ///@func r2_1dist(v1, v2)
 ///@arg {Array<Real>} v1 The first 2D vector.
 ///@arg {Array<Real>} v2 The second 2D vector.
+///@pure
 ///@desc Return the Manhattan distance between v1 and v2.
 function r2_1dist(v1, v2) {
 	GMLINEAR_INLINE
@@ -129,6 +138,7 @@ function r2_1dist(v1, v2) {
 
 ///@func r2_maxnorm(v)
 ///@arg {Array<Real>} v The 2D vector to operate on.
+///@pure
 ///@desc Return the max norm of the 2D vector.
 function r2_maxnorm(v) {
 	GMLINEAR_INLINE
@@ -201,6 +211,7 @@ function r2_rej(v1, v2, vout=[0, 0]) {
 
 ///@func r2_encode_string(v)
 ///@arg {Array<Real>} v The 2D vector to encode.
+///@pure
 ///@desc Return the string form of 2D vector v.
 function r2_encode_string(v) {
 	GMLINEAR_INLINE
@@ -222,6 +233,7 @@ function r2_decode_string(str, vout=[0, 0]) {
 
 ///@func r2_encode_base64(v)
 ///@arg {Array<Real>} v The 2D vector to encode.
+///@pure
 ///@desc Return the base64 form of 2D vector v.
 function r2_encode_base64(v) {
 	GMLINEAR_INLINE

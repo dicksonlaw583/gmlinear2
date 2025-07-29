@@ -3,6 +3,7 @@
 ///@arg {real} x1
 ///@arg {real} x2
 ///@arg {real} x3
+///@pure
 ///@desc Return a new 4D vector.
 function r4(x0, x1, x2, x3) {
 	GMLINEAR_INLINE
@@ -10,6 +11,7 @@ function r4(x0, x1, x2, x3) {
 }
 
 ///@func r4_zero()
+///@pure
 ///@desc Return the 4D zero vector.
 function r4_zero() {
 	GMLINEAR_INLINE
@@ -78,6 +80,7 @@ function r4_scale(v, r, vout=[0, 0, 0, 0]) {
 ///@func r4_dot(v1, v2)
 ///@arg {Array<Real>} v1 The first 4D vector.
 ///@arg {Array<Real>} v2 The second 4D vector.
+///@pure
 ///@desc Return v1.v2.
 function r4_dot(v1, v2) {
 	GMLINEAR_INLINE
@@ -86,6 +89,7 @@ function r4_dot(v1, v2) {
 
 ///@func r4_norm(v)
 ///@arg {Array<Real>} v The 4D vector to operate on.
+///@pure
 ///@desc Return the Euclidean norm of the 4D vector.
 function r4_norm(v) {
 	GMLINEAR_INLINE
@@ -94,6 +98,7 @@ function r4_norm(v) {
 
 ///@func r4_sqrnorm(v)
 ///@arg {Array<Real>} v The 4D vector to operate on.
+///@pure
 ///@desc Return the squared Euclidean norm of the 4D vector.
 function r4_sqrnorm(v) {
 	GMLINEAR_INLINE
@@ -103,6 +108,7 @@ function r4_sqrnorm(v) {
 ///@func r4_dist(v1, v2)
 ///@arg {Array<Real>} v1 The first 4D vector.
 ///@arg {Array<Real>} v2 The second 4D vector.
+///@pure
 ///@desc Return the Euclidean distance between v1 and v2.
 function r4_dist(v1, v2) {
 	GMLINEAR_INLINE
@@ -116,6 +122,7 @@ function r4_dist(v1, v2) {
 ///@func r4_sqrdist(v1, v2)
 ///@arg {Array<Real>} v1 The first 4D vector.
 ///@arg {Array<Real>} v2 The second 4D vector.
+///@pure
 ///@desc Return the squared Euclidean distance between v1 and v2.
 function r4_sqrdist(v1, v2) {
 	GMLINEAR_INLINE
@@ -124,6 +131,7 @@ function r4_sqrdist(v1, v2) {
 
 ///@func r4_1norm(v)
 ///@arg {Array<Real>} v The 4D vector to operate on.
+///@pure
 ///@desc Return the Manhattan norm of the 4D vector.
 function r4_1norm(v) {
 	GMLINEAR_INLINE
@@ -133,6 +141,7 @@ function r4_1norm(v) {
 ///@func r4_1dist(v1, v2)
 ///@arg {Array<Real>} v1 The first 4D vector.
 ///@arg {Array<Real>} v2 The second 4D vector.
+///@pure
 ///@desc Return the Manhattan distance between v1 and v2.
 function r4_1dist(v1, v2) {
 	GMLINEAR_INLINE
@@ -141,6 +150,7 @@ function r4_1dist(v1, v2) {
 
 ///@func r4_maxnorm(v)
 ///@arg {Array<Real>} v The 4D vector to operate on.
+///@pure
 ///@desc Return the max norm of the 4D vector.
 function r4_maxnorm(v) {
 	GMLINEAR_INLINE
@@ -227,6 +237,7 @@ function r4_rej(v1, v2, vout=[0, 0, 0, 0]) {
 
 ///@func r4_encode_string(v)
 ///@arg {Array<Real>} v The 4D vector to encode.
+///@pure
 ///@desc Return the string form of 4D vector v.
 function r4_encode_string(v) {
 	GMLINEAR_INLINE
@@ -256,6 +267,7 @@ function r4_decode_string(str, vout=[0, 0]) {
 
 ///@func r4_encode_base64(v)
 ///@arg {Array<Real>} v The 4D vector to encode.
+///@pure
 ///@desc Return the base64 form of 4D vector v.
 function r4_encode_base64(v) {
 	GMLINEAR_INLINE
