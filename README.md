@@ -8,7 +8,7 @@ GMLinear is an implementation of matrix and vector operations in pure GML. You c
 
 ## Requirements
 
-- GameMaker 2022 LTS or above
+- GameMaker 2024.11 / 2022.0.3 LTS or above
 
 If you use GameMaker Studio 2.3.0 to 2.3.7, please use v2.3.0.
 
@@ -18,7 +18,7 @@ If you use GameMaker Studio 1.4, please see [GMLinear Legacy](https://github.com
 
 ## Installation
 
-Download the latest version from [the YoYo Marketplace](https://marketplace.yoyogames.com/assets/8170/gmlinear) or [the Releases page](https://github.com/dicksonlaw583/gmlinear2/releases).
+Download the latest version from [the Releases page](https://github.com/dicksonlaw583/gmlinear2/releases).
 
 ## Contributing to GMLinear
 
